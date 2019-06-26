@@ -1,0 +1,11 @@
+@import '../variables/sizes';
+
+@mixin topBottomSpacing {
+  margin:  0;
+  padding: $spacing 0;
+}
+
+@mixin noSpacing {
+  margin: 0;
+  padding: 0;
+}

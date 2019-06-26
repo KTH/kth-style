@@ -1,0 +1,61 @@
+// KTH Bootstrap
+
+// This is where you override bootstrap values, such as colors, margins ...
+
+// Values in node_modules/bootstrap/scss/_varables to override
+
+
+@import '../variables/colors';
+@import '../variables/sizes';
+@import '../variables/fonts';
+@import 'node_modules/bootstrap/scss/mixins/breakpoints';
+
+// Colors
+
+// TODO Remove $colors-map
+
+$body-bg: $lightGrey;
+$primary: $blue;
+$secondary: $white;
+$success: $green;
+$danger: $red;
+
+// Typography
+$body-color: $black;
+
+$font-family-sans-serif: $sansSerif;
+$font-family-base: $serif;
+
+// Headings
+$h1-font-size: $h1-fontSize;
+$h2-font-size: $h2-fontSize;
+$h3-font-size: $h3-fontSize;
+$h4-font-size: $h4-fontSize;
+
+$headings-font-family: $sansSerif;
+$headings-font-weight: 400;
+$headings-color: $black;
+$headings-line-height: 1.375;
+
+// Spacing
+$spacer: 1.3rem;
+
+// Buttons
+$btn-font-weight: bold;
+$btn-padding-x: 1.5rem;
+$btn-padding-y: 0.5rem;
+
+// Links
+$link-color: $linkBlue;
+$link-hover-color: $linkBlue;
+
+// Tables
+$table-head-bg: $white;
+$table-head-color: $black;
+
+// Gutter
+$gutter: 15px;
+
+// Inputs 
+$input-bg: $lightGrey;
+$input-border-color: $inputBorderGrey;

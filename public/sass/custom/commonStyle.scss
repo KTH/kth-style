@@ -1,0 +1,117 @@
+// KTH specific styling
+
+// To override personal menu top margin in print.
+html {
+  body {
+    @media print {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+body {
+  @include t11(false);
+
+  .container {
+    &.withMainMenu {
+      > .row {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        &:first-of-type {
+          flex-direction: row-reverse;
+          flex-wrap: nowrap;
+        }
+      }
+    }
+
+    &.main {
+      max-width: $widePageWidth;
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        margin: 0 $gutter;
+        max-width: calc(100% - 2 * #{$gutter});
+      }
+
+      @media (min-width: 1258px) {
+        max-width: 1228px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .container,
+  .container-fluid {
+    padding: 0 $gutter; // Gutter should be the same in all break points.
+  }
+}
+
+.lead {
+  @include t10(false);
+  margin: 0 0 22px;
+}
+
+.paragraphs {
+  p {
+    @include t12(false);
+    margin: 0 0 27px;
+    max-width: 730px;
+  }
+}
+
+table {
+  @include t11(false);
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+p {
+  &.AlignLeft {
+    text-align: left;
+  }
+
+  &.AlignCenter {
+    text-align: center;
+  }
+
+  &.AlignRight {
+    text-align: right;
+  }
+
+  &.AlignJustify {
+    text-align: justify;
+  }
+}
+
+a {
+  &.skipToMainContent {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+
+    &:focus,
+    &:active {
+      background-color: $white;
+      color: $linkBlue;
+      left: 0;
+      top: 0;
+      width: auto;
+      height: auto;
+      overflow: auto;
+      padding: 5px;
+      font-size: 1rem;
+      z-index: 99999;
+    }
+  }
+}
+
+@import './common/focus';
+@import './component/collapse';

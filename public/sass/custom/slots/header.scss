@@ -1,0 +1,181 @@
+@import '../../variables/colors';
+@import '../../variables/sizes';
+@import '../../variables/spacings';
+@import '../../variables/fonts';
+// sass-lint:disable no-mergeable-selectors
+
+body {
+  margin: 0;
+
+  header {
+    .container-fluid {
+      @media print {
+        padding: 0;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: $widePageWidth;
+        padding: $gutter 0 20px;
+
+        @media (min-width: 992px) {
+          padding: 20px 2 * $gutter 10px;
+        }
+
+        @media print {
+          margin: 0;
+        }
+
+        .header-container {
+          &__top {
+            display: flex;
+            margin-top: 8px;
+
+            #mobileMenuWrapper {
+              @media print {
+                display: none;
+              }
+            }
+          }
+
+          &__bottom {
+            display: flex;
+
+            @media print {
+              display: none;
+            }
+          }
+        }
+
+        .block {
+          &.figure {
+            &.mainLogo {
+              margin: 0;
+              width: auto;
+              margin: 0 $gutter 0 0;
+
+              @media (min-width: 992px) {
+                margin: 0 2 * $gutter 0 0;
+              }
+
+              img {
+                &.figure-img {
+                  margin-bottom: 0;
+                  height: 50px;
+                  max-width: 275px;
+                  width: auto;
+
+                  @media (min-width: 576px) and (max-width: 991.98px) {
+                    height: 64px;
+                  }
+
+                  @media (min-width: 992px) {
+                    height: 75px;
+                  }
+                }
+              }
+              @media print {
+                margin: 0 0 0 $gutter;
+              }
+            }
+          }
+        }
+
+        .block {
+          &.search {
+            width: 100%;
+            margin-top: $gutter;
+
+            @media (min-width: 992px) {
+              padding: 0;
+              width: 270px;
+              z-index: 2;
+              margin: 0;
+              margin-left: auto;
+              top: -24px;
+              position: relative;
+              height: 53px;
+            }
+
+            @media print {
+              display: none;
+            }
+          }
+        }
+
+        .block {
+          &.list {
+            &.links {
+              &.secondaryMenu {
+                display: none;
+                margin: 0;
+                position: relative;
+                top: 2px;
+
+                @media (min-width: 992px) {
+                  flex-grow: 1;
+                  display: flex;
+                  justify-content: flex-end;
+                }
+
+                ul {
+                  list-style-type: none;
+                  position: relative;
+                  top: -7px; // To align secondary menu with top of the mainLogo
+
+                  li {
+                    float: left;
+                    margin-bottom: 0;
+
+                    &:not(:last-child) {
+                      padding-right: $gutter;
+                    }
+
+                    &:nth-last-child(2) {
+                      a {
+                        border-right: 1px solid $borderGrey;
+                        padding-right: $gutter;
+                      }
+                    }
+
+                    a {
+                      color: $black;
+                      font-size: $copyText-fontSize;
+                      font-family: $sansSerif;
+                    }
+
+                    a[hreflang] {
+                      &:after {
+                        content: '';
+                        padding-right: 2 * $spacing;
+                        background: url('../img/kth-style/icons/globe.svg') no-repeat right;
+                        background-size: 16px;
+                      }
+                    }
+                  }
+                }
+
+                @media print {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #gradientBorder {
+    height: 3px;
+    background-image: linear-gradient(to left, #005ea4, #5c98c4);
+
+    @media (min-width: 992px) {
+      height: 6px;
+    }
+
+    @media print {
+      display: none;
+    }
+  }
+}

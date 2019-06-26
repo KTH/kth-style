@@ -1,0 +1,238 @@
+// Variables and mixins for fonts.
+//
+// Variables should be created and used for everything that can be overridden in Bootstraps preStep.
+
+@import './colors';
+@import './sizes';
+
+// Import of font Open Sans
+// sass-lint:disable no-url-domains no-url-protocols
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200, 300, 400, 500, 600');
+// sass-lint:enable no-url-domains no-url-protocols
+$open-sans: 'Open Sans';
+
+$serif: 'Georgia', 'garamond pro', garamond, 'times new roman', times, serif;
+$sansSerif: $open-sans, Arial, 'Helvetica Neue', helvetica, sans-serif;
+
+// Default font size is set to 14px.
+$font-size-base: 1rem; // 16px
+
+// Default copy text style.
+$copyText-fontSize: $font-size-base !default; // 16px
+$copyText-desktop-fontSize: 1.125rem !default; // 18px
+
+// Default lead text style.
+$lead-fontSize: 1.125rem !default; // 18px
+$lead-desktop-fontSize: 1.375rem !default; // 22px
+
+// Default headline font sizes.
+$h1-fontSize: 1.75rem !default; // 28px
+$h1-desktop-fontSize: 2.875rem !default; // 46px
+
+$h2-fontSize: 1.625rem !default; // 26px
+$h2-desktop-fontSize: 1.875rem !default; // 30px
+
+$h3-fontSize: 1.25rem !default; // 22px
+$h3-desktop-fontSize: 1.25rem !default; // 26px
+
+$h4-fontSize: 1.25rem !default; // 20px
+
+// Default headline styles.
+@mixin h1 {
+  font-family: $sansSerif;
+  font-weight: 600;
+  margin: 0 0 22px;
+  padding: 0;
+  color: $black;
+
+  @media (min-width: 768px) {
+    font-size: $h1-desktop-fontSize;
+  }
+}
+
+@mixin h2 {
+  font-family: $sansSerif;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: $black;
+
+  @media (min-width: 768px) {
+    font-size: $h2-desktop-fontSize;
+  }
+}
+
+@mixin h3 {
+  font-family: $sansSerif;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: $black;
+
+  @media (min-width: 768px) {
+    font-size: $h3-desktop-fontSize;
+  }
+}
+
+@mixin h4 {
+  font-family: $sansSerif;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: $black;
+}
+
+// Element independent typography definitions
+// Heading level 1
+@mixin t1($color: true, $marginTop: 0, $marginBottom: 28px) {
+  font-family: $sansSerif;
+  font-size: $h1-fontSize;
+  font-weight: 600;
+  @if ($color) {
+    color: $black;
+  }
+  line-height: 1.3125;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+
+  @media (min-width: 768px) {
+    font-size: 2.75rem;
+  }
+}
+
+// Heading level 2
+@mixin t2($color: true, $marginTop: 28px, $marginBottom: 14px) {
+  font-family: $sansSerif;
+  font-size: $h2-fontSize;
+  font-weight: 600;
+  @if ($color) {
+    color: $black;
+  }
+  line-height: 1.3475;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+
+  @media (min-width: 768px) {
+    font-size: $h2-desktop-fontSize;
+  }
+}
+
+// Heading level 3
+@mixin t3($color: true, $marginTop: 24px, $marginBottom: 10px) {
+  font-family: $sansSerif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  @if ($color) {
+    color: $black;
+  }
+  line-height: 1.375;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+}
+
+// Heading level 4 or Block heading
+@mixin t4($color: true, $marginTop: 16px, $marginBottom: 14px) {
+  font-family: $sansSerif;
+  font-size: $h3-fontSize;
+  font-weight: 600;
+  @if ($color) {
+    color: $black;
+  }
+  line-height: 1.375;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+}
+
+// Block heading full width
+@mixin t24($color: true, $marginTop: 0, $marginBottom: 14px) {
+  font-family: $sansSerif;
+  font-size: $h3-fontSize;
+  font-weight: 600;
+  @if ($color) {
+    color: $black;
+  }
+  line-height: 1.3125;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+
+  @media (min-width: 768px) {
+    font-size: $h2-desktop-fontSize;
+    font-weight: 400;
+  }
+}
+
+// Text to pop out, like lead, block quote or mega menu
+@mixin t10($color: true, $marginTop: 0, $marginBottom: 30px) {
+  font-family: $sansSerif;
+  font-size: $lead-fontSize;
+  font-weight: 400;
+  @if ($color) {
+    color: $black;
+  }
+  line-height: 1.4375;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+
+  @media (min-width: 768px) {
+    font-size: $lead-desktop-fontSize;
+  }
+}
+
+// Normal text in block
+@mixin t11($color: true, $marginTop: 0, $marginBottom: 14px) {
+  font-family: $sansSerif;
+  font-size: $font-size-base;
+  font-weight: 400;
+  @if ($color) {
+    color: $black;
+  }
+  line-height: 1.5;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+}
+
+// Normal text in article
+@mixin t12($color: true, $marginTop: 0, $marginBottom: 16px) {
+  font-family: $serif;
+  font-size: $font-size-base;
+  font-weight: 400;
+  @if ($color) {
+    color: $black;
+  }
+  line-height: 1.5625;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
+}
+
+.t1 {
+  @include t1;
+}
+
+.t2 {
+  @include t2;
+}
+
+.t3 {
+  @include t3;
+}
+
+.t4 {
+  @include t4;
+}
+
+.t24 {
+  @include t24;
+}
+
+.t10 {
+  @include t10;
+}
+
+.t11 {
+  @include t11;
+}
+
+.t12 {
+  @include t12;
+}

@@ -1,0 +1,63 @@
+// Button style
+
+@mixin btn-coloring-base($color, $colorHover) {
+  background-color: $color;
+  border-color: $color;
+
+  &:hover,
+  &:visited {
+    background-color: $colorHover;
+    border-color: $colorHover;
+  }
+
+  &:disabled {
+    background-color: $color;
+    border-color: $color;
+  }
+}
+
+.btn-secondary {
+  @include btn-coloring-base($white, $lightGrey);
+  color: $black;
+  border-color: $grey;
+
+  &:hover,
+  &:visited,
+  &:disabled {
+    border-color: $grey;
+    color: $black;
+  }
+}
+
+.btn-success {
+  @include btn-coloring-base($green, $greenHover);
+}
+
+.btn-danger {
+  @include btn-coloring-base($red, $lightRedHover);
+}
+
+.btn-link {
+  border: 0;
+}
+
+.link-back {
+  &::before {
+    content: url('../img/kth-style/icons/pill-back.svg');
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    height: 1.2em;
+  }
+}
+
+.btn-info-modal {
+  //change secondary to primary
+  background: url('../img/kth-style/icons/modal-info.svg') no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  border: transparent;
+  border-radius: 0.8em;
+  width: 1.3em;
+  height: 1.3em;
+  padding: 0;
+}

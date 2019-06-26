@@ -1,0 +1,35 @@
+@import '../../variables/colors';
+@import '../../variables/sizes';
+@import '../../variables/spacings';
+@import '../../variables/fonts';
+
+.block {
+  &.siteName {
+    @include t4($marginBottom: 0, $marginTop: 0);
+    position: initial;
+    height: auto;
+    max-width: calc(100% - 136px);
+    position: relative;
+    top: -5px;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $black;
+        cursor: pointer;
+      }
+
+      &:active {
+        color: $black;
+      }
+
+      &:visited {
+        color: $black;
+      }
+    }
+    @media print {
+      display: none;
+    }
+  }
+}

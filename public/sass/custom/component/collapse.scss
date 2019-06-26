@@ -1,0 +1,104 @@
+// Boostrap Collapse / Panel headings / Rubriklister
+
+@import '../common/icons';
+@import '../../variables/colors';
+
+@mixin iconCommon {
+  font-size: 1.5rem;
+  line-height: 1.2rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.card {
+  &.collapsible {
+    border: 0;
+
+    .card-header {
+      border-radius: 0.25rem;
+      border-bottom: 0;
+
+      padding-top: 7px;
+      padding-bottom: 7px;
+
+      a {
+        font-size: 16px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        text-align: left;
+        overflow: hidden;
+
+        &:before {
+          content: '';
+          height: 14px;
+          width: 14px;
+          display: inline-block;
+          margin: auto;
+          margin-bottom: -1px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin-right: 0.6rem;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &[aria-expanded~='false'][load~='false'] {
+          &:before {
+            animation: rotateUp 0.3s ease-in-out forwards;
+          }
+        }
+
+        &[aria-expanded~='true'][load~='false'] {
+          &:before {
+            animation: rotateDown 0.3s ease-in-out forwards;
+          }
+        }
+      }
+    }
+
+    &.white {
+      .card-header {
+        background-color: $white;
+
+        a {
+          color: $black;
+
+          &:before {
+            background-image: url('../img/kth-style/icons/arrow-black-right.svg');
+          }
+        }
+      }
+    }
+
+    &.blue {
+      .card-header {
+        background-color: $blue;
+
+        a {
+          color: $white;
+
+          &:before {
+            background-image: url('../img/kth-style/icons/arrow-white-right.svg');
+          }
+        }
+      }
+    }
+
+    @keyframes rotateDown {
+      100% {
+        transform: rotate(90deg);
+        transform-origin: 22% 40%;
+      }
+    }
+
+    @keyframes rotateUp {
+      0% {
+        transform: rotate(90deg);
+        transform-origin: 22% 40%;
+      }
+    }
+  }
+}
