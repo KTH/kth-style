@@ -12,7 +12,9 @@ input:not([disabled]):active,
 select:not([disabled]):focus,
 select:not([disabled]):active,
 textarea:not([disabled]):focus,
-textarea:not([disabled]):active {
+textarea:not([disabled]):active,
+input[type='checkbox']:not([disabled]):focus ~ label:before,
+input[type='radio']:not([disabled]):focus ~ label:before {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
