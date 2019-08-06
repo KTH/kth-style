@@ -41,6 +41,7 @@ window.addEventListener('load', function() {
 
       // Create a link
       var link = document.createElement('a')
+
       if (menuItems[i].getElementsByTagName('a')[0] != null) {
         link.href = menuItems[i].getElementsByTagName('a')[0].href
         link.text = menuItems[i].getElementsByTagName('a')[0].text
@@ -68,9 +69,9 @@ window.addEventListener('load', function() {
           listItem.appendChild(link)
         }
       }
+      document.getElementById('mobileMenuList').appendChild(listItem) // Add menu item to the mobile menu list
     }
     secondaryMenuWrapper.appendChild(secondaryMenuContainer)
-    document.getElementById('mobileMenuList').appendChild(listItem) // Add menu item to the mobile menu list
     document.getElementById('mobileMenuList').appendChild(secondaryMenuWrapper) // Add menu item to the mobile menu list
   }
 
