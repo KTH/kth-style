@@ -126,12 +126,6 @@
                                   background-position: 100% 14px;
                                 }
 
-                                a {
-                                  &.nav-link {
-                                    border-bottom: 0;
-                                  }
-                                }
-
                                 ul.nav-list {
                                   border-top: 1px solid $borderGrey;
                                   padding: 7px 0 0 20px;
@@ -144,27 +138,6 @@
                                   &.nav-link {
                                     padding: 7px 0;
                                     color: $black;
-                                    border-bottom: 0;
-                                  }
-                                }
-
-                                &.selected {
-                                  a {
-                                    &.nav-link {
-                                      border-bottom: 0;
-                                    }
-                                  }
-
-                                  li {
-                                    &.nav-item {
-                                      &.node {
-                                        a {
-                                          &.nav-link {
-                                            border-bottom: 0;
-                                          }
-                                        }
-                                      }
-                                    }
                                   }
                                 }
                               }
@@ -193,7 +166,6 @@
                 &.nav-link {
                   @include t4(false, 0, 0);
                   padding: 0 0 11px 4px;
-                  border-bottom: 2px solid $grey;
                 }
               }
             }
@@ -204,7 +176,6 @@
               a {
                 &.nav-link {
                   padding: 6px 0;
-                  border-bottom: 1px solid $borderGrey;
                 }
               }
             }
@@ -214,7 +185,6 @@
                 &.nav-link {
                   padding: 6px 0;
                   color: $black;
-                  border-bottom: 1px solid $borderGrey;
                 }
               }
             }
@@ -222,12 +192,6 @@
             &.node {
               background: url('../img/kth-style/icons/arrow-black-right.svg') no-repeat right;
               background-size: auto 14px;
-
-              a {
-                &.nav-link {
-                  border-bottom: 1px solid $borderGrey;
-                }
-              }
             }
           }
         }
