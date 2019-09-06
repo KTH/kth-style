@@ -104,6 +104,18 @@
                             }
                           }
                         }
+
+                        &.parentLink {
+                          padding: 0 3px;
+                          background: url('../img/kth-style/icons/arrow-black-left.svg') no-repeat left;
+                          background-size: auto 12px;
+
+                          a {
+                            padding-left: $gutter;
+                            font-family: $sansSerif;
+                            font-size: $font-size-base;
+                          }
+                        }
                       }
                     }
                   }
