@@ -92,14 +92,14 @@ var setMainMenuWith = function() {
   var mediaMobile = window.matchMedia('(max-width: 767.98px)')
   var mediaTablet = window.matchMedia('(min-width: 768px) and (max-width: 991.98px)')
   var viewPortWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-  var mainMenuDropdown = $('#mainMenu.col.navbar.navbar-expand-lg.navbar-light #navbarNav.navbar-collapse ul.nav')
+  var mainMenuDropdown = document.querySelector('#mainMenu.col.navbar.navbar-expand-lg.navbar-light #navbarNav.navbar-collapse ul.nav')
 
   if (mediaMobile.matches) {
-    mainMenuDropdown.css('width', viewPortWidth - 30)
+    mainMenuDropdown.style.width = (viewPortWidth - 30)
   } else if (mediaTablet.matches) {
-    mainMenuDropdown.css('width', viewPortWidth - 60)
+    mainMenuDropdown.style.width = (viewPortWidth - 60)
   } else {
-    mainMenuDropdown.css('width', 'auto')
+    mainMenuDropdown.style.width = auto
   }
 }
 
