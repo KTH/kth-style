@@ -106,15 +106,17 @@
                         }
 
                         &.parentLink {
-                          padding: 0 3px;
+                          padding: 0;
                           background: url('../img/kth-style/icons/arrow-black-left.svg') no-repeat left;
                           background-size: auto 12px;
+                          background-position-y: 7px;
                           margin-bottom: 10px;
 
                           a {
                             padding-left: $gutter;
                             font-family: $sansSerif;
                             font-size: $font-size-base;
+                            display: block;
                           }
                         }
                       }
@@ -205,6 +207,7 @@
             &.node {
               background: url('../img/kth-style/icons/arrow-black-right.svg') no-repeat right;
               background-size: auto 14px;
+              background-position: 100% 14px;
             }
           }
         }
