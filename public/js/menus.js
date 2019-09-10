@@ -87,21 +87,3 @@ window.addEventListener('load', function() {
     this.classList.toggle('open')
   }
 })
-
-var setMainMenuWith = function() {
-  var mediaMobile = window.matchMedia('(max-width: 767.98px)')
-  var mediaTablet = window.matchMedia('(min-width: 768px) and (max-width: 991.98px)')
-  var viewPortWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-  var mainMenuDropdown = document.querySelector('#mainMenu.col.navbar.navbar-expand-lg.navbar-light #navbarNav.navbar-collapse ul.nav')
-
-  if (mediaMobile.matches) {
-    mainMenuDropdown.style.width = (viewPortWidth - 30)
-  } else if (mediaTablet.matches) {
-    mainMenuDropdown.style.width = (viewPortWidth - 60)
-  } else {
-    mainMenuDropdown.style.width = auto
-  }
-}
-
-window.addEventListener('load', setMainMenuWith)
-window.addEventListener('resize', setMainMenuWith)
