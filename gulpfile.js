@@ -151,14 +151,10 @@ gulp.task(
   })
 )
 
-// Listen for changes and re-dist
-gulp.task(
-  'watch',
-  gulp.parallel(done => {
-    return gulp.watch(
-      ['public/sass/**/*.scss', 'public/css/**/*.scss', 'public/fonts/**/*.*', 'public/js/*.js'],
-      ['build'],
-      done()
-    )
-  })
-)
+// Listen for changes and re-build
+gulp.task('watch', () => {
+  return gulp.watch(
+    ['public/sass/**/*.scsss', 'public/css/**/*.scss', 'public/fonts/**/*.*', 'public/js/*.js'],
+    gulp.parallel('build')
+  )
+})
