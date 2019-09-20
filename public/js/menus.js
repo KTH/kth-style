@@ -9,70 +9,65 @@ window.addEventListener('load', function() {
   var mainMenu = document.getElementById('mainMenu') // Get main menu
   var megaMenu = document.getElementById('megaMenu') // Get mega menu
   var secondaryMenu = document.querySelector('.secondaryMenu') // Get secondary menu
-  // var mobileMenuWrapper = document.getElementById('mobileMenuWrapper') // Get mobile menu wrapper
-
-  var secondaryMenuWrapper = document.createElement('li')
-  secondaryMenuWrapper.className = 'secondaryMenuWrap'
-  var secondaryMenuContainer = document.createElement('ul')
-  secondaryMenuContainer.className = 'secondaryMenuContainer'
 
   if (!mainMenu && !megaMenu && !secondaryMenu) {
     document.getElementById('mobileMenuWrapper').style.display = 'none' // Hide mobile menu wrapper/container if there is no menus
   }
 
   if (mainMenu) {
-    var mainMenuItems = mainMenu.getElementsByTagName('li') // Get all links from main menu
-    createMobileMenuItems(mainMenuItems)
+    // For main menu items, copy a link if it exists, otherwise copy the link content
+    createMobileMenuItems(mainMenu.querySelectorAll('li'), true)
   } else if (megaMenu) {
-    var megaMenuItems = megaMenu.getElementsByTagName('li') // Get all links from megaMenu
-    createMobileMenuItems(megaMenuItems)
+    // For mega menu items, copy only the the first alinks
+    createMobileMenuItems(megaMenu.querySelectorAll('li'), false)
   }
   if (secondaryMenu) {
-    var secondaryMenuItems = secondaryMenu.getElementsByTagName('li') // Get all links from secondary menu
-    createMobileMenuItems(secondaryMenuItems, 'secondaryMenu')
+    createMobileMenuItemsForSecondaryMenu(secondaryMenu.querySelectorAll('li a'))
   }
 
-  function createMobileMenuItems(menuItems, menuType) {
-    // Function for creating mobile menu items of different types.
+  function createMobileMenuItems(menuItems, includeInline) {
     for (var i = 0; i < menuItems.length; i++) {
-      var listItem = document.createElement('li')
-
-      listItem.className = menuItems[i].className !== '' ? menuItems[i].className : 'nav-item'
-
-      // Create a link
-      var link = document.createElement('a')
-
-      if (menuItems[i].getElementsByTagName('a')[0] != null) {
-        link.href = menuItems[i].getElementsByTagName('a')[0].href
-        link.text = menuItems[i].getElementsByTagName('a')[0].text
-        if (menuItems[i].getElementsByTagName('a')[0].hreflang) {
-          link.hreflang = menuItems[i].getElementsByTagName('a')[0].hreflang
-        }
-        link.className = menuItems[i].getElementsByTagName('a')[0].className
-      }
-
-      if (menuType === 'secondaryMenu') {
-        var secondaryMenuListItem = document.createElement('li')
-        secondaryMenuListItem.className = 'item nav-item secondaryItem'
-        link.className = 'secondaryMenu'
-        secondaryMenuListItem.appendChild(link)
-        secondaryMenuContainer.appendChild(secondaryMenuListItem)
-      } else {
-        // Menu type is main menu or mega menu
-        var ancestor = document.createElement('span')
-        if (menuItems[i].getElementsByTagName('span')[0]) {
-          // If list item contains a span it is an ancestor item
-          ancestor.className = menuItems[i].getElementsByTagName('span')[0].className
-          ancestor.innerHTML = menuItems[i].getElementsByTagName('span')[0].innerHTML
-          listItem.appendChild(ancestor)
-        } else {
+      var linkToCopy = menuItems[i].querySelector('a')
+      if (linkToCopy || includeInline) {
+        var listItem = document.createElement('li')
+        listItem.className = menuItems[i].className !== '' ? menuItems[i].className : 'nav-item'
+        if (linkToCopy) {
+          var link = document.createElement('a')
+          link.href = linkToCopy.href
+          link.text = linkToCopy.text
+          link.className = linkToCopy.className
           listItem.appendChild(link)
+        } else if (includeInline) {
+          listItem.innerHTML = menuItems[i].innerHTML
         }
+        document.getElementById('mobileMenuList').appendChild(listItem)
       }
-      document.getElementById('mobileMenuList').appendChild(listItem) // Add menu item to the mobile menu list
     }
+  }
+
+  function createMobileMenuItemsForSecondaryMenu(menuItems) {
+    var secondaryMenuWrapper = document.createElement('li')
+    secondaryMenuWrapper.className = 'secondaryMenuWrap'
+    var secondaryMenuContainer = document.createElement('ul')
+    secondaryMenuContainer.className = 'secondaryMenuContainer'
+
+    for (var i = 0; i < menuItems.length; i++) {
+      var link = document.createElement('a')
+      link.className = 'secondaryMenu'
+      link.href = menuItems[i].href
+      link.text = menuItems[i].text
+      if (menuItems[i].hreflang) {
+        link.hreflang = menuItems[i].hreflang
+      }
+      var secondaryMenuListItem = document.createElement('li')
+      secondaryMenuListItem.className = 'item nav-item secondaryItem'
+
+      secondaryMenuListItem.appendChild(link)
+      secondaryMenuContainer.appendChild(secondaryMenuListItem)
+    }
+
     secondaryMenuWrapper.appendChild(secondaryMenuContainer)
-    document.getElementById('mobileMenuList').appendChild(secondaryMenuWrapper) // Add menu item to the mobile menu list
+    document.getElementById('mobileMenuList').appendChild(secondaryMenuWrapper)
   }
 
   // Mega menu icon toggler.
