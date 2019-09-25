@@ -16,6 +16,18 @@
   }
 }
 
+%icon-general-style {
+  content: '';
+  height: 1.2em;
+  width: 1.5em;
+  display: inline-block;
+}
+
+%arrow-icon {
+  @extend %icon-general-style;
+  background: url('../img/kth-style/icons/pill-back.svg') no-repeat;
+}
+
 .btn-secondary {
   @include btn-coloring-base($white, $lightGrey);
   color: $black;
@@ -49,6 +61,13 @@
     height: 1.2em;
   }
 }
+.link-to::after{
+  @extend %arrow-icon;
+  height: 1.5em;
+  margin: -.6em 0 .3em .3em;
+  vertical-align: middle;
+  transform: rotate(180deg);
+}
 
 .btn-info-modal {
   //change secondary to primary
@@ -60,4 +79,21 @@
   width: 1.3em;
   height: 1.3em;
   padding: 0;
+}
+
+.btn-back {
+  &::before {
+      @extend %arrow-icon;
+      filter: grayscale(.9) brightness(.5);
+      vertical-align: middle;
+      margin-top: .2em;
+  }
+}
+
+.btn-next {
+  &::after {
+    @extend %arrow-icon;
+    filter: brightness(15);
+    transform: rotate(180deg);
+  }
 }
