@@ -9,14 +9,17 @@
     "type": "git",
     "uri": "https://github.com/KTH/kth-style"
   },
+  "author": {
+    "name": "KTH",
+    "email": "infosys@kth.se",
+    "url": "https://github.com/KTH"
+  },
   "scripts": {
     "//": "Gulp installs css and javascript",
     "test": "echo \"ok\"",
     "build": "gulp build",
     "build-dev": "gulp watch",
     "prepare": "npm run build",
-    "preversion": "npm run test",
-    "postversion": "./scripts/version.sh",
     "sass-lint": "./node_modules/.bin/sass-lint --config ./.sass-lint.yml './public/sass/**/*.scss' --verbose --no-exit"
   },
   "dependencies": {
