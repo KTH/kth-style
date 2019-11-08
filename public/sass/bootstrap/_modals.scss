@@ -4,6 +4,11 @@
 
   .modal-content {
     border: 0;
+    margin-top: 3rem;
+  }
+
+  .modal-header {
+    flex-direction: column;
   }
 }
 
