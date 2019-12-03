@@ -105,3 +105,22 @@
     transform: rotate(180deg);
   }
 }
+
+.btn-upload-file { //totest
+  @extend %column;
+  input[type=file] {
+      filter: alpha(opacity=0);
+      opacity: 0;
+      border: 0;
+  }
+  span {
+      margin:0;
+      &::after {
+          @extend %icon-general-style;
+          vertical-align: bottom;
+          background: url('../img/kth-style/icons/file-upload-fa-solid.svg') no-repeat;
+          background-size: 1em;   
+          float: right;
+      }
+  }
+}
