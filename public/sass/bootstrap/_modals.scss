@@ -11,7 +11,7 @@
     flex-direction: column;
   }
 ///* * * * used by new react component  ButtonModal, example kursinfo-admin-web * * * */
-  .modal-header-h4 { // TODO: check if it can replace .modal-header styling
+  .modal-header .h-4 { // TODO: check if it can replace .modal-header styling
     flex-direction: row;
 
     h4 + .close {
