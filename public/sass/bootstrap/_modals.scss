@@ -21,6 +21,21 @@
   }
 }
 
+///* * * * Publish modal * * * */
+#publish {
+  .modal-header {
+      padding: 20px;
+  }
+  .modal-footer  {
+      button {
+          margin: 0;
+      }
+      button:last-of-type {
+          margin-left: 20px;
+      }
+  }
+}
+
 ///* * * * Personal toolbar override for modal behaviour * * * */
 
 @media only screen and (min-width: 1024px) {
