@@ -69,10 +69,10 @@
     height: 1.2em;
   }
 }
-.link-to::after{
+.link-to::after {
   @extend %arrow-icon;
   height: 1.5em;
-  margin: -.6em 0 .3em .3em;
+  margin: -0.6em 0 0.3em 0.3em;
   vertical-align: middle;
   transform: rotate(180deg);
 }
@@ -91,10 +91,10 @@
 
 .btn-back {
   &::before {
-      @extend %arrow-icon;
-      filter: grayscale(.9) brightness(.5);
-      vertical-align: middle;
-      margin-top: .2em;
+    @extend %arrow-icon;
+    filter: grayscale(0.9) brightness(0.5);
+    vertical-align: middle;
+    margin-top: 0.2em;
   }
 }
 
@@ -106,21 +106,22 @@
   }
 }
 
-.btn-upload-file { //totest
-  @extend %column;
-  input[type=file] {
-      filter: alpha(opacity=0);
-      opacity: 0;
-      border: 0;
+.btn-upload-file {
+  //totest
+  @extend %column !optional;
+  input[type='file'] {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    border: 0;
   }
   span {
-      margin:0;
-      &::after {
-          @extend %icon-general-style;
-          vertical-align: bottom;
-          background: url('../img/kth-style/icons/file-upload-fa-solid.svg') no-repeat;
-          background-size: 1em;   
-          float: right;
-      }
+    margin: 0;
+    &::after {
+      @extend %icon-general-style;
+      vertical-align: bottom;
+      background: url('../img/kth-style/icons/file-upload-fa-solid.svg') no-repeat;
+      background-size: 1em;
+      float: right;
+    }
   }
 }
