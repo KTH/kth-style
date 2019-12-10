@@ -117,7 +117,9 @@
   vertical-align: baseline;
 }
 
-th > button.btn-info-modal {
+th > button.btn-info-modal, 
+td > button.btn-info-modal,
+td > span > button.btn-info-modal {
   @extend %table-info-icon-for-popup;
   margin-left: 0;
   vertical-align: middle;
