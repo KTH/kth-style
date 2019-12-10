@@ -119,6 +119,8 @@
 
 th > button.btn-info-modal {
   @extend %table-info-icon-for-popup;
+  margin-left: 0;
+  vertical-align: middle;
 }
 
 .btn-back {
