@@ -23,6 +23,17 @@
   display: inline-block;
 }
 
+%table-info-icon-for-popup {
+  height: 1.2em; 
+  width: 1.2em;
+  border: solid .8px $white;
+  filter: grayscale(1) brightness(88%) contrast(2);
+  &:focus, :hover {
+      outline: 0; 
+      filter: grayscale(1) brightness(90%) contrast(2);
+  }
+}
+
 %arrow-icon {
   @extend %icon-general-style;
   background: url('../img/kth-style/icons/pill-back.svg') no-repeat;
@@ -104,6 +115,9 @@
   height: 1.3em;
   padding: 0;
   vertical-align: baseline;
+}
+th > .btn-info-modal {
+  @extend %table-info-icon-for-popup;
 }
 
 .btn-back {
