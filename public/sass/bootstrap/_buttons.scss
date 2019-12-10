@@ -77,6 +77,21 @@
   transform: rotate(180deg);
 }
 
+.pdf-link {
+  margin: 0;
+  @media (min-width: 768px) {
+      margin: 0 1.5em 0 1em;
+  }
+  &:before {
+      @extend %icon-general-style;
+      background: url('../img/kth-style/icons/file-pdf-fa-regular.svg') no-repeat;
+      height: 1.3em;
+      width: 1.3em;
+      margin: .5em .4em .6em .4em;
+      vertical-align: middle;
+  }
+}
+
 .btn-info-modal {
   //change secondary to primary
   background: url('../img/kth-style/icons/modal-info.svg') no-repeat;
