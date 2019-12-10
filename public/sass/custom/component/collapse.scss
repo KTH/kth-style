@@ -14,6 +14,7 @@
 .card {
   &.collapsible {
     border: 0;
+    cursor: pointer;
 
     .card-header {
       border-radius: 0.25rem;
@@ -27,6 +28,7 @@
         font-weight: 600;
         text-overflow: ellipsis;
         text-align: left;
+        text-decoration: none;
         overflow: hidden;
 
         &:before {
@@ -59,7 +61,7 @@
       }
     }
 
-    &.white {
+    &.white, &.collapse > &.white {
       .card-header {
         background-color: $white;
 
