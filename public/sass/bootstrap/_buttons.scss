@@ -119,9 +119,10 @@
   &::after {
     @extend %icon-general-style;
     background: url('../img/kth-style/icons/pill-back-white.svg') no-repeat;
+    height: 1em;
     transform: rotate(180deg);
     vertical-align: middle;
-    margin: 0 .3em .3em;
+    margin-left: .3em;
   }
 }
 
