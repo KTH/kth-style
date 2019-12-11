@@ -29,6 +29,7 @@
   border: solid .8px $white;
   filter: grayscale(1) brightness(88%) contrast(2);
   &:focus, :hover {
+      border: solid .8px $white;
       outline: 0; 
       filter: grayscale(1) brightness(90%) contrast(2);
   }
