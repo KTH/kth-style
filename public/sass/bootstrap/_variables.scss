@@ -4,7 +4,6 @@
 
 // Values in node_modules/bootstrap/scss/_varables to override
 
-
 @import '../variables/colors';
 @import '../variables/sizes';
 @import '../variables/fonts';
@@ -56,6 +55,6 @@ $table-head-color: $black;
 // Gutter
 $gutter: 15px;
 
-// Inputs 
+// Inputs
 $input-bg: $lightGrey;
-$input-border-color: $inputBorderGrey;
+$input-border-color: $borderGrey;
