@@ -2,6 +2,21 @@
 
 .form-group {
   margin-bottom: 1rem;
+
+  .form-control-label {
+    @include t11;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  &.form-check {
+    margin-top: 1rem;
+
+    .form-control-label {
+      @include t11;
+    }
+  }
 }
 
 label {
@@ -47,6 +62,17 @@ input {
     height: 38px;
     width: 100%;
     padding: 6px 10px;
+  }
+
+  &.form-control {
+    font-size: 1rem;
+    border: 1px solid #d4d4d4;
+    background: #f6f6f6;
+    color: $black;
+
+    &[readonly] {
+      border: none;
+    }
   }
 }
 
