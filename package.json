@@ -21,10 +21,14 @@
   "scripts": {
     "//": "Gulp installs css and javascript",
     "test": "echo \"ok\"",
-    "build": "gulp build",
-    "build-dev": "gulp watch",
+    "build": "rm -rf dist  && npm run build-js-sass && npm run create-compatibility-links && npm run copy-statics && npm run create-zip",
+    "build-dev": "parcel watch -d dist ./public/sass/kth-bootstrap.scss ./public/js/*.js",
     "prepare": "npm run build",
-    "sass-lint": "./node_modules/.bin/sass-lint --config ./.sass-lint.yml './public/sass/**/*.scss' --verbose --no-exit"
+    "sass-lint": "./node_modules/.bin/sass-lint --config ./.sass-lint.yml './public/sass/**/*.scss' --verbose --no-exit",
+    "build-js-sass": "parcel build -d dist --no-content-hash  ./public/sass/kth-bootstrap.scss && parcel build -d dist ./public/js/*.js ",
+    "copy-statics": "mkdir -p dist/js dist/img && cp ./node_modules/bootstrap/dist/js/bootstrap.min.js ./dist/js && cp -r ./public/img/* dist/img",
+    "create-compatibility-links": "./create-compatibility-links.sh",
+    "create-zip": "rm -f dist/kth-style-scss.zip && find ./node_modules -name \"*.scss\" | xargs zip -r dist/kth-style-scss -@ && (cd ./public/sass && find . -name \"*.scss\" | xargs zip -r ../../dist/kth-style-scss -@ )&& (cd ./dist && find ./img | xargs zip -r kth-style-scss -@ )"
   },
   "dependencies": {
     "bootstrap": "4.4.1",
@@ -71,6 +75,7 @@
     "kth-node-build-commons": "^4.1.0",
     "mocha": "^7.1.2",
     "node-sass": "^4.14.1",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^2.0.5",
     "pretty-quick": "2.0.1",
     "sass-lint": "^1.13.1",
@@ -91,5 +96,10 @@
     "semi": false,
     "singleQuote": true,
     "printWidth": 120
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "not dead",
+    "IE 11"
+  ]
 }
