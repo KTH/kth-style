@@ -2,6 +2,8 @@
 @import '../../variables/spacings';
 @import '../../variables/sizes';
 @import '../../variables/fonts';
+@import '../../variables/_svg_data';
+
 // sass-lint:disable no-mergeable-selectors
 
 .block {
@@ -163,7 +165,7 @@
                               position: absolute;
                               right: $gutter;
                               top: $gutter;
-                              background: url('../img/kth-style/input-clear-gray.svg') no-repeat transparent;
+                              background: $data-input-clear-gray-svg no-repeat transparent;
                               border: 0;
                               background-size: contain;
                               height: 15px;

@@ -1,0 +1,21 @@
+{
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "import/newline-after-import": 0,
+    "semi": ["error", "never"],
+    "global-require": "off",
+    "prefer-template": "off",
+    "import/order": "off",
+    "quotes": [1, "single", "avoid-escape"],
+    "no-underscore-dangle": "off",
+    "react/prop-types": "off",
+    "array-callback-return": "off",
+    "sort-imports": 0,
+    "strict": "off"
+  }
+}

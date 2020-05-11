@@ -2,6 +2,7 @@
 @import '../../variables/spacings';
 @import '../../variables/sizes';
 @import '../../variables/fonts';
+@import '../../variables/_svg_data';
 // sass-lint:disable no-mergeable-selectors
 
 #mainMenu {
@@ -107,7 +108,7 @@
 
                         &.parentLink {
                           padding: 0;
-                          background: url('../img/kth-style/icons/arrow-black-left.svg') no-repeat left;
+                          background: $data-arrow-black-left-svg no-repeat left;
                           background-size: auto 12px;
                           background-position-y: 7px;
                           margin-bottom: 10px;
@@ -136,7 +137,7 @@
                                 background-position-y: 14px;
 
                                 &.expanded {
-                                  background: url('../img/kth-style/icons/arrow-black-down.svg') no-repeat right;
+                                  background: $data-arrow-black-down-svg no-repeat right;
                                   background-size: 14px 14px;
                                   background-position: 100% 14px;
                                 }
@@ -205,7 +206,7 @@
             }
 
             &.node {
-              background: url('../img/kth-style/icons/arrow-black-right.svg') no-repeat right;
+              background: $data-arrow-black-right-svg no-repeat right;
               background-size: auto 14px;
               background-position: 100% 14px;
             }

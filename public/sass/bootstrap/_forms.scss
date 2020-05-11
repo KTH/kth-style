@@ -1,4 +1,5 @@
 //  Bootstrap overrides for forms
+@import '../variables/_svg_data';
 
 .form-group {
   margin-bottom: 1rem;
@@ -138,7 +139,7 @@ input {
           position: absolute;
           left: 0;
           top: 2px;
-          background: url('../img/kth-style/icons/check-mark.svg');
+          background: $data-check-mark-svg;
           background-repeat: no-repeat;
           background-position: center;
           background-size: 17px 17px;
@@ -200,7 +201,7 @@ input {
       bottom: 0;
       padding: 0 1em;
       pointer-events: none;
-      background: $blue url('../img/kth-style/icons/arrow-white-down.svg') no-repeat center;
+      background: $blue $data-arrow-white-down-svg no-repeat center;
       background-size: 14px 7px;
       display: inline-block;
     }

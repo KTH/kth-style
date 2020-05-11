@@ -2,7 +2,7 @@
 
 @import '../common/icons';
 @import '../../variables/colors';
-
+@import '../../variables/_svg_data';
 @mixin iconCommon {
   font-size: 1.5rem;
   line-height: 1.2rem;
@@ -61,7 +61,8 @@
       }
     }
 
-    &.white, &.collapse > &.white {
+    &.white,
+    &.collapse > &.white {
       .card-header {
         background-color: $white;
 
@@ -69,7 +70,7 @@
           color: $black;
 
           &:before {
-            background-image: url('../img/kth-style/icons/arrow-black-right.svg');
+            background-image: $data-arrow-black-right-svg;
           }
         }
       }

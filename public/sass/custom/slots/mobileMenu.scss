@@ -2,6 +2,8 @@
 @import '../../variables/spacings';
 @import '../../variables/sizes';
 @import '../../variables/fonts';
+@import '../../variables/_svg_data';
+
 // sass-lint:disable no-mergeable-selectors
 
 #nav-icon {
@@ -164,12 +166,12 @@
                     }
 
                     &.node {
-                      background: url('../img/kth-style/icons/arrow-black-right.svg') no-repeat right;
+                      background: $data-arrow-black-right-svg no-repeat right;
                       background-size: auto 12px;
                       background-position: 100% 14px;
 
                       &.expanded {
-                        background: url('../img/kth-style/icons/arrow-black-down.svg') no-repeat right;
+                        background: $data-arrow-black-down-svg no-repeat right;
                         background-size: 12px 12px;
                         background-position: 100% 14px;
                         padding-right: 0;
@@ -203,7 +205,7 @@
                   padding: 0;
                   margin-left: 10px;
                   margin-right: 45px;
-                  background: url('../img/kth-style/icons/arrow-black-left.svg') no-repeat left;
+                  background: $data-arrow-black-left-svg no-repeat left;
                   background-size: auto 12px;
                   background-position-y: 7px;
 
@@ -280,7 +282,7 @@
                   }
 
                   &.node {
-                    background: url('../img/kth-style/icons/arrow-black-right.svg') no-repeat right;
+                    background: $data-arrow-black-right-svg no-repeat right;
                     background-size: auto 12px;
                     background-position: 100% 14px;
                   }
@@ -333,7 +335,7 @@
                         a[hreflang='en-UK'],
                         a[hreflang='sv-SE'] {
                           &.secondaryMenu {
-                            background: url('../img/kth-style/icons/globe-white.svg') no-repeat right;
+                            background: $data-globe-white-svg no-repeat right;
 
                             background-size: 18px;
                             padding-right: 22px;
