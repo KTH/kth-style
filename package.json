@@ -3,6 +3,7 @@
   "name": "kth-style",
   "version": "4.3.1",
   "description": "KTH CSS. A custom build of Bootstrap 4. The purpose of this project is to provide the essential design and style for applications within KTH and make the development process of these applications faster.",
+  "automaticPublish": true,
   "private": false,
   "license": "MIT",
   "repository": {
@@ -27,7 +28,7 @@
     "lint": "eslint \"public/**/*.{js,jsx}\" --quiet",
     "lint-v": "eslint \"public/**/*.{js,jsx}\" ",
     "sass-lint": "./node_modules/.bin/sass-lint --config ./.sass-lint.yml './public/sass/**/*.scss' --verbose --no-exit",
-    "build-js-sass": "parcel build -d dist --no-content-hash  ./public/sass/kth-bootstrap.scss && parcel build -d dist ./public/js/*.js ",
+    "build-js-sass": "parcel build --no-source-maps -d dist --no-content-hash  ./public/sass/kth-bootstrap.scss && parcel build --no-source-maps -d dist ./public/js/*.js ",
     "copy-statics": "mkdir -p dist/js dist/img && cp ./node_modules/bootstrap/dist/js/bootstrap.min.js ./dist/js && cp -r ./public/img/* dist/img",
     "create-compatibility-links": "./create-compatibility-links.sh",
     "create-zip": "rm -f dist/kth-style-scss.zip && find ./node_modules -name \"*.scss\" | xargs zip -r dist/kth-style-scss -@ && (cd ./public/sass && find . -name \"*.scss\" | xargs zip -r ../../dist/kth-style-scss -@ )&& (cd ./dist && find ./img | xargs zip -r kth-style-scss -@ )",
