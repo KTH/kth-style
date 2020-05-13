@@ -16,6 +16,9 @@ ICONS="public/img/kth-style/icons/pill-back.svg \
 public/img/kth-style/icons/file-pdf-fa-regular.svg \
 public/img/kth-style/icons/globe.svg \
 public/img/kth-style/icons/globe-white.svg \
+public/img/kth-style/icons/alert-attention.svg \
+public/img/kth-style/icons/alert-info.svg \
+public/img/kth-style/icons/alert-success.svg \
 public/img/kth-style/icons/arrow-black-right.svg \
 public/img/kth-style/icons/arrow-black-left.svg \
 public/img/kth-style/icons/arrow-black-down.svg \

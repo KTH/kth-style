@@ -1,5 +1,7 @@
 //  Bootstrap overrides for alert
 
+@import '../variables/_svg_data';
+
 .alert > :last-child {
   margin-bottom: 0;
 }
@@ -9,22 +11,25 @@ $alert-styles: (
     'bgColor': $infoYellow,
     'borderColor': $infoYellowBorder,
     'iconUrl': '/img/kth-style/icons/alert-info.svg',
+    'iconData': $data-alert-info-svg,
   ),
   'danger': (
     'bgColor': $infoRed,
     'borderColor': $infoRedBorder,
     'iconUrl': '/img/kth-style/icons/alert-attention.svg',
+    'iconData': $data-alert-attention-svg,
   ),
   'success': (
     'bgColor': $infoGreen,
     'borderColor': $infoGreenBorder,
     'iconUrl': '/img/kth-style/icons/alert-success.svg',
+    'iconData': $data-alert-success-svg,
   ),
 );
 
 @each $color, $value in $alert-styles {
   .alert-#{$color} {
-    @include alert-variant(map-get($value, 'bgColor'), map-get($value, 'borderColor'), map-get($value, 'iconUrl'));
+    @include alert-variant(map-get($value, 'bgColor'), map-get($value, 'borderColor'), map-get($value, 'iconData'));
   }
 }
 
@@ -33,10 +38,10 @@ $alert-styles: (
   width: 100%;
   margin: 0 0 50px 0;
   p {
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      margin-top: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 0;
   }
 }
 .alert.alert-success {

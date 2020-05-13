@@ -1,4 +1,4 @@
-@mixin alert-variant($background, $border, $iconUrl) {
+@mixin alert-variant($background, $border, $iconData) {
   color: $black;
   font-size: 1.2rem;
   min-height: 4.4rem;
@@ -36,6 +36,6 @@
     top: 0.2em;
     left: 0.2em;
     width: 2em;
-    content: url(#{'../'+$iconUrl});
+    content: $iconData;
   }
 }
