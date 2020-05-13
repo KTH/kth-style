@@ -84,7 +84,7 @@
           color: $white;
 
           &:before {
-            background-image: url('../img/kth-style/icons/arrow-white-right.svg');
+            background-image: $data-arrow-white-right-svg;
           }
         }
       }
