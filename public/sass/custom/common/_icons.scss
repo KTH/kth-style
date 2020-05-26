@@ -1,28 +1,28 @@
-@mixin fileIcon($icon) {
+@mixin fileIcon($icon, $path: '../kth-style/img/kth-style/icons') {
   content: '';
   height: 19px;
   width: 19px;
   display: inline-block;
   margin-right: 1px;
   margin-bottom: -3px;
-  background-image: url(#{'../kth-style/img/kth-style/icons/#{$icon}.svg'});
+  background-image: url(#{'#{$path}/#{$icon}.svg'});
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-@mixin fileLinkIcon($suffix, $icon) {
+@mixin fileLinkIcon($suffix, $icon, $path) {
   a[href$='.#{$suffix}']::before {
-    @include fileIcon($icon);
+    @include fileIcon($icon, $path);
   }
 }
 
-@mixin allFileLinkIcons {
-  @include fileLinkIcon('xls', 'file-excel-fa-solid');
-  @include fileLinkIcon('xlsx', 'file-excel-fa-solid');
-  @include fileLinkIcon('ppt', 'file-powerpoint-fa-solid');
-  @include fileLinkIcon('pptx', 'file-powerpoint-fa-solid');
-  @include fileLinkIcon('doc', 'file-word-fa-solid');
-  @include fileLinkIcon('docx', 'file-word-fa-solid');
-  @include fileLinkIcon('pdf', 'file-pdf-fa-solid');
-  @include fileLinkIcon('zip', 'file-archive-fa-solid');
+@mixin allFileLinkIcons($path: '../kth-style/img/kth-style/icons') {
+  @include fileLinkIcon('xls', 'file-excel-fa-solid', $path);
+  @include fileLinkIcon('xlsx', 'file-excel-fa-solid', $path);
+  @include fileLinkIcon('ppt', 'file-powerpoint-fa-solid', $path);
+  @include fileLinkIcon('pptx', 'file-powerpoint-fa-solid', $path);
+  @include fileLinkIcon('doc', 'file-word-fa-solid', $path);
+  @include fileLinkIcon('docx', 'file-word-fa-solid', $path);
+  @include fileLinkIcon('pdf', 'file-pdf-fa-solid', $path);
+  @include fileLinkIcon('zip', 'file-archive-fa-solid', $path);
 }
