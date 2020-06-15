@@ -5,7 +5,7 @@
 /* eslint-disable  no-plusplus */
 /* eslint-disable  no-undef */
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   var mainMenu = document.getElementById('mainMenu') // Get main menu
   var megaMenu = document.getElementById('megaMenu') // Get mega menu
   var secondaryMenu = document.querySelector('.secondaryMenu') // Get secondary menu
@@ -71,7 +71,7 @@ window.addEventListener('load', function() {
   }
 
   // Mega menu icon toggler.
-  document.getElementById('nav-icon').onclick = function() {
+  document.getElementById('nav-icon').onclick = function () {
     if (document.body.style.overflow !== 'hidden') {
       document.body.style.overflow = 'hidden'
     } else {
