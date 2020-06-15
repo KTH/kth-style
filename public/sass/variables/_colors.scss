@@ -21,7 +21,7 @@ $infoGreen: #dff0d8;
 // Red
 $red: #b10e1e;
 $lightRedHover: #8e0b18;
-$infoRed: #f2dede;
+$infoRed: #f5e6e6;
 
 // Yellow
 $infoYellow: #fcf8e3;
@@ -44,6 +44,6 @@ $lightPink: #d95999;
 $mediumPink: #d95999;
 $infoRedIcon: #e01f28;
 $infoGreenIcon: #62922e;
-$infoYellowBorder: #fcf8e3;
-$infoRedBorder: #f2dede;
-$infoGreenBorder: #dff0d8;
+$infoYellowBorder: $infoYellow;
+$infoRedBorder: $infoRed;
+$infoGreenBorder: $infoGreen;
