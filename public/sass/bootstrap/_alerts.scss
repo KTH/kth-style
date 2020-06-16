@@ -40,19 +40,16 @@
 $alert-styles: (
   'info': (
     'bgColor': $infoYellow,
-    'borderColor': $infoYellowBorder,
     'iconUrl': '/img/kth-style/icons/alert-info.svg',
     'iconData': $data-alert-info-svg,
   ),
   'danger': (
     'bgColor': $infoRed,
-    'borderColor': $infoRedBorder,
     'iconUrl': '/img/kth-style/icons/alert-attention.svg',
     'iconData': $data-alert-attention-svg,
   ),
   'success': (
     'bgColor': $infoGreen,
-    'borderColor': $infoGreenBorder,
     'iconUrl': '/img/kth-style/icons/alert-success.svg',
     'iconData': $data-alert-success-svg,
   ),
@@ -60,6 +57,6 @@ $alert-styles: (
 
 @each $color, $value in $alert-styles {
   .alert-#{$color} {
-    @include alert-variant(map-get($value, 'bgColor'), map-get($value, 'borderColor'), map-get($value, 'iconData'));
+    @include alert-variant(map-get($value, 'bgColor'), map-get($value, 'iconData'));
   }
 }

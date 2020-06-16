@@ -1,4 +1,4 @@
-@mixin alert-variant($background, $border, $iconData) {
+@mixin alert-variant($background, $iconData) {
   color: $black;
   font-size: 1.2rem;
   min-height: 4.4rem;
@@ -6,7 +6,6 @@
   position: relative;
   padding: 1.2rem 2.2rem 1rem 5.4rem;
   background-color: $background;
-  border: solid 1px $border;
 
   p:last-of-type,
   span:last-child,

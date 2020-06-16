@@ -60,7 +60,7 @@
 }
 
 .btn-danger {
-  @include btn-coloring-base($red, $lightRedHover);
+  @include btn-coloring-base($red, $redHover);
 }
 
 .btn-link {
