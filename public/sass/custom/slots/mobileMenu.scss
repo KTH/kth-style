@@ -333,6 +333,7 @@
                         }
 
                         a[hreflang='en-UK'],
+                        a[hreflang='en-GB'],
                         a[hreflang='sv-SE'] {
                           &.secondaryMenu {
                             background: $data-globe-white-svg no-repeat right;
