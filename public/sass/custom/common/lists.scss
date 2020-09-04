@@ -3,6 +3,11 @@
   padding-left: 0;
   margin: 0;
 
+  li {
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
   .courses {
     &::before {
       content: url('../img/kth-style/icons/clock_grey_25.svg');
