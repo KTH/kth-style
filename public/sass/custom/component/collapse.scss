@@ -16,6 +16,51 @@
     border: 0;
     cursor: pointer;
 
+    button.card-header {
+      border-radius: 0.25rem;
+      border-bottom: 0;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      font-size: 16px;
+      font-weight: 600;
+      text-overflow: ellipsis;
+      text-align: left;
+      text-decoration: none;
+      overflow: hidden;
+      background-color: transparent;
+      color: white;
+      border: none;
+      width: 100%;
+
+      &:before {
+        content: '';
+        height: 14px;
+        width: 14px;
+        display: inline-block;
+        margin: auto;
+        margin-bottom: -1px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 0.6rem;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &[aria-expanded~='false'] {
+        &:before {
+          animation: rotateUp 0.3s ease-in-out forwards;
+        }
+      }
+
+      &[aria-expanded~='true'] {
+        &:before {
+          animation: rotateDown 0.3s ease-in-out forwards;
+        }
+      }
+    }
+
     .card-header {
       border-radius: 0.25rem;
       border-bottom: 0;
@@ -23,13 +68,17 @@
       padding-top: 7px;
       padding-bottom: 7px;
 
-      a {
+      a,
+      button {
         font-size: 16px;
         font-weight: 600;
         text-overflow: ellipsis;
         text-align: left;
         text-decoration: none;
         overflow: hidden;
+        background-color: transparent;
+        color: white;
+        border: none;
 
         &:before {
           content: '';
@@ -47,13 +96,13 @@
           }
         }
 
-        &[aria-expanded~='false'][load~='false'] {
+        &[aria-expanded~='false'] {
           &:before {
             animation: rotateUp 0.3s ease-in-out forwards;
           }
         }
 
-        &[aria-expanded~='true'][load~='false'] {
+        &[aria-expanded~='true'] {
           &:before {
             animation: rotateDown 0.3s ease-in-out forwards;
           }
@@ -63,10 +112,20 @@
 
     &.white,
     &.collapse > &.white {
+      button.card-header {
+        background-color: $white;
+        color: $black;
+
+        &:before {
+          background-image: $data-arrow-black-right-svg;
+        }
+      }
+
       .card-header {
         background-color: $white;
 
-        a {
+        a,
+        button {
           color: $black;
 
           &:before {
@@ -77,10 +136,20 @@
     }
 
     &.blue {
+      button.card-header {
+        background-color: $blue;
+        color: $white;
+
+        &:before {
+          background-image: $data-arrow-white-right-svg;
+        }
+      }
+
       .card-header {
         background-color: $blue;
 
-        a {
+        a,
+        button {
           color: $white;
 
           &:before {
