@@ -24,6 +24,8 @@ public/img/kth-style/icons/arrow-black-left.svg \
 public/img/kth-style/icons/arrow-black-down.svg \
 public/img/kth-style/icons/arrow-white-down.svg \
 public/img/kth-style/icons/arrow-white-right.svg \
+public/img/kth-style/icons/arrow-blue-down.svg \
+public/img/kth-style/icons/arrow-blue-right.svg \
 public/img/kth-style/icons/check-mark.svg \
 public/img/kth-style/icons/modal-info.svg \
 public/img/kth-style/icons/pill-back-white.svg \

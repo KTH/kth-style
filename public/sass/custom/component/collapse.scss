@@ -1,6 +1,3 @@
-// Boostrap Collapse / Panel headings / Rubriklister
-
-@import '../common/icons';
 @import '../../variables/colors';
 @import '../../variables/_svg_data';
 @mixin iconCommon {
@@ -10,6 +7,84 @@
   text-decoration: none;
   vertical-align: middle;
 }
+
+@keyframes rotateDown {
+  100% {
+    transform: rotate(90deg);
+    transform-origin: 22% 40%;
+  }
+}
+
+@keyframes rotateUp {
+  0% {
+    transform: rotate(90deg);
+    transform-origin: 22% 40%;
+  }
+}
+
+// Collapse with <details> and <summary> tags
+details {
+  &[open] {
+    summary {
+      &:before {
+        animation: rotateDown 0.3s ease-in-out forwards;
+      }
+    }
+  }
+
+  summary {
+    padding: 7px 20px 7px 20px;
+    font-size: 16px;
+    border-radius: 0.25rem;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      height: 14px;
+      width: 14px;
+      display: inline-block;
+      margin: auto;
+      margin-bottom: -1px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 0.6rem;
+      animation: rotateUp 0.3s ease-in-out forwards;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &.blue {
+      background-color: $blue;
+      color: $white;
+      font-weight: 600;
+
+      &:before {
+        background-image: $data-arrow-white-right-svg;
+      }
+    }
+
+    &.white {
+      background-color: $white;
+      color: $linkBlue;
+      padding-left: 0;
+
+      &:before {
+        background-image: $data-arrow-blue-right-svg;
+      }
+    }
+  }
+
+  p {
+    padding: 1.25rem;
+  }
+}
+
+// Old and deprecated collapse
 
 .card {
   &.collapsible {
