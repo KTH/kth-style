@@ -39,6 +39,7 @@
 
 %arrow-icon {
   @extend %icon-general-style;
+  // DEPRECATED pill-back.svg
   background: $data-pill-back-svg no-repeat;
 }
 
@@ -77,6 +78,7 @@
 
 .link-back {
   &::before {
+    // DEPRECATED pill-back.svg
     content: $data-pill-back-svg;
     margin-right: 0.5em;
     vertical-align: bottom;
@@ -140,6 +142,7 @@ td > span > button.btn-info-modal {
 .btn-next {
   &::after {
     @extend %icon-general-style;
+    // DEPRECATED pill-back-white.svg
     background: $data-pill-back-white-svg no-repeat;
     height: 1em;
     transform: rotate(180deg);
