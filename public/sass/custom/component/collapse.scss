@@ -36,7 +36,8 @@ details {
     padding: 7px 20px 7px 20px;
     font-size: 16px;
     border-radius: 0.25rem;
-
+    list-style: none;
+    // Chrome specific due to no support for list-style: none on summary tag.
     &::-webkit-details-marker {
       display: none;
     }
