@@ -24,6 +24,7 @@
 
 // Collapse with <details> and <summary> tags
 details {
+  margin-bottom: 1.875rem;
   &[open] {
     summary {
       &:before {
@@ -32,9 +33,13 @@ details {
     }
   }
 
+  *:nth-child(2) {
+    margin-top: 1.25rem;
+  }
+
   summary {
-    padding: 7px 20px 7px 20px;
-    font-size: 16px;
+    padding: 0.438rem 1.25rem 0.438rem 1.25rem;
+    font-size: 1rem;
     border-radius: 0.25rem;
     list-style: none;
     // Chrome specific due to no support for list-style: none on summary tag.
@@ -44,8 +49,8 @@ details {
 
     &:before {
       content: '';
-      height: 14px;
-      width: 14px;
+      height: 0.875rem;
+      width: 0.875rem;
       display: inline-block;
       margin: auto;
       margin-bottom: -1px;
@@ -79,13 +84,9 @@ details {
       }
     }
   }
-
-  p {
-    padding: 1.25rem;
-  }
 }
 
-// Old and deprecated collapse
+// DEPRECATED - Old and deprecated collapse styling
 
 .card {
   &.collapsible {
