@@ -216,3 +216,15 @@ input {
     }
   }
 }
+
+fieldset {
+  legend {
+    font-family: $open-sans;
+    font-size: 1rem;
+    color: $black;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+}
