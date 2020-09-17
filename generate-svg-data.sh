@@ -12,6 +12,7 @@ do
   echo ''>> ${OUTFILE}
 done
 
+# DEPRECATED pill-back.svg, pill-back-white.svg
 ICONS="public/img/kth-style/icons/pill-back.svg \
 public/img/kth-style/icons/file-pdf-fa-regular.svg \
 public/img/kth-style/icons/globe.svg \

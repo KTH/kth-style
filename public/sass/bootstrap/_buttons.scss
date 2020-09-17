@@ -108,6 +108,19 @@
   }
 }
 
+.pdf-post-link {
+  margin: 0;
+
+  &:after {
+    @extend %icon-general-style;
+    background: $data-file-pdf-fa-regular-svg no-repeat;
+    height: 1.3em;
+    width: 1.3em;
+    margin: 0.5em 0.4em 0.6em;
+    vertical-align: middle;
+  }
+}
+
 .btn-info-modal {
   //change secondary to primary
   background: $data-modal-info-svg no-repeat;
