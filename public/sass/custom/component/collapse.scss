@@ -26,7 +26,7 @@
 details {
   margin-bottom: 1.875rem;
   &[open] {
-    summary {
+    > summary {
       &:before {
         animation: rotateDown 0.3s ease-in-out forwards;
       }
@@ -38,6 +38,7 @@ details {
     font-size: 1rem;
     border-radius: 0.25rem;
     list-style: none;
+
     // Chrome specific due to no support for list-style: none on summary tag.
     &::-webkit-details-marker {
       display: none;
