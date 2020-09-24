@@ -1,12 +1,26 @@
 .pageTitle {
-    margin: 20px 0 0 0;
-    h1 {
-        margin-bottom: 0;
-    }
-    h1 + div, h1 + h4 {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 44px;
-        margin-top: 4px;
-    }
+  margin: 20px 0 0 0;
+  h1 {
+    margin-bottom: 0;
+  }
+  h1 + div,
+  h1 + h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 44px;
+    margin-top: 4px;
+  }
+}
+
+h1 {
+  &#page-heading {
+    margin-bottom: 0;
+  }
+}
+
+p {
+  &#page-sub-heading {
+    @include t4;
+    margin-top: 0.325rem;
+  }
 }
