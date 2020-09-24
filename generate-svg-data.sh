@@ -31,7 +31,11 @@ public/img/kth-style/icons/check-mark.svg \
 public/img/kth-style/icons/modal-info.svg \
 public/img/kth-style/icons/pill-back-white.svg \
 public/img/kth-style/icons/file-upload-fa-solid.svg \
-public/img/kth-style/icons/external-link.svg"
+public/img/kth-style/icons/external-link.svg \
+public/img/kth-style/icons/arrow-long-black-right.svg \
+public/img/kth-style/icons/arrow-long-blue-left.svg \
+public/img/kth-style/icons/arrow-long-blue-right.svg \
+public/img/kth-style/icons/arrow-long-white-right.svg"
 
 for f in ${ICONS}
 do
