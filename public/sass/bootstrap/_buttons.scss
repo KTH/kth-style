@@ -42,9 +42,10 @@
   background: $data-arrow-long-blue-right-svg no-repeat;
 }
 
-.btn-primary,
-.btn-success {
-  .arrow {
+.btn-primary.arrow,
+.btn-success.arrow {
+  &::after {
+    content: '';
     background: $data-arrow-long-white-right-svg no-repeat 0.3rem 0;
     background-size: 0.875rem 0.875rem;
     vertical-align: middle;
@@ -53,6 +54,7 @@
     display: inherit;
     position: relative;
     top: 2px;
+    left: 4px;
   }
 }
 
@@ -68,15 +70,19 @@
     color: $black;
   }
 
-  .arrow {
-    background: $data-arrow-long-black-right-svg no-repeat 0.3rem 0;
-    background-size: 0.875rem 0.875rem;
-    vertical-align: middle;
-    width: 1.25rem;
-    height: 1.25rem;
-    display: inherit;
-    position: relative;
-    top: 2px;
+  &.arrow {
+    &::after {
+      content: '';
+      background: $data-arrow-long-black-right-svg no-repeat 0.3rem 0;
+      background-size: 0.875rem 0.875rem;
+      vertical-align: middle;
+      width: 1.25rem;
+      height: 1.25rem;
+      display: inherit;
+      position: relative;
+      top: 2px;
+      left: 4px;
+    }
   }
 }
 
