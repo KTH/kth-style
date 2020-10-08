@@ -3,10 +3,12 @@
 // This is the root scss file for the bootstrap distribution. The entry point for
 // the gulp sass build.
 
-//
+// KTH variables (added here so you can use kth-base-template.scss separately in your application)
 @import 'variables/colors';
 @import 'variables/sizes';
+@import 'variables/spacings';
 @import 'variables/fonts';
+@import 'variables/_svg_data';
 
 // Overrides style values in bootstraps sass files
 @import './bootstrap/variables';
@@ -47,9 +49,12 @@
 @import 'node_modules/bootstrap/scss/carousel';
 @import 'node_modules/bootstrap/scss/utilities';
 @import 'node_modules/bootstrap/scss/print';
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/root';
 
 // Custom components
-
 @import 'bootstrap/containers';
 @import 'bootstrap/mixins/alert';
 @import 'bootstrap/alerts';
@@ -68,5 +73,14 @@
 @import './custom/commonStyle';
 @import './custom/typography';
 
-// This is a temporary import (should be done in each appliction) for dev reasons.
-@import 'kth-base-template';
+// Slots
+@import 'custom/slots/header';
+@import 'custom/slots/breadcrumbs';
+@import 'custom/slots/footer';
+@import 'custom/slots/mobileMenu';
+@import 'custom/slots/articleNavigation';
+
+// Blocks
+@import 'custom/blocks/siteName';
+@import 'custom/blocks/megaMenu';
+@import 'custom/blocks/mainMenu';

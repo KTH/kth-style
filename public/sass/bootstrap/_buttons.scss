@@ -1,5 +1,4 @@
 // Button style
-@import '../variables/_svg_data';
 
 @mixin btn-coloring-base($color, $colorHover) {
   background-color: $color;

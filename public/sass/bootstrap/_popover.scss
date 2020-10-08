@@ -1,10 +1,11 @@
-//popover
+// Popover
+
 .popover {
-    border: solid 1px $grey;
+  border: solid 1px $grey;
 }
 h3.popover-header {
-    margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 .popover-body {
-    font-family: "Open Sans",Arial,"Helvetica Neue",helvetica,sans-serif;
+  font-family: $sansSerif;
 }

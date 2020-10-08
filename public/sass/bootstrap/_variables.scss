@@ -1,7 +1,6 @@
 // KTH Bootstrap
 
 // This is where you override bootstrap values, such as colors, margins ...
-
 // Values in node_modules/bootstrap/scss/_varables to override
 
 @import '../variables/colors';
@@ -10,8 +9,6 @@
 @import 'node_modules/bootstrap/scss/mixins/breakpoints';
 
 // Colors
-
-// TODO Remove $colors-map
 
 $body-bg: $lightGrey;
 $primary: $blue;

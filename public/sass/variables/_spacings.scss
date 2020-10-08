@@ -1,7 +1,5 @@
-@import '../variables/sizes';
-
 @mixin topBottomSpacing {
-  margin:  0;
+  margin: 0;
   padding: $spacing 0;
 }
 
