@@ -12,9 +12,7 @@ do
   echo ''>> ${OUTFILE}
 done
 
-# DEPRECATED pill-back.svg, pill-back-white.svg
-ICONS="public/img/kth-style/icons/pill-back.svg \
-public/img/kth-style/icons/file-pdf-fa-regular.svg \
+ICONS="public/img/kth-style/icons/file-pdf-fa-regular.svg \
 public/img/kth-style/icons/globe.svg \
 public/img/kth-style/icons/globe-white.svg \
 public/img/kth-style/icons/alert-attention.svg \
@@ -29,7 +27,6 @@ public/img/kth-style/icons/arrow-blue-down.svg \
 public/img/kth-style/icons/arrow-blue-right.svg \
 public/img/kth-style/icons/check-mark.svg \
 public/img/kth-style/icons/modal-info.svg \
-public/img/kth-style/icons/pill-back-white.svg \
 public/img/kth-style/icons/file-upload-fa-solid.svg \
 public/img/kth-style/icons/external-link.svg \
 public/img/kth-style/icons/arrow-long-black-right.svg \
