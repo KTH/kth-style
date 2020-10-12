@@ -1,11 +1,8 @@
 // KTH Bootstrap
 
 // This is where you override bootstrap values, such as colors, margins ...
-// Values in node_modules/bootstrap/scss/_varables to override
+// Values in node_modules/bootstrap/scss/_variables to override
 
-@import '../variables/colors';
-@import '../variables/sizes';
-@import '../variables/fonts';
 @import 'node_modules/bootstrap/scss/mixins/breakpoints';
 
 // Colors
