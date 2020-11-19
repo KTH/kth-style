@@ -62,7 +62,7 @@
     "sass-lint": "^1.13.1"
   },
   "engines": {
-    "node": "12"
+    "node": ">=12"
   },
   "husky": {
     "hooks": {
