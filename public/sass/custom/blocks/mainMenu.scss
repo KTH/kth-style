@@ -7,10 +7,9 @@
     display: block;
     width: 296px;
     max-width: 296px;
-
     &.col {
       &.navbar {
-        padding: 0 5px $gutter 3 * $gutter;
+        padding: 0 5px $gutter 2 * $gutter;
 
         &.navbar-expand-lg {
           &.navbar-light {
