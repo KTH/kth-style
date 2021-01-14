@@ -3,7 +3,9 @@ table {
 
   caption {
     caption-side: top;
-    @include t4($marginBottom: 10px);
+    color: $black;
+    font-size: 1rem;
+    font-style: italic;
   }
 
   thead {
