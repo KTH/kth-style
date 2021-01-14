@@ -15,6 +15,12 @@
     "email": "infosys@kth.se",
     "url": "https://github.com/KTH"
   },
+  "keywords": [
+    "style",
+    "design",
+    "scss",
+    "icons"
+  ],
   "homepage": "https://github.com/KTH/kth-style#readme",
   "bugs": {
     "url": "https://github.com/KTH/kth-style/issues"
