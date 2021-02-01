@@ -22,5 +22,9 @@ p {
   &#page-sub-heading {
     @include t4;
     margin-top: 0.325rem;
+
+    @media (max-width: 767.98px) {
+      font-size: 1rem;
+    }
   }
 }
