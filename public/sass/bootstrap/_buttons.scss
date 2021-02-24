@@ -37,6 +37,8 @@
 }
 
 .btn-primary {
+  height: 2.75rem;
+
   &.next {
     &::after {
       content: '';
@@ -54,6 +56,8 @@
 }
 
 .btn-success {
+  height: 2.75rem;
+
   &.next {
     &::after {
       content: '';
@@ -85,6 +89,7 @@
   @include btn-coloring-base($white, $lightGrey);
   color: $black;
   border-color: $grey;
+  height: 2.75rem;
 
   &:hover,
   &:visited,
@@ -122,14 +127,18 @@
 
 .btn-success {
   @include btn-coloring-base($green, $greenHover);
+  height: 2.75rem;
 }
 
 .btn-danger {
   @include btn-coloring-base($red, $redHover);
+  height: 2.75rem;
 }
 
 .btn-link {
   border: 0;
+  height: 2.75rem;
+  padding: 0 1rem;
 }
 
 .external-link::after {
