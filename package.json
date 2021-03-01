@@ -36,9 +36,9 @@
     "sass-lint": "./node_modules/.bin/sass-lint --config ./.sass-lint.yml './public/sass/**/*.scss' --verbose --no-exit",
     "parcel-js-prod": "parcel build --no-source-maps -d dist/js --no-content-hash ./public/js/*.js ",
     "parcel-js": "parcel build ./public/js/*.js -d dist/js",
-    "parcel-sass-prod": "parcel build --no-source-maps --no-content-hash ./public/sass/kth-bootstrap.scss -d dist/css",
-    "parcel-sass": "NODE_ENV=development parcel build ./public/sass/kth-bootstrap.scss --no-minify -d dist/css",
-    "parcel-watch": "concurrently \"parcel watch ./public/js/*.js -d dist/js\" \"parcel watch ./public/sass/kth-bootstrap.scss -d dist/css\"",
+    "parcel-sass-prod": "parcel build --no-source-maps --no-content-hash --public-url ./ ./public/sass/kth-bootstrap.scss -d dist/css",
+    "parcel-sass": "NODE_ENV=development parcel build ./public/sass/kth-bootstrap.scss --no-minify -d dist/css --public-url ./",
+    "parcel-watch": "concurrently \"parcel watch ./public/js/*.js -d dist/js\" \"parcel watch ./public/sass/kth-bootstrap.scss -d dist/css  --public-url ./\"",
     "create-zip": "rm -f dist/kth-style-scss.zip && find ./node_modules -name \"*.scss\" | xargs zip -r dist/kth-style-scss -@ && (cd ./public/sass && find . -name \"*.scss\" | xargs zip -r ../../dist/kth-style-scss -@ )&& (cd ./dist && find ./img | xargs zip -r kth-style-scss -@ )",
     "generate-svg-data": "./generate-svg-data.sh"
   },

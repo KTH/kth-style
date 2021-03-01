@@ -27,6 +27,7 @@ cp -R ./node_modules/bootstrap/dist/js/bootstrap.min.js ./dist/js
 echo -e "     -> Copying all images to dist/img folder"
 cp -R ./public/img/. ./dist/img
 
+
 # Only run Parcel watch in production
 if [ $1 == "prod" ]; then
 
