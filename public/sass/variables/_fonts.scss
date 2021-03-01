@@ -2,7 +2,7 @@
 // Variables should be created and used for everything that can be overridden in Bootstraps preStep.
 
 // Import of font Open Sans
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600');
+@import '../../fonts/openSans';
 $open-sans: 'Open Sans';
 
 $serif: 'Georgia', 'garamond pro', garamond, 'times new roman', times, serif;
