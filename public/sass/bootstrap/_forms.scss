@@ -13,6 +13,7 @@
   &.form-check {
     .form-control-label {
       @include t11;
+      margin-bottom: 0.25rem;
     }
   }
 }
