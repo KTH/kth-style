@@ -7,10 +7,13 @@
     @include t11;
     font-weight: bold;
     margin-top: 0;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5rem;
   }
 
   &.form-check {
+    margin-top: 0.8rem;
+    margin-bottom: 1.25rem;
+
     .form-control-label {
       @include t11;
       margin-bottom: 0.25rem;
@@ -206,6 +209,7 @@ input {
       background: $blue $data-arrow-white-down-svg no-repeat center;
       background-size: 14px 7px;
       display: inline-block;
+      width: 44px;
     }
 
     select {
