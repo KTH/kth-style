@@ -32,10 +32,11 @@ details {
   }
 
   summary {
-    padding: 0.438rem 1.25rem 0.438rem 1.25rem;
-    font-size: 1rem;
     border-radius: 0.25rem;
+    font-size: 1rem;
+    height: 2.75rem;
     list-style: none;
+    padding: 0.638rem 1.25rem;
 
     // Chrome specific due to no support for list-style: none on summary tag.
     &::-webkit-details-marker {
