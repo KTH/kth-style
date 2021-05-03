@@ -5,7 +5,16 @@
 /* eslint-disable  no-plusplus */
 /* eslint-disable  no-undef */
 
-window.addEventListener('load', function () {
+window.addEventListener('load', () => {
+  // If no mobile menu containers are present, skip it all togehter
+  if (
+    !document.getElementById('mobileMenuWrapper') ||
+    !document.getElementById('mobileMenuList') ||
+    !document.getElementById('mobileMenuContent') ||
+    !document.getElementById('nav-icon')
+  ) {
+    return
+  }
   var mainMenu = document.getElementById('mainMenu') // Get main menu
   var megaMenu = document.getElementById('megaMenu') // Get mega menu
   var secondaryMenu = document.querySelector('.secondaryMenu') // Get secondary menu

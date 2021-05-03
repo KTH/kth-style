@@ -1,15 +1,30 @@
 /* eslint-disable  func-names */
 /* eslint-disable  no-var */
 
-window.addEventListener('load', function() {
+window.addEventListener('load', () => {
   /**
    * Back to top link
    */
-  var backToTopButton = document.querySelector('#back-to-top')
   var lastKnownScrollPosition = 0
   var ticking = false
+  var backToTopButton = document.querySelector('#back-to-top')
+  if (!backToTopButton) {
+    backToTopButton = document.createElement('div')
+    backToTopButton = document.body.appendChild(backToTopButton)
+    backToTopButton.id = 'back-to-top'
+    backToTopButton.setAttribute('role', 'link')
+    backToTopButton.setAttribute('aria-hidden', 'true')
 
-  backToTopButton.addEventListener('click', function() {
+    if (document.documentElement.lang === 'sv-SE') {
+      backToTopButton.innerText = 'Till sidans topp'
+    } else {
+      backToTopButton.innerText = 'To page top'
+    }
+    if (document.querySelector('footer')) {
+      document.body.insertBefore(backToTopButton, document.querySelector('footer'))
+    }
+  }
+  backToTopButton.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' })
     this.classList.toggle('show')
     this.setAttribute('aria-hidden', true)
@@ -25,10 +40,10 @@ window.addEventListener('load', function() {
     }
   }
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', () => {
     lastKnownScrollPosition = window.scrollY
     if (!ticking) {
-      window.requestAnimationFrame(function() {
+      window.requestAnimationFrame(() => {
         handleBackToTop(lastKnownScrollPosition)
         ticking = false
       })
