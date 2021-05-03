@@ -34,7 +34,8 @@ details {
   summary {
     border-radius: 0.25rem;
     font-size: 1rem;
-    height: 2.75rem;
+    height: auto;
+    min-height: 2.75rem;
     list-style: none;
     padding: 0.638rem 1.25rem;
 
