@@ -39,7 +39,8 @@
     "webpack": "webpack",
     "webpack-watch": "webpack --watch",
     "sass-prod": "sass --style=compressed --no-source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css",
-    "sass-dev": "sass --style=expanded --source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css"
+    "sass-dev": "sass --style=expanded --source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css",
+    "babel-js-prod": "babel --minified --source-maps false public/js --out-dir dist/js"
   },
   "dependencies": {
     "bootstrap": "4.6.0",
@@ -51,6 +52,7 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "7.15.0",
     "@kth/eslint-config-kth": "^1.0.12",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^8.2.2",
     "concurrently": "^6.2.0",
     "copy-webpack-plugin": "^9.0.1",

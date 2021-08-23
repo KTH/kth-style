@@ -21,7 +21,7 @@ if [ -f "/etc/alpine-release"  ]; then
   apk add zip
 
   echo -e "\n  Install tools for build"
- 
+
   apk add  bash 
   apk add  python2 make g++ util-linux
 
@@ -35,7 +35,19 @@ rm -rf ./dist
 
 # Creating dist directories
 echo -e "     -> Creating the dist folder structure"
-mkdir -p ./dist/css ./dist/img ./dist/js 
+mkdir -p ./dist/css ./dist/img ./dist/js ./dist/fonts
+
+# Copy bootstrap.min.js
+echo -e "     -> Copying bootstrap.min.js to dist/js folder"
+cp -R ./node_modules/bootstrap/dist/js/bootstrap.min.js ./dist/js
+
+# Copy all images
+echo -e "     -> Copying all images to dist/img folder"
+cp -R ./public/img/. ./dist/img
+
+# Copy all fonts
+echo -e "     -> Copying all fonts to dist/fonts folder"
+cp -R ./public/fonts/. ./dist/fonts
 
 # Only run Parcel watch in production
 if [ $1 == "prod" ]; then
@@ -46,14 +58,18 @@ if [ $1 == "prod" ]; then
 
    # Run webpack build on the vendor.js file and put the optimized file in the /dist folder.
   echo -e "${yellow}\n  3. Parcing all js files and putting them in the /dist/js folder${nc}"
-  npm run webpack
+  npm run babel-js-prod
+
+   # Run webpack build on the vendor.js file and put the optimized file in the /dist folder.
+#   echo -e "${yellow}\n  3. Parcing all js files and putting them in the /dist/js folder${nc}"
+#   npm run webpack
 
   # Run create-zip and create the kth-style-scss.zip package and put it in the dist folder
   echo -e "${yellow}\n  4. Creating the kth-style-scss.zip package and putting it in the /dist folder${nc}"
   npm run create-zip
 
   ls -lR dist
-  
+
 fi
 
 # Only run Parcel watch in development
