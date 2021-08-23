@@ -3,7 +3,7 @@
   "name": "kth-style",
   "version": "7.0.0",
   "description": "KTH CSS. A custom build of Bootstrap 4. The purpose of this project is to provide the essential design and style for applications within KTH and make the development process of these applications faster.",
-  "automaticPublish": "true",
+  "automaticPublish": "false",
   "private": false,
   "license": "MIT",
   "repository": {
@@ -37,7 +37,9 @@
     "create-zip": "rm -f dist/kth-style-scss.zip && find ./node_modules -name \"*.scss\" | xargs zip -r dist/kth-style-scss -@ && (cd ./public/sass && find . -name \"*.scss\" | xargs zip -r ../../dist/kth-style-scss -@ )&& (cd ./dist && find ./img | xargs zip -r kth-style-scss -@ )",
     "generate-svg-data": "./generate-svg-data.sh",
     "webpack": "webpack",
-    "sass-prod": "sass --no-source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css"
+    "webpack-watch": "webpack --watch",
+    "sass-prod": "sass --no-source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css",
+    "sass-dev": "sass --source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css"
   },
   "dependencies": {
     "bootstrap": "4.6.0",
