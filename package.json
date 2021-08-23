@@ -38,8 +38,8 @@
     "generate-svg-data": "./generate-svg-data.sh",
     "webpack": "webpack",
     "webpack-watch": "webpack --watch",
-    "sass-prod": "sass --no-source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css",
-    "sass-dev": "sass --source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css"
+    "sass-prod": "sass --style=compressed --no-source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css",
+    "sass-dev": "sass --style=expanded --source-map -I. ./public/sass/kth-bootstrap.scss ./dist/css/kth-bootstrap.css"
   },
   "dependencies": {
     "bootstrap": "4.6.0",
