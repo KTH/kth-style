@@ -51,6 +51,9 @@ if [ $1 == "prod" ]; then
   # Run create-zip and create the kth-style-scss.zip package and put it in the dist folder
   echo -e "${yellow}\n  4. Creating the kth-style-scss.zip package and putting it in the /dist folder${nc}"
   npm run create-zip
+
+  ls -lR dist
+  
 fi
 
 # Only run Parcel watch in development
