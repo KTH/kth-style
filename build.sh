@@ -21,8 +21,6 @@ if [ -f "/etc/alpine-release"  ]; then
   apk add zip
 
   echo -e "\n  Install tools for build"
-
-  apk add  bash 
   apk add  python2 make g++ util-linux
 
 fi
