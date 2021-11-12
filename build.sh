@@ -1,4 +1,5 @@
-#!/bin/bash -X
+#!/bin/bash
+set -x
 
 # Colors
 yellow='\033[1;33m' # Yellow
