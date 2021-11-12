@@ -47,11 +47,11 @@ cp -R ./public/img/. ./dist/img
 echo -e "     -> Copying all fonts to dist/fonts folder"
 cp -R ./public/fonts/. ./dist/fonts
 
-# Only run Parcel watch in production
+# Only production
 if [ $1 == "prod" ]; then
 
   # Run webpack build on the vendor.js file and put the optimized file in the /dist folder.
-  echo -e "${yellow}\n  2. Transpiling kth-bootstra.scss annd put it /dist/css folder${nc}"
+  echo -e "${yellow}\n  2. Transpiling kth-bootstrap.scss and put it /dist/css folder${nc}"
   npm run sass-prod
 
    # Run webpack build on the vendor.js file and put the optimized file in the /dist folder.
