@@ -1,7 +1,9 @@
+@use 'sass:math';
+
 $spacing: 10px;
 $doubleSpacing: ($spacing * 2);
-$halfSpacing: ($spacing / 2);
-$quarterSpacing: ($spacing / 4);
+$halfSpacing: math.div($spacing, 2);
+$quarterSpacing: math.div($spacing, 2);
 $pageInset: 38px;
 $bodyLineHeight: 1.3;
 $widePageWidth: 1228px;
