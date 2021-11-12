@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -X
 
 # Colors
 yellow='\033[1;33m' # Yellow
@@ -15,11 +15,30 @@ echo -e "\n  0. Install some necessary tools if not found"
 OS=`uname -a`
 echo  -e "\n  Building on OS: ${OS}"
 
+echo "which apt-get:"
+which apt-get
+
+echo "which apk:"
+which apk
+
+echo "which python2:"
+which python2
+
+echo "which make:"
+which make
+
+echo "which g++:"
+which g++
+
 # Print OS info
+echo "Info about lsb-release"
+ls -l /etc/lsb-release
 cat /etc/lsb-release
 
 # Do we have this file?
+echo "Info about alpine-release"
 ls -l /etc/alpine-release
+cat /etc/alpine-release
 
 if [ -f "/etc/alpine-release"  ]; then
 
@@ -27,7 +46,7 @@ if [ -f "/etc/alpine-release"  ]; then
   apk add zip
 
   echo -e "\n  Install tools for build"
-  apk add  python2 make g++ util-linux
+  apk add python2 make g++ util-linux
 
 fi
 
