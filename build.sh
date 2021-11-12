@@ -12,8 +12,14 @@ echo -e "|--------------------------------------------------------|"
 
 echo -e "\n  0. Install some necessary tools if not found"
 
-OS=`uname`
+OS=`uname -a`
 echo  -e "\n  Building on OS: ${OS}"
+
+# Print OS info
+cat /etc/lsb-release
+
+# Do we have this file?
+ls -l /etc/alpine-release
 
 if [ -f "/etc/alpine-release"  ]; then
 
