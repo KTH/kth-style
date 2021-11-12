@@ -57,7 +57,6 @@
     "copy-webpack-plugin": "^9.1.0",
     "eslint": "^7.32.0",
     "husky": "^7.0.4",
-    "mini-css-extract-plugin": "^2.4.4",
     "prettier": "^2.4.1",
     "pretty-quick": "3.1.1",
     "sass": "^1.43.4",
