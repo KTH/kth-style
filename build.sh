@@ -16,6 +16,13 @@ echo -e "\n  0. Install some necessary tools if not found"
 OS=`uname -a`
 echo  -e "\n  Building on OS: ${OS}"
 
+# Current user
+echo "id:"
+id
+
+echo "which sudo:"
+which sudo
+
 echo "which apk:"
 which apk
 
