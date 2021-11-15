@@ -28,7 +28,7 @@
   "scripts": {
     "//": "Parcel installs css, images and javascript",
     "test": "echo \"ok\"",
-    "build": "apk add wget && wget --version",
+    "build": "apk add wget && echo '-----> $(wget --version) <-----'",
     "build-old": "./build.sh prod",
     "build-dev": "./build.sh dev",
     "prepare": "husky install",
