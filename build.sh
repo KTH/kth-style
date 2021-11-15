@@ -16,22 +16,6 @@ echo -e "\n  0. Install some necessary tools if not found"
 OS=`uname -a`
 echo  -e "\n  Building on OS: ${OS}"
 
-echo "which python3:"
-which python3
-
-echo "which util-linux:"
-which util-linux
-
-
-# #if [ -f "/etc/alpine-release"  ]; then#
-#   echo -e "\n  Install zip"
-#   apk add zip 2>&1
-
-#   echo -e "\n  Install tools for build"
-#   apk add python2 make g++ util-linux 2>&1
-
-# fi
-
 echo -e "\n  1. Cleaning up & copying files"
 
 # Removing the dist folder
