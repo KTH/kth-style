@@ -28,7 +28,7 @@
   "scripts": {
     "//": "Parcel installs css, images and javascript",
     "test": "echo \"ok\"",
-    "build": "npm run sass-prod'",
+    "build": "npm run sass-prod",
     "build-old": "./build.sh prod",
     "build-dev": "./build.sh dev",
     "prepare": "husky install",
