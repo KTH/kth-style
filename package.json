@@ -28,8 +28,6 @@
   "scripts": {
     "//": "Parcel installs css, images and javascript",
     "test": "echo \"ok\"",
-    "//build": "npm run-script sass-prod 2>&1",
-    "-build": "echo '************************\n' && npm run echoit && echo '\n************************\n'",
     "build": "./build.sh prod",
     "build-dev": "./build.sh dev",
     "prepare": "husky install",
