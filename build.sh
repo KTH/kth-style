@@ -10,8 +10,9 @@ nc='\033[0m'        # No Color
 echo -e "${yellow}"
 echo -e "|--------------------------------------------------------|"
 echo -e "| Building the application with Bash and Webpack         |"   
-echo -e "| $WORKSPACE                                             |"   
-echo -e "| $(pwd)                                                |"
+echo -e "| WORKSPACE: $WORKSPACE                                  |"   
+echo -e "| PWD: $(pwd)                                            |"
+echo -e "| Home: $(HOME)                                          |"
 echo -e "|--------------------------------------------------------|"
 
 ls -la
