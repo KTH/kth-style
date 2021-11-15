@@ -1,6 +1,8 @@
 #!/bin/bash
 set -x
 
+exec 2>&1
+
 # Colors
 yellow='\033[1;33m' # Yellow
 nc='\033[0m'        # No Color
