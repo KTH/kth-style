@@ -7,7 +7,7 @@ nc='\033[0m'        # No Color
 
 echo -e "${yellow}"
 echo -e "|--------------------------------------------------------|"
-echo -e "| Building the application with Bash and Webpack          |"   
+echo -e "| Building the application with Bash and Webpack         |"   
 echo -e "|--------------------------------------------------------|"
 
 
