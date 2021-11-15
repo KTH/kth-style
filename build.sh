@@ -21,6 +21,8 @@ echo  -e "\n  Building on OS: ${OS}"
 echo "which npm"
 which npm
 
+npm --version
+
 echo -e "\n  1. Cleaning up & copying files"
 
 # Removing the dist folder
