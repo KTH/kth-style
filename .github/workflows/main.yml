@@ -1,13 +1,13 @@
 name: Evolene CI
 
-on:  
+on:
   push:
   pull_request:
     branches:
       - main
     paths-ignore:
-          - '*.md'
-          - '*.png'
+      - '*.md'
+      - '*.png'
   workflow_dispatch:
 
 jobs:
@@ -19,8 +19,8 @@ jobs:
       - name: Run Evolene CI pipeline steps
         shell: bash
         env:
-          SLACK_CHANNELS: "#team-kth-webb-build"
+          SLACK_CHANNELS: '#team-kth-webb-build'
           NPM_UPDATES_AVAILABLE: True
-          BUILD_INFORMATION_OUTPUT_FILE: "/config/version.js"
+          BUILD_INFORMATION_OUTPUT_FILE: '/config/version.js'
         run: |
-          ${{ secrets.EVOLENE_RUN_COMMAND }}
+          ${{ secrets.EVOLENE_LATEST_RUN_COMMAND }}
