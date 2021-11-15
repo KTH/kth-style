@@ -16,30 +16,14 @@ echo -e "\n  0. Install some necessary tools if not found"
 OS=`uname -a`
 echo  -e "\n  Building on OS: ${OS}"
 
-# Current user
-echo "id:"
-id
+# #if [ -f "/etc/alpine-release"  ]; then#
+#   echo -e "\n  Install zip"
+#   apk add zip 2>&1
 
-echo "which python2:"
-which python2
+#   echo -e "\n  Install tools for build"
+#   apk add python2 make g++ util-linux 2>&1
 
-echo "which zip:"
-which zip
-
-# Do we have this file?
-echo "Info about alpine-release"
-ls -l /etc/alpine-release
-cat /etc/alpine-release
-
-if [ -f "/etc/alpine-release"  ]; then
-
-  echo -e "\n  Install zip"
-  apk add zip 2>&1
-
-  echo -e "\n  Install tools for build"
-  apk add python2 make g++ util-linux 2>&1
-
-fi
+# fi
 
 echo -e "\n  1. Cleaning up & copying files"
 
