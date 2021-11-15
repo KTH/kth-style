@@ -18,6 +18,9 @@ echo -e "\n  0. Install some necessary tools if not found"
 OS=`uname -a`
 echo  -e "\n  Building on OS: ${OS}"
 
+echo "which npm"
+which npm
+
 echo -e "\n  1. Cleaning up & copying files"
 
 # Removing the dist folder
