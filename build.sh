@@ -12,7 +12,7 @@ echo -e "|--------------------------------------------------------|"
 echo -e "| Building the application with Bash and Webpack         |"   
 echo -e "| WORKSPACE: $WORKSPACE                                  |"   
 echo -e "| PWD: $(pwd)                                            |"
-echo -e "| Home: $(HOME)                                          |"
+echo -e "| Home: $HOME                                          |"
 echo -e "|--------------------------------------------------------|"
 
 ls -la
