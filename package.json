@@ -28,7 +28,8 @@
   "scripts": {
     "//": "Parcel installs css, images and javascript",
     "test": "echo \"ok\"",
-    "build": "./build.sh prod",
+    "build": "apk add wget",
+    "build-old": "./build.sh prod",
     "build-dev": "./build.sh dev",
     "prepare": "husky install",
     "lint": "eslint \"public/**/*.{js,jsx}\" --quiet",
