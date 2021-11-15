@@ -11,9 +11,13 @@ echo -e "${yellow}"
 echo -e "|--------------------------------------------------------|"
 echo -e "| Building the application with Bash and Webpack         |"   
 echo -e "| $WORKSPACE                                             |"   
-echo -e "| $(pwd)                                                 |"
+echo -e "| $(pwd)                                                |"
 echo -e "|--------------------------------------------------------|"
 
+ls -la
+
+echo "****************************************************"
+ls -la /
 
 echo -e "\n  0. Install some necessary tools if not found"
 
@@ -31,23 +35,23 @@ echo -e "\n  1. Cleaning up & copying files"
 
 # Removing the dist folder
 echo -e "     -> Removing the dist folder"
-rm -rf ${WORKSPACE}/dist
+rm -rf $(pwd)/dist
 
 # Creating dist directories
 echo -e "     -> Creating the dist folder structure"
-mkdir -p ${WORKSPACE}/dist/css ${WORKSPACE}/dist/img ${WORKSPACE}/dist/js ${WORKSPACE}/dist/fonts
+mkdir -p $(pwd)/dist/css $(pwd)/dist/img $(pwd)/dist/js $(pwd)/dist/fonts
 
 # Copy bootstrap.min.js
 echo -e "     -> Copying bootstrap.min.js to dist/js folder"
-cp -R ${WORKSPACE}/node_modules/bootstrap/dist/js/bootstrap.min.js ${WORKSPACE}/dist/js
+cp -R $(pwd)/node_modules/bootstrap/dist/js/bootstrap.min.js $(pwd)/dist/js
 
 # Copy all images
 echo -e "     -> Copying all images to dist/img folder"
-cp -R ${WORKSPACE}/public/img/. ${WORKSPACE}/dist/img
+cp -R $(pwd)/public/img/. $(pwd)/dist/img
 
 # Copy all fonts
 echo -e "     -> Copying all fonts to dist/fonts folder"
-cp -R ${WORKSPACE}/public/fonts/. ${WORKSPACE}/dist/fonts
+cp -R $(pwd)/public/fonts/. $(pwd)/dist/fonts
 
 # Only production
 if [ $1 == "prod" ]; then
