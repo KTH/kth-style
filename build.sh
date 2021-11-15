@@ -20,20 +20,8 @@ echo  -e "\n  Building on OS: ${OS}"
 echo "id:"
 id
 
-echo "which sudo:"
-which sudo
-
-echo "which apk:"
-which apk
-
 echo "which python2:"
 which python2
-
-echo "which make:"
-which make
-
-echo "which g++:"
-which g++
 
 echo "which zip:"
 which zip
