@@ -27,7 +27,7 @@
   },
   "scripts": {
     "//": "Parcel installs css, images and javascript",
-    "test": "id",
+    "test": "ps auxf && which nvm",
     "build": "./build.sh prod",
     "build-dev": "./build.sh dev",
     "prepare": "husky install",
