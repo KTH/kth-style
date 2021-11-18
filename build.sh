@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # Colors
 yellow='\033[1;33m' # Yellow
 nc='\033[0m'        # No Color
@@ -57,7 +59,11 @@ if [ $1 == "prod" ]; then
   npm run create-zip
 
   ls -lR dist
-
+  
+  if [[ ! -s dist/css/kth-bootstrap.css.notexist || ! -s dist/kth-style-scss.zip || ! -s dist/js/backtotop.js || ! -s dist/js/menus.js || ! -s dist/js/vendor.js ]];then 
+    echo >&2 "Some files are missing, failing..."
+    exit 1
+  fi
 fi
 
 # Only run Parcel watch in development
