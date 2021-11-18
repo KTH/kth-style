@@ -12,8 +12,6 @@ echo -e "| Building the application with Bash and Webpack         |"
 echo -e "|--------------------------------------------------------|"
 
 
-echo -e "\n  0. Install some necessary tools if not found"
-
 OS=$(uname -a)
 echo  -e "\n  Building on OS: ${OS}"
 
@@ -60,13 +58,13 @@ if [ $1 == "prod" ]; then
 
   ls -lR dist
   
-  if [[ ! -s dist/css/kth-bootstrap.css.notexist || ! -s dist/kth-style-scss.zip || ! -s dist/js/backtotop.js || ! -s dist/js/menus.js || ! -s dist/js/vendor.js ]];then 
+  if [[ ! -s dist/css/kth-bootstrap.css || ! -s dist/kth-style-scss.zip || ! -s dist/js/backtotop.js || ! -s dist/js/menus.js || ! -s dist/js/vendor.js ]];then 
     echo >&2 "Some files are missing, failing..."
     exit 1
   fi
 fi
 
-# Only run Parcel watch in development
+# Only run webpack watch in development
 if [ $1 == "dev" ]; then
   # Run webpack build on the vendor.js file and put the optimized file in the /dist folder.
   echo -e "${yellow}\n  2. Transpiling kth-bootstra.scss annd put it /dist/css folder${nc}"
