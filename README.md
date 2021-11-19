@@ -1,4 +1,4 @@
-# KTH STYLE
+# KTH STYLE ![Continous Integration](https://github.com/KTH/kth-style/actions/workflows/main.yml/badge.svg)
 
 ## kth-style
 
