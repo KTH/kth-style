@@ -24,4 +24,4 @@ jobs:
           BUILD_INFORMATION_OUTPUT_FILE: '/config/version.js'
           CXXFLAGS: '--std=c++14'
         run: |
-          ${{ secrets.EVOLENE_RUN_COMMAND }}
+          ${{ secrets.EVOLENE_LATEST_RUN_COMMAND }}
