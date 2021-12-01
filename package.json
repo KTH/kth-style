@@ -26,7 +26,7 @@
     "url": "https://github.com/KTH/kth-style/issues"
   },
   "scripts": {
-    "//": "Parcel installs css, images and javascript",
+    "//": "Webpack installs css, images and javascripts",
     "test": "echo \"ok\"",
     "build": "./build.sh prod",
     "build-dev": "./build.sh dev",
@@ -50,19 +50,19 @@
     "tether": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
-    "@babel/preset-env": "7.16.0",
+    "@babel/preset-env": "7.16.4",
     "@kth/eslint-config-kth": "^2.0.2",
-    "babel-cli": "^6.26.0",
     "babel-loader": "^8.2.3",
-    "copy-webpack-plugin": "^9.1.0",
+    "copy-webpack-plugin": "^10.0.0",
     "eslint": "^7.32.0",
     "husky": "^7.0.4",
-    "prettier": "^2.4.1",
-    "pretty-quick": "3.1.1",
-    "sass": "^1.43.4",
+    "prettier": "^2.5.0",
+    "pretty-quick": "3.1.2",
+    "sass": "^1.44.0",
     "sass-loader": "^12.3.0",
-    "webpack": "^5.64.0",
+    "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1"
   },
   "engines": {
