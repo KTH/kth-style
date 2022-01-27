@@ -25,9 +25,10 @@ rm -rf ./dist
 echo -e "     -> Creating the dist folder structure"
 mkdir -p ./dist/css ./dist/img ./dist/js ./dist/fonts
 
-# Copy bootstrap.min.js
+# Copy bootstrap.min.js and klaro-no-css.js
 echo -e "     -> Copying bootstrap.min.js to dist/js folder"
 cp -R ./node_modules/bootstrap/dist/js/bootstrap.min.js ./dist/js
+cp -R ./node_modules/klaro/dist/klaro-no-css.js ./dist/js
 
 # Copy all images
 echo -e "     -> Copying all images to dist/img folder"
