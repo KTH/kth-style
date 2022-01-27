@@ -79,6 +79,8 @@
         height: 210px;
         max-width: 554px;
         background-color: $white;
+        border-radius: 0.25rem;
+        box-shadow: 0 4px 6px 0 rgb(0 0 0 / 20%), 5px 5px 10px 0 rgb(0 0 0 / 19%);
 
         .cn-ok {
           flex-flow: column !important;
@@ -103,7 +105,7 @@
         @media (max-width: 768px) {
           position: relative;
           top: 30%;
-          width: auto;
+          width: 90%;
           height: auto;
         }
       }
