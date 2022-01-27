@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+# Initialize evolene env
+[[ -e /root/.evolene_bashrc ]] && . /root/.evolene_bashrc
+
 # Colors
 yellow='\033[1;33m' # Yellow
 nc='\033[0m'        # No Color
