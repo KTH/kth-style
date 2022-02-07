@@ -38,6 +38,10 @@ cp -R ./public/img/. ./dist/img
 echo -e "     -> Copying all fonts to dist/fonts folder"
 cp -R ./public/fonts/. ./dist/fonts
 
+# Copy all CSS
+echo -e "     -> Copying all CSS to dist/css folder"
+cp -R ./public/css/. ./dist/css
+
 # Only production
 if [ $1 == "prod" ]; then
 
