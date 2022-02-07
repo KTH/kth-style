@@ -1,9 +1,5 @@
 .DS_Store
 
-# Sass compilation related files
-public/css/*.css
-
-
 # IDEA specific
 .idea
 *.iml
