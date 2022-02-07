@@ -27,6 +27,7 @@ module.exports = {
       patterns: [
         { from: 'public/img', to: './img' },
         { from: 'public/fonts', to: './fonts' },
+        { from: 'public/css', to: './css' },
         { from: './node_modules/bootstrap/dist/js/bootstrap.min.js', to: './js/bootstrap.min.js' },
       ],
     }),
