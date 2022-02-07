@@ -9,6 +9,7 @@ For information how to use and examples: https://app.kth.se/style/
 ### Included files in dist folder
 
 <pre>
+
 dist
 ├── css
 │ └── kth-bootstrap.css
@@ -124,3 +125,12 @@ dist
 │ └── vendor.js
 └── kth-style-scss.zip
 </pre>
+
+## Note about Klaro CSS
+
+The original Klaro CSS contains validation errors so the actual CSS file has bee extracted and updatet to validate.
+The file is placed here and the update could be found by searching for "Updated manually to validate".
+
+├── public
+└── css
+└── klaro.css
