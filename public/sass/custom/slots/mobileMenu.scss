@@ -151,7 +151,8 @@
               &.expandable {
                 li {
                   &.nav-item {
-                    a {
+                    a,
+                    span {
                       &.nav-link {
                         padding-left: 0;
                         padding-right: 20px;
@@ -203,7 +204,8 @@
                   background-size: auto 12px;
                   background-position-y: 7px;
 
-                  a {
+                  a,
+                  span {
                     padding-left: $gutter;
                     font-family: $sansSerif;
                     font-size: $font-size-base;
@@ -228,7 +230,8 @@
                     padding: 8px 3px;
                   }
 
-                  a {
+                  a,
+                  span {
                     &.nav-link {
                       color: $black;
                       font-family: $sansSerif;
@@ -239,7 +242,8 @@
                   }
 
                   &.selected {
-                    > a {
+                    > a,
+                    span {
                       &.nav-link {
                         font-weight: 600;
                       }
@@ -248,7 +252,8 @@
 
                   &.mainMenuItem {
                     &.selected {
-                      a {
+                      a,
+                      span {
                         font-weight: 600;
                       }
                     }
@@ -258,7 +263,8 @@
                     margin-right: 1.25rem;
 
                     &.active {
-                      a {
+                      a,
+                      span {
                         &.nav-link {
                           border-bottom: 0;
                           padding: 0 4px;
@@ -266,7 +272,8 @@
                       }
                     }
 
-                    a {
+                    a,
+                    span {
                       &.nav-link {
                         margin-top: 8px;
                         margin-bottom: 8px;
@@ -311,7 +318,8 @@
                       &.secondaryItem {
                         padding-top: 6px;
 
-                        a {
+                        a,
+                        span {
                           font-size: $font-size-base;
                           padding: 0;
                           margin: 0 2.5rem 0 0;
