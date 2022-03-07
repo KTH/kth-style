@@ -72,7 +72,7 @@ fi
 # Only run webpack watch in development
 if [ $1 == "dev" ]; then
   # Run webpack build on the vendor.js file and put the optimized file in the /dist folder.
-  echo -e "${yellow}\n  2. Transpiling kth-bootstra.scss annd put it /dist/css folder${nc}"
+  echo -e "${yellow}\n  2. Transpiling kth-bootstra.scss and put it /dist/css folder${nc}"
   npm run sass-dev
 
    # Run webpack build on the vendor.js file and put the optimized file in the /dist folder.
