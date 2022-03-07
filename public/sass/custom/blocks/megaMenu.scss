@@ -156,10 +156,11 @@
 
                           button {
                             &.closeButton {
+                              color: $lightGrey;
                               position: absolute;
                               right: $gutter;
                               top: $gutter;
-                              background: $data-input-clear-gray-svg no-repeat transparent;
+                              background: $data-close-svg no-repeat transparent;
                               border: 0;
                               background-size: contain;
                               height: 15px;

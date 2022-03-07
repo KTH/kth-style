@@ -12,27 +12,73 @@ do
   echo ''>> ${OUTFILE}
 done
 
-ICONS="public/img/kth-style/icons/file-pdf-fa-regular.svg \
-public/img/kth-style/icons/globe.svg \
-public/img/kth-style/icons/globe-white.svg \
-public/img/kth-style/icons/alert-attention.svg \
-public/img/kth-style/icons/alert-info.svg \
-public/img/kth-style/icons/alert-success.svg \
-public/img/kth-style/icons/arrow-black-right.svg \
-public/img/kth-style/icons/arrow-black-left.svg \
-public/img/kth-style/icons/arrow-black-down.svg \
-public/img/kth-style/icons/arrow-white-down.svg \
-public/img/kth-style/icons/arrow-white-right.svg \
-public/img/kth-style/icons/arrow-blue-down.svg \
-public/img/kth-style/icons/arrow-blue-right.svg \
-public/img/kth-style/icons/check-mark.svg \
-public/img/kth-style/icons/modal-info.svg \
-public/img/kth-style/icons/file-upload-fa-solid.svg \
-public/img/kth-style/icons/external-link.svg \
-public/img/kth-style/icons/arrow-long-black-right.svg \
-public/img/kth-style/icons/arrow-long-blue-left.svg \
-public/img/kth-style/icons/arrow-long-blue-right.svg \
-public/img/kth-style/icons/arrow-long-white-right.svg"
+ICONS="public/img/kth-style/icons/arrow-back.svg \
+public/img/kth-style/icons/arrow-back-blue.svg \
+public/img/kth-style/icons/arrow-back-white.svg \
+public/img/kth-style/icons/arrow-next.svg \
+public/img/kth-style/icons/arrow-next-blue.svg \
+public/img/kth-style/icons/arrow-next-white.svg \
+public/img/kth-style/icons/arrow-collapse.svg \
+public/img/kth-style/icons/arrow-collapse-white.svg \
+public/img/kth-style/icons/arrow-cross.svg \
+public/img/kth-style/icons/arrow-expand.svg \
+public/img/kth-style/icons/arrow-expand-white.svg \
+public/img/kth-style/icons/arrow-maximize.svg \
+public/img/kth-style/icons/arrow-minimize.svg \
+public/img/kth-style/icons/arrow-up-down.svg \
+public/img/kth-style/icons/asterisk.svg \
+public/img/kth-style/icons/audio.svg \
+public/img/kth-style/icons/back-to-top.svg \
+public/img/kth-style/icons/calculate.svg \
+public/img/kth-style/icons/check.svg \
+public/img/kth-style/icons/close.svg \
+public/img/kth-style/icons/code.svg \
+public/img/kth-style/icons/compressed.svg \
+public/img/kth-style/icons/copy.svg \
+public/img/kth-style/icons/date.svg \
+public/img/kth-style/icons/delete.svg \
+public/img/kth-style/icons/doc.svg \
+public/img/kth-style/icons/download.svg \
+public/img/kth-style/icons/edit.svg \
+public/img/kth-style/icons/email.svg \
+public/img/kth-style/icons/error.svg \
+public/img/kth-style/icons/eye-off.svg \
+public/img/kth-style/icons/eye.svg \
+public/img/kth-style/icons/favorite-active.svg \
+public/img/kth-style/icons/favorite.svg \
+public/img/kth-style/icons/file.svg \
+public/img/kth-style/icons/gallery-active.svg \
+public/img/kth-style/icons/gallery-back.svg \
+public/img/kth-style/icons/gallery-next.svg \
+public/img/kth-style/icons/gallery-passive.svg \
+public/img/kth-style/icons/gallery-pause.svg \
+public/img/kth-style/icons/gallery-play.svg \
+public/img/kth-style/icons/image.svg \
+public/img/kth-style/icons/information.svg \
+public/img/kth-style/icons/language.svg \
+public/img/kth-style/icons/link.svg \
+public/img/kth-style/icons/menu.svg \
+public/img/kth-style/icons/message.svg \
+public/img/kth-style/icons/notification.svg \
+public/img/kth-style/icons/open-modal.svg \
+public/img/kth-style/icons/open-window.svg \
+public/img/kth-style/icons/pdf.svg \
+public/img/kth-style/icons/ppt.svg \
+public/img/kth-style/icons/print.svg \
+public/img/kth-style/icons/quote.svg \
+public/img/kth-style/icons/scale.svg \
+public/img/kth-style/icons/search.svg \
+public/img/kth-style/icons/settings.svg \
+public/img/kth-style/icons/sort-ascending.svg \
+public/img/kth-style/icons/sort-descending.svg \
+public/img/kth-style/icons/success.svg \
+public/img/kth-style/icons/text.svg \
+public/img/kth-style/icons/thumb-down.svg \
+public/img/kth-style/icons/thumb-up.svg \
+public/img/kth-style/icons/upload.svg \
+public/img/kth-style/icons/user-management.svg \
+public/img/kth-style/icons/video.svg \
+public/img/kth-style/icons/xls.svg"
 
 for f in ${ICONS}
 do

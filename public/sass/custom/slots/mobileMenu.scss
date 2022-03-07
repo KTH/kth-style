@@ -161,14 +161,12 @@
                     }
 
                     &.node {
-                      background: $data-arrow-black-right-svg no-repeat right;
-                      background-size: auto 12px;
-                      background-position: 100% 14px;
+                      background: $data-arrow-expand-svg no-repeat right;
+                      background-position: 100% 8px;
 
                       &.expanded {
-                        background: $data-arrow-black-down-svg no-repeat right;
-                        background-size: 12px 12px;
-                        background-position: 100% 14px;
+                        background: $data-arrow-collapse-svg no-repeat right;
+                        background-position: 100% 8px;
                         padding-right: 0;
                       }
 
@@ -200,7 +198,7 @@
                   padding: 0;
                   margin-left: 10px;
                   margin-right: 45px;
-                  background: $data-arrow-black-left-svg no-repeat left;
+                  background: $data-arrow-back-svg no-repeat left;
                   background-size: auto 12px;
                   background-position-y: 7px;
 
@@ -283,9 +281,9 @@
                   }
 
                   &.node {
-                    background: $data-arrow-black-right-svg no-repeat right;
+                    background: $data-arrow-expand-svg no-repeat right;
                     background-size: auto 12px;
-                    background-position: 100% 14px;
+                    background-position: 100% 8px;
                   }
                 }
               }
@@ -338,8 +336,8 @@
                         a[hreflang='en-GB'],
                         a[hreflang='sv-SE'] {
                           &.secondaryMenu {
-                            background: $data-globe-white-svg no-repeat right;
-
+                            color: $white;
+                            background: $data-language-svg no-repeat right;
                             background-size: 18px;
                             padding-right: 22px;
                             padding-top: 6px;

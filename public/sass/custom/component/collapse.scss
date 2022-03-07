@@ -9,14 +9,14 @@
 @keyframes rotateDown {
   100% {
     transform: rotate(90deg);
-    transform-origin: 22% 40%;
+    transform-origin: 20% 50%;
   }
 }
 
 @keyframes rotateUp {
   0% {
     transform: rotate(90deg);
-    transform-origin: 22% 40%;
+    transform-origin: 20% 50%;
   }
 }
 
@@ -51,14 +51,14 @@ details {
 
     &:before {
       content: '';
-      height: 0.875rem;
-      width: 0.875rem;
+      height: 1rem;
+      width: 1rem;
       display: inline-block;
       margin: auto;
-      margin-bottom: -1px;
+      margin-bottom: -3px;
+      margin-right: 8px;
       background-size: contain;
       background-repeat: no-repeat;
-      margin-right: 0.6rem;
       animation: rotateUp 0.3s ease-in-out forwards;
 
       &:hover {
@@ -72,7 +72,7 @@ details {
       font-weight: 600;
 
       &:before {
-        background-image: $data-arrow-white-right-svg;
+        background-image: $data-arrow-expand-white-svg;
       }
     }
 
@@ -82,7 +82,7 @@ details {
       padding-left: 0;
 
       &:before {
-        background-image: $data-arrow-blue-right-svg;
+        background-image: $data-arrow-expand-svg;
       }
     }
   }

@@ -144,7 +144,7 @@ input {
           position: absolute;
           left: 0;
           top: 2px;
-          background: $data-check-mark-svg;
+          background: $data-check-svg;
           background-repeat: no-repeat;
           background-position: center;
           background-size: 17px 17px;
@@ -200,16 +200,17 @@ input {
 
     &::after {
       content: '';
+      color: $white;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       padding: 0 1em;
       pointer-events: none;
-      background: $blue $data-arrow-white-down-svg no-repeat center;
-      background-size: 14px 7px;
+      background: $blue $data-arrow-collapse-white-svg no-repeat center;
       display: inline-block;
       width: 44px;
+      background-size: 20px;
     }
 
     select {
