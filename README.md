@@ -124,7 +124,7 @@ The original Klaro CSS contains validation errors so the actual CSS file has bee
 The file is placed here and the update could be found by searching for "Updated manually to validate".
 
 <pre>
-├── public
-└── css
-└── klaro.css
+└── public
+  └── css
+    └── klaro.css
 </pre>
