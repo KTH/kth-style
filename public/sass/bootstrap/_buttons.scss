@@ -164,16 +164,6 @@
   }
 }
 
-.link-to {
-  &::after {
-    @extend %icon-general-style;
-    background: $data-arrow-next-blue-svg no-repeat 0.3rem 0;
-    background-size: 0.875rem 0.875rem;
-    vertical-align: middle;
-    margin-top: 0.188rem;
-  }
-}
-
 .pdf-link {
   margin: 0;
   @media (min-width: 768px) {
