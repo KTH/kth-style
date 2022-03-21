@@ -90,4 +90,35 @@ window.addEventListener('load', () => {
     document.getElementById('mobileMenuContent').classList.toggle('show')
     this.classList.toggle('open')
   }
+  /*
+   * Make the main menu sticky
+   */
+  var maxScrollPos = document.body.scrollHeight - document.querySelector('footer').clientHeight
+  var minScrollPos = 260
+
+  function handleMainMenu(scrollPos) {
+    if (scrollPos > minScrollPos) {
+      if (scrollPos < maxScrollPos) {
+        mainMenu.style.marginTop = scrollPos - 260 + 'px'
+      } else {
+        mainMenu.style.marginTop = maxScrollPos - 260 + 'px'
+      }
+    } else {
+      mainMenu.style.marginTop = 0
+    }
+  }
+  if (mainMenu) {
+    var lastKnownScrollPosition = 0
+    var ticking = false
+    window.addEventListener('scroll', () => {
+      lastKnownScrollPosition = window.scrollY
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleMainMenu(lastKnownScrollPosition)
+          ticking = false
+        })
+        ticking = true
+      }
+    })
+  }
 })

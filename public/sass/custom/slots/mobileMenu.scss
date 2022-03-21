@@ -2,7 +2,8 @@
 
 #nav-icon {
   z-index: 25;
-  position: absolute;
+  position: fixed;
+  margin-top: 32px;
   top: $gutter;
   right: $gutter;
   padding: 5px 15px 15px;
@@ -110,7 +111,8 @@
           &.collapsing {
             background-color: white;
             display: block !important; // Bootstrap override
-            position: absolute;
+            position: fixed;
+            margin-top: 32px;
             z-index: 20;
             top: 0;
             right: 0;
