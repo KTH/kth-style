@@ -103,8 +103,9 @@ window.addEventListener('load', () => {
       } else {
         mainMenu.style.marginTop = maxScrollPos - 260 + 'px'
       }
-    } else {
-      mainMenu.style.marginTop = 0
+    } else if (mainMenu.style.marginTop !== '0px') {
+      mainMenu.style.marginTop = '0px'
+      maxScrollPos = document.body.scrollHeight - document.querySelector('footer').clientHeight
     }
   }
   if (mainMenu) {
