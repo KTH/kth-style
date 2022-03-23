@@ -19,6 +19,7 @@ public/img/kth-style/icons/arrow-next-white.svg \
 public/img/kth-style/icons/arrow-collapse.svg \
 public/img/kth-style/icons/arrow-collapse-white.svg \
 public/img/kth-style/icons/arrow-expand.svg \
+public/img/kth-style/icons/arrow-expand-blue.svg \
 public/img/kth-style/icons/arrow-expand-white.svg \
 public/img/kth-style/icons/arrow-maximize.svg \
 public/img/kth-style/icons/arrow-maximize-blue.svg \
