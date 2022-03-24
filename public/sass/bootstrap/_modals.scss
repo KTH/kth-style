@@ -55,3 +55,21 @@
     }
   }
 }
+
+/* * * * * * Information modal icon * * * * * * */
+
+.info-modal {
+  background: $data-open-modal-svg no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  border: transparent;
+  border-radius: 0.8em;
+  margin-left: 0.5em;
+  padding: 0;
+  vertical-align: baseline;
+  padding-right: 1.3rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  position: relative;
+  top: 4px;
+}
