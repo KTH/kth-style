@@ -96,29 +96,36 @@ window.addEventListener('load', () => {
   var maxScrollPos = document.body.scrollHeight - document.querySelector('footer').clientHeight
   var minScrollPos = 260
 
-  function handleMainMenu(scrollPos) {
+  function handleMainMenu(scrollPos, doReset) {
+    // console.log(`handleMainMenu`, scrollPos, doReset, mainMenu.style.marginTop, maxScrollPos)
     if (scrollPos > minScrollPos) {
       if (scrollPos < maxScrollPos) {
         mainMenu.style.marginTop = scrollPos - 260 + 'px'
       } else {
         mainMenu.style.marginTop = maxScrollPos - 260 + 'px'
       }
-    } else if (mainMenu.style.marginTop !== '0px') {
+    } else if (doReset || mainMenu.style.marginTop !== '0px') {
+      // console.log(`Reset`, doReset, scrollPos, mainMenu.style.marginTop, maxScrollPos, window.location.href)
       mainMenu.style.marginTop = '0px'
       maxScrollPos = document.body.scrollHeight - document.querySelector('footer').clientHeight
     }
   }
   if (mainMenu) {
-    var lastKnownScrollPosition = 0
-    var ticking = false
+    var lastKnownScrollPosition1 = 0
+    var ticking1 = false
+    var lastUrl = window.location.href
     window.addEventListener('scroll', () => {
-      lastKnownScrollPosition = window.scrollY
-      if (!ticking) {
+      lastKnownScrollPosition1 = Math.round(window.scrollY)
+      if (!ticking1) {
         window.requestAnimationFrame(() => {
-          handleMainMenu(lastKnownScrollPosition)
-          ticking = false
+          var doResetUrl = lastUrl !== window.location.href
+          handleMainMenu(lastKnownScrollPosition1, doResetUrl)
+          ticking1 = false
+          if (doResetUrl) {
+            lastUrl = window.location.href
+          }
         })
-        ticking = true
+        ticking1 = true
       }
     })
   }
