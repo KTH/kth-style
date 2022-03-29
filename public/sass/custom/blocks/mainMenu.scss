@@ -2,6 +2,9 @@
 
 #mainMenu {
   display: none;
+  position: sticky;
+  align-self: start;
+  top: 1rem;
 
   @media (min-width: 992px) {
     display: block;
