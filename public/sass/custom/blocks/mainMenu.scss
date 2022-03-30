@@ -136,7 +136,7 @@
                                 background-position-y: 14px;
 
                                 &.expanded {
-                                  background: $data-arrow-collapse-svg no-repeat right;
+                                  background: $data-arrow-collapse-black-svg no-repeat right;
                                   background-size: 14px 14px;
                                   background-position: 100% 14px;
                                 }
@@ -207,7 +207,7 @@
             }
 
             &.node {
-              background: $data-arrow-expand-svg no-repeat right;
+              background: $data-arrow-expand-black-svg no-repeat right;
               background-size: 9px;
             }
           }

@@ -163,11 +163,11 @@
                     }
 
                     &.node {
-                      background: $data-arrow-expand-svg no-repeat right;
+                      background: $data-arrow-expand-black-svg no-repeat right;
                       background-position: 100% 8px;
 
                       &.expanded {
-                        background: $data-arrow-collapse-svg no-repeat right;
+                        background: $data-arrow-collapse-black-svg no-repeat right;
                         background-position: 100% 8px;
                         padding-right: 0;
                       }
@@ -283,7 +283,7 @@
                   }
 
                   &.node {
-                    background: $data-arrow-expand-svg no-repeat right;
+                    background: $data-arrow-expand-black-svg no-repeat right;
                     background-size: auto 12px;
                     background-position: 100% 8px;
                   }
@@ -339,13 +339,13 @@
                         a[hreflang='sv-SE'] {
                           &.secondaryMenu {
                             color: $white;
-                            background: $data-language-svg no-repeat right;
+                            background: $data-language-black-svg no-repeat right;
                             background-size: 18px;
                             padding-right: 22px;
                             padding-top: 6px;
 
                             &:first-child {
-                              border-top: 0; // 1px solid #65656c;
+                              border-top: 0;
                             }
                           }
                         }

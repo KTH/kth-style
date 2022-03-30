@@ -39,17 +39,17 @@ $alert-styles: (
   'info': (
     'bgColor': $infoYellow,
     'iconUrl': '/img/kth-style/icons/information.svg',
-    'iconData': $data-information-svg,
+    'iconData': $data-information-black-svg,
   ),
   'danger': (
     'bgColor': $infoRed,
     'iconUrl': '/img/kth-style/icons/error.svg',
-    'iconData': $data-error-svg,
+    'iconData': $data-error-black-svg,
   ),
   'success': (
     'bgColor': $infoGreen,
     'iconUrl': '/img/kth-style/icons/success.svg',
-    'iconData': $data-success-svg,
+    'iconData': $data-success-black-svg,
   ),
 );
 
