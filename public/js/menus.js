@@ -4,6 +4,87 @@
 /* eslint-disable  no-use-before-define */
 /* eslint-disable  no-plusplus */
 /* eslint-disable  no-undef */
+function klaroOnload() {
+  var klaro = document.querySelector('div.klaro')
+  if (!klaro || klaro.querySelector('a') === null) {
+    return
+  }
+  if (klaro !== document.body.firstElementChild) {
+    document.body.insertBefore(klaro, document.body.firstElementChild)
+    klaro.querySelector('a').focus()
+  }
+  const getNextFocusableElement = function (element, step) {
+    var elements = Array.prototype.slice.call(
+      klaro.querySelectorAll('a:not([disabled]), button:not([disabled]), input:not([disabled])')
+    )
+    if (!elements) return null
+
+    elements = elements.filter((e) => window.getComputedStyle(e).display !== 'none')
+    for (var i = 0; i < elements.length; i++) {
+      if (elements[i] === element) {
+        if (i < elements.length - step) {
+          return elements[i + step]
+        }
+        return elements[0]
+      }
+    }
+    return elements[0]
+  }
+
+  const resetActiveLI = function (element) {
+    var elements = Array.prototype.slice.call(klaro.querySelectorAll('li.active'))
+    if (!elements) return null
+    elements.forEach((e) => e.classList.remove('active'))
+  }
+  const handleKeydown = (event) => {
+    if (!klaro || klaro.querySelector('a') === null) {
+      window.removeEventListener('keydown', handleKeydown)
+      return
+    }
+    if (event.key === 'Tab') {
+      const nextElement = getNextFocusableElement(event.target, event.shiftKey ? -1 : 1)
+      if (nextElement) {
+        event.preventDefault()
+        nextElement.focus()
+        resetActiveLI()
+        if (nextElement.tagName === 'INPUT') {
+          nextElement.parentElement.closest('li').classList.add('active')
+        }
+      }
+    }
+  }
+  window.addEventListener('keydown', handleKeydown)
+
+  const config = { childList: true, subtree: true }
+  const callback = function (mutationsList, observer) {
+    for (let mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        if (mutation.addedNodes.length > 0) {
+          for (let node of mutation.addedNodes) {
+            if (node.nodeType === 1) {
+              if (node.classList.contains('cookie-modal')) {
+                var inputs = Array.prototype.slice.call(node.querySelectorAll('input'))
+                for (let input of inputs) {
+                  input.setAttribute('tabindex', '0')
+                }
+                const activeInput = inputs.find((i) => !i.disabled)
+                activeInput.parentElement.closest('li').classList.add('active')
+                activeInput.focus()
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  const observer = new MutationObserver(callback)
+  observer.observe(klaro, config)
+}
+
+window.addEventListener('load', () => {
+  klaroOnload()
+})
 
 window.addEventListener('load', () => {
   // If no mobile menu containers are present, skip it all togehter
