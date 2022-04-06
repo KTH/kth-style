@@ -1,9 +1,7 @@
-/* eslint-disable  func-names */
 /* eslint-disable  no-var */
 /* eslint-disable  vars-on-top */
 /* eslint-disable  no-use-before-define */
-/* eslint-disable  no-plusplus */
-/* eslint-disable  no-undef */
+
 function klaroOnload() {
   var klaro = document.querySelector('div.klaro')
   if (!klaro || klaro.querySelector('a') === null) {
@@ -32,11 +30,12 @@ function klaroOnload() {
     return elements[0]
   }
 
-  const resetActiveLI = function (element) {
+  const resetActiveLI = function () {
     var elements = Array.prototype.slice.call(klaro.querySelectorAll('li.active'))
-    if (!elements) return null
+    if (!elements) return
     elements.forEach((e) => e.classList.remove('active'))
   }
+  // eslint-disable-next-line no-shadow
   const handleKeydown = (event) => {
     if (!klaro || klaro.querySelector('a') === null) {
       window.removeEventListener('keydown', handleKeydown)
@@ -63,7 +62,7 @@ function klaroOnload() {
   window.addEventListener('keydown', handleKeydown)
 
   const config = { childList: true, subtree: true }
-  const callback = function (mutationsList, observer) {
+  const callback = function (mutationsList) {
     for (const mutation of mutationsList) {
       if (mutation.type === 'childList') {
         if (mutation.addedNodes.length > 0) {
@@ -71,7 +70,7 @@ function klaroOnload() {
             if (node.nodeType === 1) {
               if (node.classList.contains('cookie-modal')) {
                 var inputs = Array.prototype.slice.call(node.querySelectorAll('input'))
-                for (let input of inputs) {
+                for (const input of inputs) {
                   input.setAttribute('tabindex', '0')
                 }
                 const activeInput = inputs.find((i) => !i.disabled)
@@ -177,7 +176,7 @@ window.addEventListener('load', () => {
   }
 
   // Mega menu icon toggler.
-  document.getElementById('nav-icon').onclick = function () {
+  document.getElementById('nav-icon').onclick = function _onclick() {
     if (document.body.style.overflow !== 'hidden') {
       document.body.style.overflow = 'hidden'
     } else {
