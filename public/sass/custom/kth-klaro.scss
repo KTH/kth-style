@@ -76,7 +76,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 554px;
-        height: auto;
+        height: fit-content;
         max-width: 554px;
         background-color: $white;
         border-radius: 0.25rem;
@@ -165,6 +165,13 @@
         }
       }
     }
+    .cm-list-input.required:checked {
+      + .cm-list-label {
+        .slider {
+          background-color: #97b566;
+        }
+      }
+    }
 
     a {
       color: $blue;
@@ -184,6 +191,7 @@
           height: 22px;
           border-radius: 11px;
           */
+          stroke: var(--dark, #fafafa);
         }
       }
 
