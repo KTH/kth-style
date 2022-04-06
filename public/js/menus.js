@@ -1,7 +1,6 @@
 /* eslint-disable  no-var */
 /* eslint-disable  vars-on-top */
 /* eslint-disable  no-use-before-define */
-
 function klaroOnload() {
   var klaro = document.querySelector('div.klaro')
   if (!klaro || klaro.querySelector('a') === null) {
@@ -9,7 +8,6 @@ function klaroOnload() {
   }
   if (klaro !== document.body.firstElementChild) {
     document.body.insertBefore(klaro, document.body.firstElementChild)
-    klaro.querySelector('a').focus()
     document.body.style.overflowY = 'hidden'
   }
   const getNextFocusableElement = function (element, step) {
@@ -30,7 +28,7 @@ function klaroOnload() {
     return elements[0]
   }
 
-  const resetActiveLI = function () {
+  const resetActiveLI = function _resetActiveLI() {
     var elements = Array.prototype.slice.call(klaro.querySelectorAll('li.active'))
     if (!elements) return
     elements.forEach((e) => e.classList.remove('active'))
@@ -73,9 +71,6 @@ function klaroOnload() {
                 for (const input of inputs) {
                   input.setAttribute('tabindex', '0')
                 }
-                const activeInput = inputs.find((i) => !i.disabled)
-                activeInput.parentElement.closest('li').classList.add('active')
-                activeInput.focus()
               }
             }
           }
