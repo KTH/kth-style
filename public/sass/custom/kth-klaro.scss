@@ -76,7 +76,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 554px;
-        height: 210px;
+        height: auto;
         max-width: 554px;
         background-color: $white;
         border-radius: 0.25rem;
@@ -196,7 +196,7 @@
       li {
         color: $black;
         &.active {
-          border: 1px solid $blue;
+          border: 3px solid $blue;
         }
       }
 

@@ -12,6 +12,7 @@ function klaroOnload() {
   if (klaro !== document.body.firstElementChild) {
     document.body.insertBefore(klaro, document.body.firstElementChild)
     klaro.querySelector('a').focus()
+    document.body.style.overflowY = 'hidden'
   }
   const getNextFocusableElement = function (element, step) {
     var elements = Array.prototype.slice.call(
@@ -39,6 +40,7 @@ function klaroOnload() {
   const handleKeydown = (event) => {
     if (!klaro || klaro.querySelector('a') === null) {
       window.removeEventListener('keydown', handleKeydown)
+      document.body.style.overflowY = 'auto'
       return
     }
     if (event.key === 'Tab') {
@@ -51,16 +53,21 @@ function klaroOnload() {
           nextElement.parentElement.closest('li').classList.add('active')
         }
       }
+    } else if (event.key === 'Escape') {
+      const closeButton = klaro.querySelector('div.klaro .cookie-modal button.hide')
+      if (closeButton) {
+        closeButton.click()
+      }
     }
   }
   window.addEventListener('keydown', handleKeydown)
 
   const config = { childList: true, subtree: true }
   const callback = function (mutationsList, observer) {
-    for (let mutation of mutationsList) {
+    for (const mutation of mutationsList) {
       if (mutation.type === 'childList') {
         if (mutation.addedNodes.length > 0) {
-          for (let node of mutation.addedNodes) {
+          for (const node of mutation.addedNodes) {
             if (node.nodeType === 1) {
               if (node.classList.contains('cookie-modal')) {
                 var inputs = Array.prototype.slice.call(node.querySelectorAll('input'))
@@ -70,6 +77,15 @@ function klaroOnload() {
                 const activeInput = inputs.find((i) => !i.disabled)
                 activeInput.parentElement.closest('li').classList.add('active')
                 activeInput.focus()
+              }
+            }
+          }
+        } else if (mutation.removedNodes.length > 0) {
+          for (const node of mutation.removedNodes) {
+            if (node.nodeType === 1) {
+              if (node.classList.contains('cn-body')) {
+                window.removeEventListener('keydown', handleKeydown)
+                document.body.style.overflowY = 'auto'
               }
             }
           }
