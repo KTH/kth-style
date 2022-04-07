@@ -77,7 +77,7 @@ function klaroOnload() {
         } else if (mutation.removedNodes.length > 0) {
           for (const node of mutation.removedNodes) {
             if (node.nodeType === 1) {
-              if (node.classList.contains('cn-body')) {
+              if (node.classList.contains('cn-body') || node.classList.contains('cookie-modal')) {
                 window.removeEventListener('keydown', handleKeydown)
                 document.body.style.overflowY = 'auto'
               }
