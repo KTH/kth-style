@@ -2,7 +2,7 @@
 /* eslint-disable  vars-on-top */
 /* eslint-disable  no-use-before-define */
 function klaroOnload() {
-  var klaro = document.querySelector('div.klaro')
+  var klaro = document.querySelector('#klaro div.klaro')
   if (!klaro || klaro.querySelector('a') === null) {
     return
   }
