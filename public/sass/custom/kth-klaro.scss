@@ -66,6 +66,7 @@
       left: 0;
       background: rgba(0, 0, 0, 0.5);
       border-radius: 0;
+      z-index: 99999;
 
       .cn-body {
         font-size: 1rem;
@@ -140,6 +141,7 @@
   }
 
   .cookie-modal {
+    z-index: 99999;
     .cm-list-input.required:checked + .cm-list-label .slider {
       background-color: $green;
     }
