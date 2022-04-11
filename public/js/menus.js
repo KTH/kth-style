@@ -181,13 +181,11 @@ window.addEventListener('load', () => {
     document.getElementById('mobileMenuContent').classList.toggle('show')
     this.classList.toggle('open')
   }
-
+})
+document.addEventListener('kpmLoaded', () => {
   // Set kpm menu height as css var to handle margin top correctly
   var kthMenu = document.querySelector('nav#kth-pmenu')
   if (kthMenu && kthMenu.clientHeight) {
     document.documentElement.style.setProperty('--kth-pmenu-height', kthMenu.clientHeight + 'px')
-    console.log(
-      `kth-pmenu-height: ${getComputedStyle(document.documentElement).getPropertyValue('--kth-pmenu-height')}`
-    )
   }
 })
