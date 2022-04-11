@@ -3,7 +3,7 @@
 #nav-icon {
   z-index: 25;
   position: fixed;
-  margin-top: 32px;
+  margin-top: calc(var(--kth-pm-height, 0) + 1px);
   top: $gutter;
   right: $gutter;
   padding: 5px 15px 15px;
@@ -112,7 +112,7 @@
             background-color: white;
             display: block !important; // Bootstrap override
             position: fixed;
-            margin-top: 32px;
+            margin-top: calc(var(--kth-pm-height, 0) + 1px);
             z-index: 20;
             top: 0;
             right: 0;
