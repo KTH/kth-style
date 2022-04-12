@@ -3,14 +3,18 @@
 /* eslint-disable  no-use-before-define */
 function klaroOnload() {
   var klaro = document.querySelector('#klaro div.klaro')
-  if (!klaro || klaro.querySelector('a') === null) {
+  function noVisibleKlaro() {
+    return !klaro || window.getComputedStyle(klaro).display === 'none' || klaro.querySelector('a') === null
+  }
+  if (noVisibleKlaro()) {
     return
   }
   if (klaro !== document.body.firstElementChild) {
     document.body.insertBefore(klaro, document.body.firstElementChild)
     document.body.style.overflowY = 'hidden'
   }
-  const getNextFocusableElement = function (element, step) {
+
+  const getNextFocusableElement = function _getNextFocusableElement(element, step) {
     var elements = Array.prototype.slice.call(
       klaro.querySelectorAll('a:not([disabled]), button:not([disabled]), input:not([disabled])')
     )
@@ -35,7 +39,7 @@ function klaroOnload() {
   }
   // eslint-disable-next-line no-shadow
   const handleKeydown = (event) => {
-    if (!klaro || klaro.querySelector('a') === null) {
+    if (noVisibleKlaro()) {
       window.removeEventListener('keydown', handleKeydown)
       document.body.style.overflowY = 'auto'
       return
@@ -59,8 +63,8 @@ function klaroOnload() {
   }
   window.addEventListener('keydown', handleKeydown)
 
-  const config = { childList: true, subtree: true }
-  const callback = function (mutationsList) {
+  const config = { childList: true, subtree: true, attributes: true }
+  const callback = function _callback(mutationsList) {
     for (const mutation of mutationsList) {
       if (mutation.type === 'childList') {
         if (mutation.addedNodes.length > 0) {
@@ -83,6 +87,11 @@ function klaroOnload() {
               }
             }
           }
+        }
+      } else if (mutation.attributeName === 'style') {
+        if (window.getComputedStyle(klaro).getPropertyValue('display') === 'none') {
+          window.removeEventListener('keydown', handleKeydown)
+          document.body.style.overflowY = 'auto'
         }
       }
     }
