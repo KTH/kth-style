@@ -11,7 +11,6 @@ function klaroOnload() {
   }
   if (klaro !== document.body.firstElementChild) {
     document.body.insertBefore(klaro, document.body.firstElementChild)
-    document.body.style.overflowY = 'hidden'
   }
 
   const getNextFocusableElement = function _getNextFocusableElement(element, step) {
@@ -41,7 +40,6 @@ function klaroOnload() {
   const handleKeydown = (event) => {
     if (noVisibleKlaro()) {
       window.removeEventListener('keydown', handleKeydown)
-      document.body.style.overflowY = 'auto'
       return
     }
     if (event.key === 'Tab') {
@@ -83,7 +81,6 @@ function klaroOnload() {
             if (node.nodeType === 1) {
               if (node.classList.contains('cn-body') || node.classList.contains('cookie-modal')) {
                 window.removeEventListener('keydown', handleKeydown)
-                document.body.style.overflowY = 'auto'
               }
             }
           }
@@ -91,7 +88,6 @@ function klaroOnload() {
       } else if (mutation.attributeName === 'style') {
         if (window.getComputedStyle(klaro).getPropertyValue('display') === 'none') {
           window.removeEventListener('keydown', handleKeydown)
-          document.body.style.overflowY = 'auto'
         }
       }
     }
