@@ -146,11 +146,9 @@
 .external-link::after {
   @extend %icon-general-style;
   background: $data-open-window-blue-svg no-repeat;
-  background-position: 18% 0;
-  background-size: 14px;
-  height: 0.85em;
-  width: 0.85em;
-  margin: 0 0.3em -0.1em 0.2em;
+  background-position: 0 4px;
+  background-size: 16px;
+  margin: 0 0 -1px 10px;
 }
 
 .link-back {

@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
-    <path fill="#000000" d="M13,18H11V10L7.5,13.5L6.08,12.08L12,6.16L17.92,12.08L16.5,13.5L13,10V18M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><rect x="0" y="0" width="42" height="42" rx="20.97" ry="20.97" style="fill:#fff;"/><path d="M22.5,30.01h-3v-12.01l-5.25,5.25-2.13-2.13,8.88-8.88,8.88,8.88-2.13,2.13-5.25-5.25v12.01m-1.5-24.01c8.29,0,15,6.72,15,15s-6.72,15-15,15-15-6.72-15-15S12.72,6,21,6m0,3c-6.63,0-12.01,5.38-12.01,12.01s5.38,12.01,12.01,12.01,12.01-5.38,12.01-12.01-5.38-12.01-12.01-12.01Z"/></svg>
