@@ -2,9 +2,11 @@
 
 #mainMenu {
   display: none;
-  position: sticky;
-  align-self: start;
-  top: 3rem;
+  &.sticky-menu {
+    position: sticky;
+    align-self: start;
+    top: 0;
+  }
 
   @media (min-width: 992px) {
     display: block;

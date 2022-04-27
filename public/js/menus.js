@@ -187,3 +187,27 @@ window.addEventListener('load', () => {
     this.classList.toggle('open')
   }
 })
+
+window.addEventListener('load', () => {
+  if (!document.querySelector('#mainMenu')) return
+  const stickyMainMenu = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        document.getElementById('mainMenu').classList.add('sticky-menu')
+      } else {
+        document.getElementById('mainMenu').classList.remove('sticky-menu')
+      }
+    })
+  }
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0,
+  }
+
+  const observer = new IntersectionObserver(stickyMainMenu, options)
+  const target = document.querySelector('#mainMenu ul.nav.nav-list:last-of-type')
+  if (target) {
+    observer.observe(target)
+  }
+})
