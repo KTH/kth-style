@@ -187,12 +187,3 @@ window.addEventListener('load', () => {
     this.classList.toggle('open')
   }
 })
-const setKthPmenuHeight = () => {
-  // Set kpm menu height as css var to handle margin top correctly
-  var kthMenu = document.querySelector('nav#kth-pmenu')
-  if (kthMenu && kthMenu.clientHeight) {
-    document.documentElement.style.setProperty('--kth-pmenu-height', kthMenu.clientHeight + 'px')
-  }
-}
-document.addEventListener('kpmLoaded', setKthPmenuHeight)
-window.addEventListener('resize', setKthPmenuHeight)
