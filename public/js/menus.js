@@ -188,26 +188,25 @@ window.addEventListener('load', () => {
   }
 })
 
-window.addEventListener('load', () => {
+function stickyMainMenu() {
   if (!document.querySelector('#mainMenu')) return
-  const stickyMainMenu = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        document.getElementById('mainMenu').classList.add('sticky-menu')
-      } else {
-        document.getElementById('mainMenu').classList.remove('sticky-menu')
-      }
-    })
-  }
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0,
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect()
+
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
   }
 
-  const observer = new IntersectionObserver(stickyMainMenu, options)
-  const target = document.querySelector('#mainMenu ul.nav.nav-list:last-of-type')
-  if (target) {
-    observer.observe(target)
+  if (isInViewport(document.querySelector('#mainMenu ul.nav.nav-list:last-of-type')?.lastElementChild)) {
+    document.querySelector('#mainMenu').classList.add('sticky-menu')
+  } else {
+    document.querySelector('#mainMenu').classList.remove('sticky-menu')
   }
-})
+}
+window.addEventListener('load', stickyMainMenu)
+window.addEventListener('resize', stickyMainMenu)
