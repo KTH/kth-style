@@ -6,6 +6,11 @@ KTH base stylesheets and javascript package and a custom build of Bootstrap 4. T
 
 For information how to use and examples: https://app.kth.se/style/
 
+### How to generate icons in base64 format
+
+- Add the icon into the `/public/img/kth-style/icons` folder
+- Run the script ./generate-svg-data.sh to generate the icons
+
 ### Included files in dist folder
 
 <pre>
