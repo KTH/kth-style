@@ -71,7 +71,7 @@ public/img/kth-style/icons/file-black.svg \
 public/img/kth-style/icons/file-blue.svg \
 public/img/kth-style/icons/file-white.svg \
 public/img/kth-style/icons/folder-black.svg \
-public/img/kth-style/icons/fifolderle-blue.svg \
+public/img/kth-style/icons/folder-blue.svg \
 public/img/kth-style/icons/folder-white.svg \
 public/img/kth-style/icons/gallery-active-black.svg \
 public/img/kth-style/icons/gallery-back-black.svg \
