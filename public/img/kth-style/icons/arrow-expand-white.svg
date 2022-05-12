@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.41 12">
-  <path fill="#ffffff" d="M0,10.58,4.58,6,0,1.41,1.41,0l6,6-6,6Z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a"
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.41 12">
+  <path d="M0,10.58L4.58,6,0,1.41,1.41,0,7.41,6,1.41,12l-1.41-1.42Z" style="fill:#ffffff;"/>
 </svg>

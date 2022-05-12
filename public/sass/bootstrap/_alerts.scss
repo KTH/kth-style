@@ -14,7 +14,7 @@
     overflow: auto;
 
     &:before {
-      width: 1em;
+      width: 0.694em;
       top: 12px;
       left: 20px;
     }
@@ -23,8 +23,26 @@
       padding: 30px 30px 30px 70px;
 
       &:before {
-        width: 1em;
-        top: 22px;
+        width: 0.694em;
+        top: 16px;
+        left: 30px;
+      }
+    }
+  }
+
+  &.alert-info {
+    &:before {
+      height: 0.694em;
+      width: 0.278em;
+      top: 12px;
+      left: 20px;
+    }
+
+    @media (min-width: 768px) {
+      &:before {
+        height: 0.694em;
+        width: 0.278em;
+        top: 16px;
         left: 30px;
       }
     }

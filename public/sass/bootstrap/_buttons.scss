@@ -43,13 +43,13 @@
     &::after {
       content: '';
       background: $data-arrow-next-white-svg no-repeat 0.3rem 0;
-      background-size: 1.1rem 1.1rem;
+      background-size: 0.875rem 0.875rem;
       vertical-align: middle;
       width: 1.25rem;
       height: 1.25rem;
       display: inherit;
       position: relative;
-      top: 0px;
+      top: 2px;
       left: 2px;
     }
   }
@@ -62,13 +62,13 @@
     &::after {
       content: '';
       background: $data-arrow-next-white-svg no-repeat 0.3rem 0;
-      background-size: 1.1rem 1.1rem;
+      background-size: 0.875rem 0.875rem;
       vertical-align: middle;
       width: 1.25rem;
       height: 1.25rem;
       display: inherit;
       position: relative;
-      top: 0px;
+      top: 2px;
       left: 2px;
     }
   }
@@ -103,7 +103,7 @@
     &::after {
       content: '';
       background: $data-arrow-next-black-svg no-repeat 0.3rem 0;
-      background-size: 1.1rem 1.1rem;
+      background-size: 0.875rem 0.875rem;
       vertical-align: middle;
       width: 1.25rem;
       height: 1.25rem;
@@ -117,8 +117,8 @@
   &.back {
     &::before {
       @extend %icon-general-style;
-      background: $data-arrow-back-black-svg no-repeat 0 -0.1rem;
-      background-size: 1.1rem 1.1rem;
+      background: $data-arrow-back-black-svg no-repeat 0 0rem;
+      background-size: 0.875rem 0.875rem;
       color: $linkBlue;
       vertical-align: middle;
       margin-top: 0.188rem;
@@ -145,10 +145,11 @@
 
 .external-link::after {
   @extend %icon-general-style;
+  height: 1.25rem;
+  width: 1.3rem;
   background: $data-open-window-blue-svg no-repeat;
-  background-position: 0 4px;
-  background-size: 16px;
-  margin: 0 0 -1px 10px;
+  background-size: 1.25rem 1.25rem;
+  margin: 0 0 -4px 10px;
 }
 
 .link-back {
@@ -158,7 +159,8 @@
     background-size: 0.875rem 0.875rem;
     background-position-x: center;
     vertical-align: middle;
-    margin-top: 0.125rem;
+    margin: 0.125rem 0.625rem 0 0;
+    width: 1rem;
   }
 }
 
@@ -170,9 +172,9 @@
   &:before {
     @extend %icon-general-style;
     background: $data-pdf-blue-svg no-repeat;
-    height: 1.4em;
-    width: 1.3em;
-    margin: 0.3em 0.4em 0.6em 0.4em;
+    height: 1.25rem;
+    margin: 0 0.625rem 0.3rem 0;
+    width: 1rem;
     vertical-align: middle;
   }
 }
@@ -183,9 +185,9 @@
   &:after {
     @extend %icon-general-style;
     background: $data-pdf-blue-svg no-repeat;
-    height: 1.4em;
-    width: 1.3em;
-    margin: 0.3em 0.4em 0.6em 0.3em;
+    height: 1.25rem;
+    width: 1rem;
+    margin: 0 0 0.3rem 0.625em;
     vertical-align: middle;
   }
 }

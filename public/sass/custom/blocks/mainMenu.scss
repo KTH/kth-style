@@ -110,12 +110,12 @@
                         &.parentLink {
                           padding: 0;
                           background: $data-arrow-back-blue-svg no-repeat left;
-                          background-size: auto 12px;
-                          background-position-y: 6px;
+                          background-size: 0.875rem 0.875rem;
+                          background-position-y: 5px;
                           margin-bottom: 10px;
 
                           a {
-                            padding-left: $gutter;
+                            padding-left: 1.313rem;
                             font-family: $sansSerif;
                             font-size: $font-size-base;
                             display: block;

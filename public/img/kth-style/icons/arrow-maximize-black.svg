@@ -1,1 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" style="fill:#000"><path d="M9.5,13.09L10.91,14.5L6.41,19H10V21H3V14H5V17.59L9.5,13.09M10.91,9.5L9.5,10.91L5,6.41V10H3V3H10V5H6.41L10.91,9.5M14.5,13.09L19,17.59V14H21V21H14V19H17.59L13.09,14.5L14.5,13.09M13.09,9.5L17.59,5H14V3H21V10H19V6.41L14.5,10.91L13.09,9.5Z" /></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+    <path d="M6.5,10.09l1.41,1.41-4.5,4.5h3.59v2H0v-7H2v3.59l4.5-4.5m1.41-3.59l-1.41,1.41L2,3.41v3.59H0V0H7V2H3.41L7.91,6.5m3.59,3.59l4.5,4.5v-3.59h2v7h-7v-2h3.59l-4.5-4.5,1.41-1.41m-1.41-3.59L14.59,2h-3.59V0h7V7h-2V3.41l-4.5,4.5-1.41-1.41Z" style="fill:#212121;"/>
+</svg>
