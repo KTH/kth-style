@@ -1,8 +1,8 @@
 // Set browser native outline when a focusable element gets focus
 iframe:focus,
 iframe:active,
-[tabindex]:focus,
-[tabindex]:active,
+[tabindex]:not(body):focus,
+[tabindex]:not(body)::active,
 button:not([disabled]):focus,
 button:not([disabled]):active,
 input:not([disabled]):focus,
