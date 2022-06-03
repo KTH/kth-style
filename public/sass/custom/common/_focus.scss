@@ -2,7 +2,7 @@
 iframe:focus,
 iframe:active,
 [tabindex]:not(body):focus,
-[tabindex]:not(body)::active,
+[tabindex]:not(body):active,
 button:not([disabled]):focus,
 button:not([disabled]):active,
 input:not([disabled]):focus,
