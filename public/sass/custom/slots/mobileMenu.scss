@@ -6,90 +6,24 @@
   margin-top: calc(var(--kpm-bar-height, 2em) + 1px);
   top: $gutter;
   right: $gutter;
-  padding: 5px 15px 15px;
-  background-color: white;
-  border: 5px solid white;
-  border-left: 0;
-  border-right: 0;
+  background: $data-menu-black-svg no-repeat right;
+  margin-right: 4px;
+  margin-top: 52px;
+  height: 32px;
+  width: 32px;
+
+  &.open {
+    height: 14px;
+    width: 14px;
+    padding: 16px;
+    background: $data-close-black-svg no-repeat center;
+    background-size: 17px;
+    background-color: $white;
+  }
 
   @media (min-width: 992px) {
     display: none;
   }
-
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-
-  // &:focus {
-  //   outline: none;
-  // }
-
-  span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: $blue;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-
-    &:nth-child(1) {
-      top: 0;
-    }
-
-    &:nth-child(2) {
-      top: 8px;
-    }
-
-    &:nth-child(3) {
-      top: 8px;
-    }
-
-    &:nth-child(4) {
-      top: 16px;
-    }
-  }
-}
-
-#nav-icon.open span:nth-child(1) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
-
-#nav-icon.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-#nav-icon.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-#nav-icon.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
 }
 
 #mobileMenu {
