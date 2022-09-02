@@ -17,12 +17,12 @@
 }
 
 @mixin allFileLinkIcons($path: '../kth-style/img/kth-style/icons') {
-  @include fileLinkIcon('xls', 'file-excel-fa-solid', $path);
-  @include fileLinkIcon('xlsx', 'file-excel-fa-solid', $path);
-  @include fileLinkIcon('ppt', 'file-powerpoint-fa-solid', $path);
-  @include fileLinkIcon('pptx', 'file-powerpoint-fa-solid', $path);
-  @include fileLinkIcon('doc', 'file-word-fa-solid', $path);
-  @include fileLinkIcon('docx', 'file-word-fa-solid', $path);
-  @include fileLinkIcon('pdf', 'file-pdf-fa-solid', $path);
-  @include fileLinkIcon('zip', 'file-archive-fa-solid', $path);
+  @include fileLinkIcon('xls', 'xls-black', $path);
+  @include fileLinkIcon('xlsx', 'xls-black', $path);
+  @include fileLinkIcon('ppt', 'ppt-black', $path);
+  @include fileLinkIcon('pptx', 'ppt-black', $path);
+  @include fileLinkIcon('doc', 'doc-black', $path);
+  @include fileLinkIcon('docx', 'doc-black', $path);
+  @include fileLinkIcon('pdf', 'pdf-black', $path);
+  @include fileLinkIcon('zip', 'compressed-black', $path);
 }
