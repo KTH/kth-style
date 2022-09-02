@@ -50,6 +50,7 @@ public/img/kth-style/icons/date-blue.svg \
 public/img/kth-style/icons/date-white.svg \
 public/img/kth-style/icons/delete-black.svg \
 public/img/kth-style/icons/delete-blue.svg \
+public/img/kth-style/icons/delete-white.svg \
 public/img/kth-style/icons/doc-black.svg \
 public/img/kth-style/icons/doc-blue.svg \
 public/img/kth-style/icons/doc-white.svg \
