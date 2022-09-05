@@ -92,7 +92,6 @@ public/img/kth-style/icons/message-black.svg \
 public/img/kth-style/icons/message-white.svg \
 public/img/kth-style/icons/notification-black.svg \
 public/img/kth-style/icons/notification-white.svg \
-public/img/kth-style/icons/open-modal-black.svg \
 public/img/kth-style/icons/open-modal-blue.svg \
 public/img/kth-style/icons/open-window-black.svg \
 public/img/kth-style/icons/open-window-blue.svg \
