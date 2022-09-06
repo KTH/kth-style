@@ -37,6 +37,7 @@ public/img/kth-style/icons/calculate-black.svg \
 public/img/kth-style/icons/calculate-blue.svg \
 public/img/kth-style/icons/check-black.svg \
 public/img/kth-style/icons/close-black.svg \
+public/img/kth-style/icons/close-white.svg \
 public/img/kth-style/icons/code-black.svg \
 public/img/kth-style/icons/code-blue.svg \
 public/img/kth-style/icons/code-white.svg \
@@ -84,6 +85,7 @@ public/img/kth-style/icons/image-blue.svg \
 public/img/kth-style/icons/image-white.svg \
 public/img/kth-style/icons/information-black.svg \
 public/img/kth-style/icons/link-black.svg \
+public/img/kth-style/icons/link-blue.svg \
 public/img/kth-style/icons/language-black.svg \
 public/img/kth-style/icons/menu-black.svg \
 public/img/kth-style/icons/message-black.svg \
