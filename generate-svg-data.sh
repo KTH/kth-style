@@ -87,6 +87,7 @@ public/img/kth-style/icons/information-black.svg \
 public/img/kth-style/icons/link-black.svg \
 public/img/kth-style/icons/link-blue.svg \
 public/img/kth-style/icons/language-black.svg \
+public/img/kth-style/icons/language-white.svg \
 public/img/kth-style/icons/menu-black.svg \
 public/img/kth-style/icons/message-black.svg \
 public/img/kth-style/icons/message-white.svg \
