@@ -273,11 +273,15 @@
                         a[hreflang='sv-SE'] {
                           &.secondaryMenu {
                             color: $white;
-                            background: $data-language-white-svg no-repeat right;
-                            background-size: 18px;
                             padding-right: 22px;
                             padding-top: 6px;
-
+                            &:after {
+                              content: '';
+                              padding-right: 2 * $spacing;
+                              padding-left: 10px;
+                              background: $data-language-white-svg no-repeat right;
+                              background-size: 16px;
+                            }
                             &:first-child {
                               border-top: 0;
                             }

@@ -144,6 +144,7 @@ body {
                       &:after {
                         content: '';
                         padding-right: 2 * $spacing;
+                        padding-left: 10px;
                         background: $data-language-black-svg no-repeat right;
                         background-size: 16px;
                       }
