@@ -96,14 +96,10 @@
                     }
 
                     &.node {
-                      background: $data-arrow-expand-black-svg no-repeat right;
-                      background-position: 100% 8px;
-                      background-size: auto 12px;
                       &.expanded {
                         background: $data-arrow-collapse-black-svg no-repeat right;
-                        background-position: 100% 8px;
-                        padding-right: 0;
-                        background-size: auto 12px;
+                        background-size: 14px 9px;
+                        background-position: 100% 14px;
                       }
 
                       ul {
@@ -217,9 +213,14 @@
                   }
 
                   &.node {
-                    background: $data-arrow-expand-black-svg no-repeat right;
-                    background-size: auto 12px;
-                    background-position: 100% 8px;
+                    background: $data-arrow-next-black-svg no-repeat right;
+                    background-size: 14px 14px;
+                    background-position: 100% 14px;
+                    &.expandable {
+                      background: $data-arrow-expand-black-svg no-repeat right;
+                      background-size: 9px 14px;
+                      background-position: 100% 14px;
+                    }
                   }
                 }
               }

@@ -135,12 +135,9 @@
                               width: 100%;
 
                               &.node {
-                                background-position-y: 14px;
-
                                 &.expanded {
                                   background: $data-arrow-collapse-black-svg no-repeat right;
-                                  background-size: 14px 14px;
-                                  background-position: 100% 14px;
+                                  background-size: 14px 9px;
                                 }
 
                                 ul.nav-list {
@@ -209,8 +206,15 @@
             }
 
             &.node {
-              background: $data-arrow-expand-black-svg no-repeat right;
-              background-size: 9px;
+              background: $data-arrow-next-black-svg no-repeat right;
+              background-size: 14px 14px;
+              background-position: 100% 14px;
+
+              &.expandable {
+                background: $data-arrow-expand-black-svg no-repeat right;
+                background-size: 9px 14px;
+                background-position: 100% 14px;
+              }
             }
           }
         }
