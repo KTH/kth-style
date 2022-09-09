@@ -228,7 +228,7 @@ td > span > button.btn-info-modal {
     &::after {
       @extend %icon-general-style;
       vertical-align: bottom;
-      background: $data-upload-black-svg no-repeat;
+      background: $data-upload-blue-svg no-repeat;
       background-size: 1em;
       float: right;
     }
