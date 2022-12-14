@@ -54,7 +54,7 @@ body {
 }
 
 .paragraphs {
-  p {
+  p:not(.calendar) {
     @include t12(false);
     margin: 0 0 27px;
     max-width: 730px;
