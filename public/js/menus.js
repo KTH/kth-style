@@ -189,9 +189,10 @@ window.addEventListener('load', () => {
 })
 
 function stickyMainMenu() {
-  if (!document.querySelector('#mainMenu')) return
+  if (!document.querySelector('#mainMenu ul.nav.nav-list')) return
 
   function isInViewport(element) {
+    if (!element) return false
     const rect = element.getBoundingClientRect()
 
     return (
