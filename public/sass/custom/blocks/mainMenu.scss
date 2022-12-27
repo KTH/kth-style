@@ -136,8 +136,7 @@
 
                               &.node {
                                 &.expanded {
-                                  background: $data-arrow-collapse-black-svg no-repeat right;
-                                  background-size: 14px 9px;
+                                  background: none;
                                 }
 
                                 ul.nav-list {
