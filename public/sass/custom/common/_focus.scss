@@ -20,6 +20,12 @@ input[type='radio']:not([disabled]):focus ~ label:before {
   outline-offset: 3px;
   box-shadow: none;
 }
+#webform iframe:focus {
+  outline: none;
+}
+#webform iframe:active {
+  outline: none;
+}
 
 /* This needs to be separated from the above block due to legacy msedge problem */
 [href]:focus,
