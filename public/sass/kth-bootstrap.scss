@@ -1,8 +1,10 @@
 // KTH Bootstrap
+// This file is customized following this page: https://getbootstrap.com/docs/5.3/customize/sass/
 
-// This is the root scss file for the bootstrap distribution. The entry point for
-// the gulp sass build.
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import 'node_modules/bootstrap/scss/functions';
 
+// 2. Include any default variable overrides here
 // KTH variables
 @import '../fonts/openSans';
 @import 'variables/colors';
@@ -14,11 +16,16 @@
 // Overrides style values in bootstraps sass files
 @import './bootstrap/variables';
 
-// Bootstrap source
-@import 'node_modules/bootstrap/scss/functions';
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import 'node_modules/bootstrap/scss/variables';
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import 'node_modules/bootstrap/scss/maps';
 @import 'node_modules/bootstrap/scss/mixins';
 @import 'node_modules/bootstrap/scss/root';
+
+// 6. Include any other parts as needed
 @import 'node_modules/bootstrap/scss/reboot';
 @import 'node_modules/bootstrap/scss/type';
 @import 'node_modules/bootstrap/scss/images';
@@ -55,7 +62,8 @@
 @import 'node_modules/bootstrap/scss/mixins';
 @import 'node_modules/bootstrap/scss/root';
 
-// Custom components
+// ----------------------------------
+// 8. Add additional custom code here
 @import 'bootstrap/containers';
 @import 'bootstrap/mixins/alert';
 @import 'bootstrap/alerts';
