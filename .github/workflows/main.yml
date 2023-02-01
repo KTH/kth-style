@@ -29,6 +29,5 @@ jobs:
           CXXFLAGS: '--std=c++14'
           BRANCHES_SAVE_STARTING_WITH: 'refs/heads/bootstrap5'
           BRANCHES_TAG_AS_MAIN: 'True'
-          NPM_VERSION_CHANGED: True
         run: |
           ${{ secrets.EVOLENE_RUN_COMMAND }}
