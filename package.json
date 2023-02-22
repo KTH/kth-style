@@ -6,6 +6,7 @@
   "automaticPublish": "true",
   "private": false,
   "license": "MIT",
+  "main": "public/index.js",
   "repository": {
     "type": "git",
     "uri": "https://github.com/KTH/kth-style"
