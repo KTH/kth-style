@@ -26,7 +26,10 @@ details {
   &[open] {
     > summary {
       &:before {
-        animation: rotateDown 0.3s ease-in-out forwards;
+        animation: rotateDown 1ms ease-in-out forwards;
+      }
+      &:hover:before {
+        animation-duration: 0.3s;
       }
     }
   }
@@ -60,10 +63,11 @@ details {
       background-size: contain;
       background-repeat: no-repeat;
       animation: rotateUp 0.3s ease-in-out forwards;
-
-      &:hover {
-        text-decoration: none;
-      }
+      animation-duration: 1ms;
+    }
+    &:hover:before {
+      text-decoration: none;
+      animation-duration: 0.3s;
     }
 
     &.blue {
