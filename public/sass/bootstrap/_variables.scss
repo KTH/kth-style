@@ -44,10 +44,13 @@ $btn-padding-y: 0.5rem;
 // Links
 $link-color: $linkBlue;
 $link-hover-color: $linkBlue;
+$link-decoration: none !default;
+$link-hover-decoration: underline !default;
 
 // Tables
 $table-head-bg: $white;
 $table-head-color: $black;
+$table-bg: $grey; // This value is temporal because how tables are customized right now. Remove this when refactoring _tables.scss
 
 // Gutter
 $gutter: 15px;

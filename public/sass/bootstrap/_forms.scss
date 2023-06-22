@@ -1,5 +1,6 @@
 //  Bootstrap overrides for forms
-
+// TODO: use the recommended way to customize boostrap (Sass/CSS variables) instead of overriding everything
+// Specially, try to remove the :before :after hacks for checkboxes and radio buttons
 .form-group {
   margin-bottom: 1rem;
 
@@ -82,6 +83,7 @@ input {
 
 .form-check {
   padding-left: 1.8rem;
+  position: relative;
 
   input {
     &[type='radio'] {
