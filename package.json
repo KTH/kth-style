@@ -47,7 +47,6 @@
     "bootstrap": "^5.3.0",
     "jquery": "^3.6.0",
     "klaro": "^0.7.18",
-    "popper.js": "^1.16.1",
     "tether": "^2.0.0"
   },
   "devDependencies": {
