@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-      - v-7
+      - v8
   pull_request:
     branches:
       - main
-      - v-7
+      - v8
     paths-ignore:
       - '*.md'
       - '*.png'
@@ -27,7 +27,7 @@ jobs:
           NPM_UPDATES_AVAILABLE: True
           BUILD_INFORMATION_OUTPUT_FILE: '/config/version.js'
           CXXFLAGS: '--std=c++14'
-          BRANCHES_SAVE_STARTING_WITH: 'refs/heads/v-7'
+          BRANCHES_SAVE_STARTING_WITH: 'refs/heads/v8'
           BRANCHES_TAG_AS_MAIN: 'True'
         run: |
           ${{ secrets.EVOLENE_RUN_COMMAND }}
