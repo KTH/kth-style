@@ -9,6 +9,7 @@ on:
     branches:
       - main
       - v8
+      - feat/local-klaro-js-v8
     paths-ignore:
       - '*.md'
       - '*.png'
@@ -27,7 +28,7 @@ jobs:
           NPM_UPDATES_AVAILABLE: True
           BUILD_INFORMATION_OUTPUT_FILE: '/config/version.js'
           CXXFLAGS: '--std=c++14'
-          BRANCHES_SAVE_STARTING_WITH: 'refs/heads/v8'
+          BRANCHES_SAVE_STARTING_WITH: 'refs/heads/feat/local-klaro-js-v8'
           BRANCHES_TAG_AS_MAIN: 'True'
         run: |
           ${{ secrets.EVOLENE_RUN_COMMAND }}
