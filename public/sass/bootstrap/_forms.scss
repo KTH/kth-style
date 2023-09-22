@@ -191,33 +191,31 @@ input {
   }
 }
 
-.form-select {
-  .select-wrapper {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border-radius: 0.25em;
-    font-size: 0.875rem;
-    font-family: $open-sans;
+.select-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 0.25em;
+  font-size: 0.875rem;
+  font-family: $open-sans;
 
-    &::after {
-      content: '';
-      color: $white;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      padding: 0 1em;
-      pointer-events: none;
-      background: $blue $data-arrow-collapse-white-svg no-repeat center;
-      display: inline-block;
-      width: 44px;
-      background-size: 1rem;
-    }
+  &::after {
+    content: '';
+    color: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    pointer-events: none;
+    background: $blue $data-arrow-collapse-white-svg no-repeat center;
+    display: inline-block;
+    width: 44px;
+    background-size: 1rem;
+  }
 
-    select {
-      height: 44px;
-    }
+  select {
+    height: 44px;
   }
 }
 
