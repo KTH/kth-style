@@ -10,8 +10,6 @@ html {
 }
 
 body {
-  @include t11(false);
-
   .container {
     &.withMainMenu {
       > .row {
