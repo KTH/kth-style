@@ -75,17 +75,12 @@
 @import './custom/typography';
 
 // Slots
-@import 'custom/slots/header';
 @import 'custom/slots/intra';
 @import 'custom/slots/breadcrumbs';
 @import 'custom/slots/footer';
-@import 'custom/slots/mobileMenu';
 @import 'custom/slots/articleNavigation';
 
 // Blocks
-@import 'custom/blocks/siteName';
-@import 'custom/blocks/megaMenu';
-@import 'custom/blocks/mainMenu';
 @import 'custom/blocks/separator';
 
 // Concent modal
