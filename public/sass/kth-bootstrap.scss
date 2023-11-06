@@ -2,11 +2,10 @@
 // This file is customized following this page: https://getbootstrap.com/docs/5.3/customize/sass/
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import 'node_modules/bootstrap/scss/functions';
+@import './bootstrap/functions';
 
 // 2. Include any default variable overrides here
 // KTH variables
-@import '../fonts/openSans';
 @import 'variables/colors';
 @import 'variables/sizes';
 @import 'variables/spacings';
@@ -17,60 +16,60 @@
 @import './bootstrap/variables';
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
-@import 'node_modules/bootstrap/scss/variables';
-@import 'node_modules/bootstrap/scss/variables-dark';
+@import './bootstrap/variables';
+@import './bootstrap/variables-dark';
 // 4. Include any default map overrides here
 
 // 5. Include remainder of required parts
-@import 'node_modules/bootstrap/scss/maps';
-@import 'node_modules/bootstrap/scss/mixins';
-@import 'node_modules/bootstrap/scss/root';
+@import './bootstrap/maps';
+@import './bootstrap/mixins';
+@import './bootstrap/root';
 
 // 6. Include any other parts as needed
-@import 'node_modules/bootstrap/scss/reboot';
-@import 'node_modules/bootstrap/scss/type';
-@import 'node_modules/bootstrap/scss/images';
-@import 'node_modules/bootstrap/scss/grid';
-@import 'node_modules/bootstrap/scss/tables';
-@import 'node_modules/bootstrap/scss/forms';
-@import 'node_modules/bootstrap/scss/buttons';
-@import 'node_modules/bootstrap/scss/transitions';
-@import 'node_modules/bootstrap/scss/dropdown';
-@import 'node_modules/bootstrap/scss/button-group';
-@import 'node_modules/bootstrap/scss/nav';
-@import 'node_modules/bootstrap/scss/navbar';
-@import 'node_modules/bootstrap/scss/card';
-@import 'node_modules/bootstrap/scss/breadcrumb';
-@import 'node_modules/bootstrap/scss/pagination';
-@import 'node_modules/bootstrap/scss/badge';
-@import 'node_modules/bootstrap/scss/progress';
-@import 'node_modules/bootstrap/scss/list-group';
-@import 'node_modules/bootstrap/scss/close';
-@import 'node_modules/bootstrap/scss/modal';
-@import 'node_modules/bootstrap/scss/tooltip';
-@import 'node_modules/bootstrap/scss/popover';
-@import 'node_modules/bootstrap/scss/carousel';
-@import 'node_modules/bootstrap/scss/utilities';
-@import 'node_modules/bootstrap/scss/helpers';
+@import './bootstrap/reboot';
+@import './bootstrap/type';
+@import './bootstrap/images';
+@import './bootstrap/grid';
+@import './bootstrap/tables';
+@import './bootstrap/forms';
+@import './bootstrap/buttons';
+@import './bootstrap/transitions';
+@import './bootstrap/dropdown';
+@import './bootstrap/button-group';
+@import './bootstrap/nav';
+@import './bootstrap/navbar';
+@import './bootstrap/card';
+@import './bootstrap/breadcrumb';
+@import './bootstrap/pagination';
+@import './bootstrap/badge';
+@import './bootstrap/progress';
+@import './bootstrap/list-group';
+@import './bootstrap/close';
+@import './bootstrap/modal';
+@import './bootstrap/tooltip';
+@import './bootstrap/popover';
+@import './bootstrap/carousel';
+@import './bootstrap/utilities';
+@import './bootstrap/helpers';
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import 'node_modules/bootstrap/scss/utilities/api';
+@import './bootstrap/utilities/api';
 
 // ----------------------------------
 // 8. Add additional custom code here
-@import 'bootstrap/containers';
-@import 'bootstrap/mixins/alert';
-@import 'bootstrap/alerts';
-@import 'bootstrap/modals';
-@import 'bootstrap/popover';
-@import 'bootstrap/nav';
-@import 'bootstrap/fonts';
-@import 'bootstrap/buttons';
-@import 'bootstrap/tables';
-@import 'bootstrap/forms';
+@import 'bootstrap-overrides/containers';
+@import 'bootstrap-overrides/mixins/alert';
+@import 'bootstrap-overrides/alerts';
+@import 'bootstrap-overrides/modals';
+@import 'bootstrap-overrides/popover';
+@import 'bootstrap-overrides/nav';
+@import 'bootstrap-overrides/fonts';
+@import 'bootstrap-overrides/buttons';
+@import 'bootstrap-overrides/tables';
+@import 'bootstrap-overrides/forms';
 
 // Random things, should not be needed in the future when they have found their place
-@import 'bootstrap/custom';
+@import 'bootstrap-overrides/custom';
 
 // our own styling
 @import './custom/commonStyle';

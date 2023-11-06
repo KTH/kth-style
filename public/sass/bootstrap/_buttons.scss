@@ -1,236 +1,204 @@
-// Button style
+//
+// Base styles
+//
 
-@mixin btn-coloring-base($color, $colorHover) {
-  background-color: $color;
-  border-color: $color;
+.btn {
+  // scss-docs-start btn-css-vars
+  --#{$prefix}btn-padding-x: #{$btn-padding-x};
+  --#{$prefix}btn-padding-y: #{$btn-padding-y};
+  --#{$prefix}btn-font-family: #{$btn-font-family};
+  @include rfs($btn-font-size, --#{$prefix}btn-font-size);
+  --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  --#{$prefix}btn-line-height: #{$btn-line-height};
+  --#{$prefix}btn-color: #{$btn-color};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-width: #{$btn-border-width};
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-hover-border-color: transparent;
+  --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
+  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), 0.5);
+  // scss-docs-end btn-css-vars
 
-  &:hover,
-  &:visited {
-    background-color: $colorHover;
-    border-color: $colorHover;
-  }
-
-  &:disabled {
-    background-color: $color;
-    border-color: $color;
-  }
-}
-
-%icon-general-style {
-  content: '';
-  height: 1.2em;
-  width: 1.5em;
   display: inline-block;
-}
+  padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
+  font-family: var(--#{$prefix}btn-font-family);
+  @include font-size(var(--#{$prefix}btn-font-size));
+  font-weight: var(--#{$prefix}btn-font-weight);
+  line-height: var(--#{$prefix}btn-line-height);
+  color: var(--#{$prefix}btn-color);
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  cursor: if($enable-button-pointers, pointer, null);
+  user-select: none;
+  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+  @include border-radius(var(--#{$prefix}btn-border-radius));
+  @include gradient-bg(var(--#{$prefix}btn-bg));
+  @include box-shadow(var(--#{$prefix}btn-box-shadow));
+  @include transition($btn-transition);
 
-%table-info-icon-for-popup {
-  height: 1.2em;
-  width: 1.2em;
-  border: solid 0.8px $white;
-  filter: grayscale(1) brightness(88%) contrast(2);
-  &:focus,
   &:hover {
-    border: solid 0.8px $white;
+    color: var(--#{$prefix}btn-hover-color);
+    text-decoration: if($link-hover-decoration == underline, none, null);
+    background-color: var(--#{$prefix}btn-hover-bg);
+    border-color: var(--#{$prefix}btn-hover-border-color);
+  }
+
+  .btn-check + &:hover {
+    // override for the checkbox/radio buttons
+    color: var(--#{$prefix}btn-color);
+    background-color: var(--#{$prefix}btn-bg);
+    border-color: var(--#{$prefix}btn-border-color);
+  }
+
+  &:focus-visible {
+    color: var(--#{$prefix}btn-hover-color);
+    @include gradient-bg(var(--#{$prefix}btn-hover-bg));
+    border-color: var(--#{$prefix}btn-hover-border-color);
     outline: 0;
-    filter: grayscale(1) brightness(90%) contrast(2);
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
+    } @else {
+      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    }
+  }
+
+  .btn-check:focus-visible + & {
+    border-color: var(--#{$prefix}btn-hover-border-color);
+    outline: 0;
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
+    } @else {
+      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    }
+  }
+
+  .btn-check:checked + &,
+  :not(.btn-check) + &:active,
+  &:first-child:active,
+  &.active,
+  &.show {
+    color: var(--#{$prefix}btn-active-color);
+    background-color: var(--#{$prefix}btn-active-bg);
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$prefix}btn-active-border-color);
+    @include box-shadow(var(--#{$prefix}btn-active-shadow));
+
+    &:focus-visible {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows {
+        box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
+      } @else {
+        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+      }
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    color: var(--#{$prefix}btn-disabled-color);
+    pointer-events: none;
+    background-color: var(--#{$prefix}btn-disabled-bg);
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$prefix}btn-disabled-border-color);
+    opacity: var(--#{$prefix}btn-disabled-opacity);
+    @include box-shadow(none);
   }
 }
 
-.btn-primary {
-  min-height: 2.75rem;
+//
+// Alternate buttons
+//
 
-  &.next {
-    &::after {
-      content: '';
-      background: $data-arrow-next-white-svg no-repeat 0.3rem 0;
-      background-size: 0.875rem 0.875rem;
-      vertical-align: middle;
-      width: 1.25rem;
-      height: 1.25rem;
-      display: inherit;
-      position: relative;
-      top: 2px;
-      left: 2px;
+// scss-docs-start btn-variant-loops
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @if $color == 'light' {
+      @include button-variant(
+        $value,
+        $value,
+        $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+        $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+        $active-background: shade-color($value, $btn-active-bg-shade-amount),
+        $active-border: shade-color($value, $btn-active-border-shade-amount)
+      );
+    } @else if $color == 'dark' {
+      @include button-variant(
+        $value,
+        $value,
+        $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
+        $hover-border: tint-color($value, $btn-hover-border-tint-amount),
+        $active-background: tint-color($value, $btn-active-bg-tint-amount),
+        $active-border: tint-color($value, $btn-active-border-tint-amount)
+      );
+    } @else {
+      @include button-variant($value, $value);
     }
   }
 }
 
-.btn-success {
-  min-height: 2.75rem;
-
-  &.next {
-    &::after {
-      content: '';
-      background: $data-arrow-next-white-svg no-repeat 0.3rem 0;
-      background-size: 0.875rem 0.875rem;
-      vertical-align: middle;
-      width: 1.25rem;
-      height: 1.25rem;
-      display: inherit;
-      position: relative;
-      top: 2px;
-      left: 2px;
-    }
-  }
-
-  &.back {
-    &::before {
-      @extend %icon-general-style;
-      background: $data-arrow-back-black-svg no-repeat;
-      background-size: 0.875rem 0.875rem;
-      color: $linkBlue;
-      vertical-align: middle;
-      margin-top: 0.25rem;
-      filter: brightness(0) invert(1);
-    }
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
   }
 }
+// scss-docs-end btn-variant-loops
 
-.btn-secondary {
-  @include btn-coloring-base($white, $lightGrey);
-  color: $black;
-  border-color: $grey;
-  min-height: 2.75rem;
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  --#{$prefix}btn-font-weight: #{$font-weight-normal};
+  --#{$prefix}btn-color: #{$btn-link-color};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
+  --#{$prefix}btn-hover-border-color: transparent;
+  --#{$prefix}btn-active-color: #{$btn-link-hover-color};
+  --#{$prefix}btn-active-border-color: transparent;
+  --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
+  --#{$prefix}btn-disabled-border-color: transparent;
+  --#{$prefix}btn-box-shadow: 0 0 0 #000; // Can't use `none` as keyword negates all values when used with multiple shadows
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix(color-contrast($link-color), $link-color, 15%))};
+
+  text-decoration: $link-decoration;
+  @if $enable-gradients {
+    background-image: none;
+  }
 
   &:hover,
-  &:visited,
-  &:disabled {
-    border-color: $grey;
-    color: $black;
+  &:focus-visible {
+    text-decoration: $link-hover-decoration;
   }
 
-  &.next {
-    &::after {
-      content: '';
-      background: $data-arrow-next-black-svg no-repeat 0.3rem 0;
-      background-size: 0.875rem 0.875rem;
-      vertical-align: middle;
-      width: 1.25rem;
-      height: 1.25rem;
-      display: inherit;
-      position: relative;
-      top: 1px;
-      left: 2px;
-    }
+  &:focus-visible {
+    color: var(--#{$prefix}btn-color);
   }
 
-  &.back {
-    &::before {
-      @extend %icon-general-style;
-      background: $data-arrow-back-black-svg no-repeat 0 0rem;
-      background-size: 0.875rem 0.875rem;
-      color: $linkBlue;
-      vertical-align: middle;
-      margin-top: 0.188rem;
-      filter: grayscale(0.9) brightness(0.5);
-    }
+  &:hover {
+    color: var(--#{$prefix}btn-hover-color);
   }
+
+  // No need for an active state here
 }
 
-.btn-success {
-  @include btn-coloring-base($green, $greenHover);
-  min-height: 2.75rem;
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
 }
 
-.btn-danger {
-  @include btn-coloring-base($red, $redHover);
-  min-height: 2.75rem;
-}
-
-.btn-link {
-  border: 0;
-  height: 2.75rem;
-  padding: 0 1rem;
-}
-
-.external-link::after {
-  @extend %icon-general-style;
-  height: 1.25rem;
-  width: 1.3rem;
-  background: $data-open-window-blue-svg no-repeat;
-  background-size: 1.25rem 1.25rem;
-  margin: 0 0 -4px 10px;
-}
-
-.link-back {
-  &::before {
-    @extend %icon-general-style;
-    background: $data-arrow-back-blue-svg no-repeat;
-    background-size: 0.875rem 0.875rem;
-    background-position-x: center;
-    vertical-align: middle;
-    margin: 0.125rem 0.625rem 0 0;
-    width: 1rem;
-  }
-}
-
-.pdf-link {
-  margin: 0;
-  @media (min-width: 768px) {
-    margin: 0 1.5em 0 1em;
-  }
-  &:before {
-    @extend %icon-general-style;
-    background: $data-pdf-blue-svg no-repeat;
-    height: 1.25rem;
-    margin: 0 0.625rem 0.3rem 0;
-    width: 1rem;
-    vertical-align: middle;
-  }
-}
-
-.pdf-post-link {
-  margin: 0;
-
-  &:after {
-    @extend %icon-general-style;
-    background: $data-pdf-blue-svg no-repeat;
-    height: 1.25rem;
-    width: 1rem;
-    margin: 0 0 0.3rem 0.625em;
-    vertical-align: middle;
-  }
-}
-
-.btn-info-modal {
-  //change secondary to primary
-  background: $data-open-modal-blue-svg no-repeat;
-  background-color: transparent;
-  background-size: contain;
-  border: transparent;
-  border-radius: 0.8em;
-  margin-left: 1em;
-  width: 1.3em;
-  height: 1.3em;
-  padding: 0;
-  vertical-align: baseline;
-}
-
-th > button.btn-info-modal,
-td > button.btn-info-modal,
-td > span > button.btn-info-modal {
-  @extend %table-info-icon-for-popup;
-  margin-left: 0;
-  vertical-align: middle;
-}
-
-.btn-upload-file {
-  //FileInput in kth-style-react-components
-  display: flex;
-  flex-direction: column;
-  input[type='file'] {
-    filter: alpha(opacity=0);
-    opacity: 0;
-    border: 0;
-  }
-  span {
-    margin: 0;
-    &::after {
-      @extend %icon-general-style;
-      vertical-align: bottom;
-      background: $data-upload-blue-svg no-repeat;
-      background-size: 1em;
-      float: right;
-    }
-  }
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
 }

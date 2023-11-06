@@ -1,0 +1,88 @@
+// TODO: customize this with Sass variables as recommended by bootstrap to
+// avoid unintended side-effects
+table {
+  width: 100%;
+
+  caption {
+    caption-side: top;
+    color: $black;
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  thead {
+    tr {
+      border-color: #fff;
+      th {
+        padding: 0.75rem !important;
+        color: $white !important;
+        background-color: $grey;
+        font-weight: 500;
+        border-right: 1px solid $white !important;
+        border-bottom: 1px solid $white !important;
+        vertical-align: top !important;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-color: #fff;
+      th {
+        color: $white;
+        background-color: $grey;
+        font-weight: 500;
+        border-right: 1px solid $white;
+
+        &[scope='row'] {
+          vertical-align: middle;
+          border-top: 1px solid $white;
+          border-right: 0;
+        }
+      }
+
+      &:first-child {
+        th {
+          border-top: 1px solid $white;
+        }
+      }
+
+      td {
+        border-style: none;
+        background-color: $lightGrey;
+        border-top: 1px solid $white;
+        padding: 0.75rem !important;
+
+        p {
+          font-family: $sansSerif;
+        }
+      }
+    }
+  }
+
+  th {
+    border-top: 0;
+  }
+}
+
+// Overriding Bootstrap table design
+
+.table {
+  thead {
+    th {
+      border-bottom: 1px solid $white;
+      border-top: 0;
+
+      &:first-of-type {
+        border-top: 0;
+      }
+    }
+  }
+
+  tr {
+    td {
+      background-color: $lightGrey;
+      border-top: 1px solid $white;
+    }
+  }
+}

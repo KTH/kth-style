@@ -1,0 +1,63 @@
+// KTH Bootstrap
+
+// This is where you override bootstrap values, such as colors, margins ...
+// Values in node_modules/bootstrap/scss/_variables to override
+
+@import 'node_modules/bootstrap/scss/mixins/breakpoints';
+
+// Colors
+
+$body-bg: $lightGrey;
+$primary: $blue;
+$secondary: $white;
+$success: $green;
+$danger: $red;
+
+// general border colors
+$border-color: $borderGrey;
+
+// Typography
+$body-color: $black;
+
+$font-family-sans-serif: $sansSerif;
+$font-family-base: $serif;
+
+// Headings
+$h1-font-size: $h1-fontSize;
+$h2-font-size: $h2-fontSize;
+$h3-font-size: $h3-fontSize;
+$h4-font-size: $h4-fontSize;
+
+$headings-font-family: $sansSerif;
+$headings-font-weight: 400;
+$headings-color: $black;
+$headings-line-height: 1.375;
+
+// Spacing
+$spacer: 1.3rem;
+
+// Buttons
+$btn-font-weight: bold;
+$btn-padding-x: 1.5rem;
+$btn-padding-y: 0.5rem;
+
+// Links
+$link-color: $linkBlue;
+$link-hover-color: $linkBlue;
+$link-decoration: none !default;
+$link-hover-decoration: underline !default;
+
+// Tables
+$table-head-bg: $white;
+$table-head-color: $black;
+$table-bg: $grey; // This value is temporal because how tables are customized right now. Remove this when refactoring _tables.scss
+
+// Gutter
+$gutter: 15px;
+
+// Inputs
+$input-bg: $lightGrey;
+$input-border-color: $borderGrey;
+
+// card border color
+$card-border-color: $borderGrey;
