@@ -26,7 +26,6 @@
   label {
     margin: 0;
     font-size: 0.875rem;
-    font-family: $open-sans;
     font-weight: 600;
   }
 
@@ -35,7 +34,6 @@
     background-color: $lightGrey;
     border-radius: 4px;
     font-size: 0.875rem;
-    font-family: $open-sans;
     width: 100%;
     padding: 6px 10px;
   }
@@ -64,7 +62,6 @@
       background-color: $lightGrey;
       border-radius: 4px;
       font-size: 0.875rem;
-      font-family: $open-sans;
       height: 44px;
       width: 100%;
       padding: 6px 10px;
@@ -109,7 +106,6 @@
         & ~ label {
           margin: 0;
           font-size: 0.875rem;
-          font-family: $open-sans;
           font-weight: 600;
 
           &:before {
@@ -161,7 +157,6 @@
         & ~ label {
           margin: 0;
           font-size: 0.875rem;
-          font-family: $open-sans;
           font-weight: 600;
 
           &:before {
@@ -198,7 +193,6 @@
     overflow: hidden;
     border-radius: 0.25em;
     font-size: 0.875rem;
-    font-family: $open-sans;
 
     &::after {
       content: '';
@@ -222,7 +216,6 @@
 
   fieldset {
     legend {
-      font-family: $open-sans;
       font-size: 1rem;
       color: $black;
       line-height: 1.5;

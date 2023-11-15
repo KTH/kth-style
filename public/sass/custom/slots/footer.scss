@@ -20,7 +20,6 @@ footer {
             & a {
               &.block {
                 &.link {
-                  font-family: $open-sans;
                   color: $white;
                   line-height: 1.4375;
                   font-weight: 400;
@@ -35,7 +34,6 @@ footer {
                 &.links {
                   h2 {
                     color: $white;
-                    font-family: $open-sans;
                     font-weight: 600;
                     font-size: 1.25rem;
                     margin-top: 0;
@@ -52,7 +50,6 @@ footer {
                       line-height: 1.4375;
 
                       a {
-                        font-family: $open-sans;
                         color: $white;
                         line-height: 1.4375;
                         font-weight: 400;
