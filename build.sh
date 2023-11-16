@@ -33,10 +33,6 @@ cp -R ./public/js/klaro-no-css.js ./dist/js
 echo -e "     -> Copying all images to dist/img folder"
 cp -R ./public/img/. ./dist/img
 
-# Copy all fonts
-echo -e "     -> Copying all fonts to dist/fonts folder"
-cp -R ./public/fonts/. ./dist/fonts
-
 # Copy all CSS
 echo -e "     -> Copying all CSS to dist/css folder"
 cp -R ./public/css/. ./dist/css
