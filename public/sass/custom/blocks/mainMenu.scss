@@ -39,7 +39,7 @@
                         &.ancestor {
                           display: block;
                           padding: 8px $gutter 8px 0;
-                          @include t4(false, 0, 0);
+                          @include t4(0, 0);
                         }
 
                         &.leaf {
@@ -52,7 +52,7 @@
                       }
 
                       li {
-                        @include t11(false, 0, 0);
+                        @include t11(0, 0);
 
                         &.nav-item {
                           &.ancestor {
@@ -177,7 +177,7 @@
             &.ancestor {
               a {
                 &.nav-link {
-                  @include t4(false, 0, 0);
+                  @include t4(0, 0);
                   padding: 0 0 11px 4px;
                 }
               }

@@ -47,20 +47,20 @@ body {
 }
 
 .lead {
-  @include t10(false);
+  @include t10;
   margin: 0 0 22px;
 }
 
 .paragraphs {
   p:not(.calendar) {
-    @include t12(false);
+    @include t12;
     margin: 0 0 27px;
     max-width: 730px;
   }
 }
 
 table {
-  @include t11(false);
+  @include t11;
 
   p {
     margin-bottom: 0;
