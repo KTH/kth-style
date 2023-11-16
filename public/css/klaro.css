@@ -10,7 +10,6 @@ mechanism.
 /* Border styles */
 /* Cookie notice positioning */
 /* Text colors */
-/* Font Families */
 /* White */
 /* Differently shaded colors */
 /*
@@ -23,15 +22,11 @@ to create a white background.
 /* Spacing */
 /* Breakpoints */
 .klaro {
-  font-family: inherit;
-  font-family: var(--font-family, inherit);
   font-size: 14px;
   font-size: var(--font-size, 14px);
 }
 
 .klaro button {
-  font-family: inherit;
-  font-family: var(--font-family, inherit);
   font-size: 14px;
   font-size: var(--font-size, 14px);
 }
@@ -302,28 +297,6 @@ to create a white background.
   margin: 0;
   padding: 0;
   margin-top: 0.7em;
-}
-
-.klaro .cookie-modal h1,
-.klaro .cookie-modal h2,
-.klaro .cookie-modal h3,
-.klaro .cookie-modal h4,
-.klaro .cookie-modal h5,
-.klaro .cookie-modal h6,
-.klaro .context-notice h1,
-.klaro .context-notice h2,
-.klaro .context-notice h3,
-.klaro .context-notice h4,
-.klaro .context-notice h5,
-.klaro .context-notice h6,
-.klaro .cookie-notice h1,
-.klaro .cookie-notice h2,
-.klaro .cookie-notice h3,
-.klaro .cookie-notice h4,
-.klaro .cookie-notice h5,
-.klaro .cookie-notice h6 {
-  font-family: inherit;
-  font-family: var(--title-font-family, inherit);
 }
 
 .klaro .cookie-modal .cm-link,

@@ -7,12 +7,7 @@
     flex-wrap: nowrap;
     border-radius: 0;
 
-    p {
-      font-family: 'Open Sans', Arial, 'Helvetica Neue', helvetica, sans-serif;
-    }
-
     .cm-btn {
-      font-family: 'Open Sans', Arial, 'Helvetica Neue', helvetica, sans-serif;
       padding: 0.5rem 1.5rem;
       line-height: 1.5;
       border-radius: 0.25rem;
@@ -208,7 +203,6 @@
 
         h1 {
           &.title {
-            font-family: 'Open Sans', Arial, 'Helvetica Neue', helvetica, sans-serif;
             font-size: 1.875rem;
             font-weight: 400;
             color: $black;
