@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - main
-      - feat/local-klaro-js
+      - fix/conditional-visibility-header
       - deprecation
   pull_request:
     branches:
       - main
-      - feat/local-klaro-js
+      - fix/conditional-visibility-header
       - deprecation
     paths-ignore:
       - '*.md'
@@ -29,7 +29,7 @@ jobs:
           NPM_UPDATES_AVAILABLE: True
           BUILD_INFORMATION_OUTPUT_FILE: '/config/version.js'
           CXXFLAGS: '--std=c++14'
-          BRANCHES_SAVE_STARTING_WITH: 'refs/heads/deprecation'
+          BRANCHES_SAVE_STARTING_WITH: 'refs/heads/fix/conditional-visibility-header'
           BRANCHES_TAG_AS_MAIN: 'True'
         run: |
           ${{ secrets.EVOLENE_RUN_COMMAND }}
