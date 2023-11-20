@@ -202,7 +202,9 @@
 
   // site name
   .block.siteName {
-    @include t2($marginTop: 0, $marginBottom: 0);
+    @include t2;
+    margin-top: 0;
+    margin-bottom: 0;
     left: 0;
     bottom: 0;
     height: auto;

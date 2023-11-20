@@ -21,6 +21,7 @@ h1 {
 p {
   &#page-sub-heading {
     @include t4;
+    margin-bottom: 14px;
     margin-top: 0.325rem;
 
     @media (max-width: 767.98px) {
