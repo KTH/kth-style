@@ -28,8 +28,6 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 // Default headline styles.
 @mixin h1 {
   font-weight: 600;
-  margin: 0 0 22px;
-  padding: 0;
 
   @media (min-width: 768px) {
     font-size: $h1-desktop-fontSize;
@@ -38,7 +36,6 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 
 @mixin h2 {
   font-weight: 600;
-  margin: 0 0 8px;
 
   @media (min-width: 768px) {
     font-size: $h2-desktop-fontSize;
@@ -47,7 +44,6 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 
 @mixin h3 {
   font-weight: 600;
-  margin: 0 0 8px;
 
   @media (min-width: 768px) {
     font-size: $h3-desktop-fontSize;
@@ -57,7 +53,6 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 @mixin h4 {
   font-size: $h4-fontSize;
   font-weight: 600;
-  margin: 0 0 8px;
 
   @media (min-width: 768px) {
     font-size: $h4-desktop-fontSize;
@@ -66,12 +61,10 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 
 // Element independent typography definitions
 // Heading level 1
-@mixin t1($marginTop: 0, $marginBottom: 28px) {
+@mixin t1 {
   font-size: $h1-fontSize;
   font-weight: 600;
   line-height: 1.3125;
-  margin-top: $marginTop;
-  margin-bottom: $marginBottom;
 
   @media (min-width: 768px) {
     font-size: 2.75rem;
@@ -79,12 +72,10 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 }
 
 // Heading level 2
-@mixin t2($marginTop: 28px, $marginBottom: 14px) {
+@mixin t2 {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.3475;
-  margin-top: $marginTop;
-  margin-bottom: $marginBottom;
 
   @media (min-width: 768px) {
     font-size: $h2-desktop-fontSize;
@@ -92,12 +83,10 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 }
 
 // Heading level 3
-@mixin t3($marginTop: 24px, $marginBottom: 10px) {
+@mixin t3 {
   font-size: $h3-fontSize;
   font-weight: 600;
   line-height: 1.375;
-  margin-top: $marginTop;
-  margin-bottom: $marginBottom;
 
   @media (min-width: 768px) {
     font-size: 1.5rem;
@@ -105,11 +94,9 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 }
 
 // Heading level 4 or Block heading
-@mixin t4($marginTop: 16px, $marginBottom: 14px) {
+@mixin t4 {
   font-weight: 600;
   line-height: 1.375;
-  margin-top: $marginTop;
-  margin-bottom: $marginBottom;
 
   @media (min-width: 768px) {
     font-size: $h4-desktop-fontSize;
@@ -117,12 +104,10 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 }
 
 // Block heading full width
-@mixin t24($marginTop: 0, $marginBottom: 14px) {
+@mixin t24 {
   font-size: $h3-fontSize;
   font-weight: 600;
   line-height: 1.3125;
-  margin-top: $marginTop;
-  margin-bottom: $marginBottom;
 
   @media (min-width: 768px) {
     font-size: $h2-desktop-fontSize;
@@ -131,12 +116,10 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 }
 
 // Text to pop out, like lead, block quote or mega menu
-@mixin t10($marginTop: 0, $marginBottom: 30px) {
+@mixin t10 {
   font-size: $lead-fontSize;
   font-weight: 400;
   line-height: 1.4375;
-  margin-top: $marginTop;
-  margin-bottom: $marginBottom;
 
   @media (min-width: 768px) {
     font-size: $lead-desktop-fontSize;
@@ -144,21 +127,17 @@ $h4-desktop-fontSize: 1.25rem !default; // 20px
 }
 
 // Normal text in block
-@mixin t11($marginTop: 0, $marginBottom: 14px) {
+@mixin t11 {
   font-size: $font-size-base;
   font-weight: 400;
   line-height: 1.5;
-  margin-top: $marginTop;
-  margin-bottom: $marginBottom;
 }
 
 // Normal text in article
-@mixin t12($marginTop: 0, $marginBottom: 16px) {
+@mixin t12 {
   font-size: $font-size-base;
   font-weight: 400;
   line-height: 1.5625;
-  margin-top: $marginTop;
-  margin-bottom: $marginBottom;
 
   @media (min-width: 768px) {
     font-size: 1.125rem;

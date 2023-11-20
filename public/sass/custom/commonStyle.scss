@@ -61,6 +61,8 @@ body {
 
 table {
   @include t11;
+  margin-top: 0; 
+  margin-bottom: 14px;
 
   p {
     margin-bottom: 0;
