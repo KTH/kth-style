@@ -5885,6 +5885,7 @@
                             changeDescription:
                                 'There were changes since your last visit, please renew your consent.',
                             title: 'Cookie Consent',
+                            accessibleTitle: 'Cookie Consent',
                             description:
                                 'Hi! Could we please enable some additional services for {purposes}? You can always change or withdraw your consent later.',
                             learnMore: 'Let me choose',
@@ -7057,6 +7058,7 @@
                         },
                         consentNotice: {
                             title: 'Cookie-samtycke',
+                            accessibleTitle: 'Cookie-samtycke',
                             changeDescription:
                                 'Det har skett förändringar sedan ditt senaste besök, var god uppdatera ditt medgivande.',
                             description:
@@ -11557,9 +11559,11 @@
                                                 role: 'dialog',
                                                 'aria-describedby':
                                                     'id-cookie-notice',
-                                                'aria-labelledby': P
-                                                    ? 'id-cookie-title'
-                                                    : null,
+                                                'aria-label': u([
+                                                    '!',
+                                                    'consentNotice',
+                                                    'accessibleTitle',
+                                                ]),
                                                 id: 'klaro-cookie-notice',
                                                 tabIndex: '0',
                                                 autoFocus: !0,
