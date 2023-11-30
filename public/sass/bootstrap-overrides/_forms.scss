@@ -6,7 +6,8 @@
     margin-bottom: 1rem;
 
     .form-control-label {
-      @include t11;
+      font-size: 1rem;
+      line-height: 1.5;
       font-weight: bold;
       margin-top: 0;
       margin-bottom: 0.5rem;
@@ -17,7 +18,9 @@
       margin-bottom: 1.25rem;
 
       .form-control-label {
-        @include t11;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
         margin-top: 0;
         margin-bottom: 0.25rem;
       }

@@ -39,9 +39,13 @@
                         &.ancestor {
                           display: block;
                           padding: 8px $gutter 8px 0;
-                          @include t4;
+                          font-weight: 600;
+                          line-height: 1.375;
                           margin-top: 0;
                           margin-bottom: 0;
+                          @media (min-width: 768px) {
+                            font-size: 1.25rem;
+                          }
                         }
 
                         &.leaf {
@@ -54,7 +58,9 @@
                       }
 
                       li {
-                        @include t11;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.5;
                         margin-top: 0;
                         margin-bottom: 0;
 
@@ -120,7 +126,7 @@
 
                           a {
                             padding-left: 1.313rem;
-                            font-size: $font-size-base;
+                            font-size: 1rem;
                             display: block;
                           }
                         }
@@ -181,10 +187,15 @@
             &.ancestor {
               a {
                 &.nav-link {
-                  @include t4;
+                  font-weight: 600;
+                  line-height: 1.375;
                   margin-top: 0;
                   margin-bottom: 0;
                   padding: 0 0 11px 4px;
+
+                  @media (min-width: 768px) {
+                    font-size: 1.25rem;
+                  }
                 }
               }
             }

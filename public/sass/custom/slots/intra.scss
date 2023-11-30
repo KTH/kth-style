@@ -202,7 +202,8 @@
 
   // site name
   .block.siteName {
-    @include t2;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-top: 0;
     margin-bottom: 0;
     left: 0;
@@ -215,6 +216,7 @@
 
     @media (min-width: 768px) {
       min-height: 60px;
+      font-size: 1.875rem;
     }
 
     a {

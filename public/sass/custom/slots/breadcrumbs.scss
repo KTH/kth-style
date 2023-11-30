@@ -14,11 +14,11 @@
         border-radius: 0;
 
         li {
-          font-size: $copyText-fontSize;
+          font-size: 1rem;
 
           &.breadcrumb-item {
             a {
-              font-size: $copyText-fontSize;
+              font-size: 1rem;
             }
           }
         }

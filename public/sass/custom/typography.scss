@@ -20,7 +20,8 @@ h1 {
 
 p {
   &#page-sub-heading {
-    @include t4;
+    font-weight: 600;
+    line-height: 1.375;
     margin-bottom: 14px;
     margin-top: 0.325rem;
 
