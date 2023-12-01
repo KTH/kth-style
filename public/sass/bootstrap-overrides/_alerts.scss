@@ -1,78 +1,79 @@
 //  Bootstrap overrides for alert
-
-.alert {
-  &.alert-success,
-  &.alert-danger,
-  &.alert-info {
-    width: 100%;
-    margin: 0 0 50px;
-    font-size: 1rem;
-    border: none;
-    padding: 20px 20px 20px 60px;
-    min-height: 0;
-    color: $black;
-    overflow: auto;
-
-    &:before {
-      width: 0.694em;
-      top: 12px;
-      left: 20px;
-    }
-
-    @media (min-width: 768px) {
-      padding: 30px 30px 30px 70px;
+@layer kth-style.old {
+  .alert {
+    &.alert-success,
+    &.alert-danger,
+    &.alert-info {
+      width: 100%;
+      margin: 0 0 50px;
+      font-size: 1rem;
+      border: none;
+      padding: 20px 20px 20px 60px;
+      min-height: 0;
+      color: $black;
+      overflow: auto;
 
       &:before {
         width: 0.694em;
-        top: 16px;
-        left: 30px;
+        top: 12px;
+        left: 20px;
+      }
+
+      @media (min-width: 768px) {
+        padding: 30px 30px 30px 70px;
+
+        &:before {
+          width: 0.694em;
+          top: 16px;
+          left: 30px;
+        }
       }
     }
-  }
 
-  &.alert-info {
-    &:before {
-      height: 0.694em;
-      width: 0.278em;
-      top: 12px;
-      left: 20px;
-    }
-
-    @media (min-width: 768px) {
+    &.alert-info {
       &:before {
         height: 0.694em;
         width: 0.278em;
-        top: 16px;
-        left: 30px;
+        top: 12px;
+        left: 20px;
+      }
+
+      @media (min-width: 768px) {
+        &:before {
+          height: 0.694em;
+          width: 0.278em;
+          top: 16px;
+          left: 30px;
+        }
       }
     }
   }
-}
 
-.alert > :last-child {
-  margin-bottom: 0;
-}
+  .alert > :last-child {
+    margin-bottom: 0;
+  }
 
-$alert-styles: (
-  'info': (
-    'bgColor': $infoYellow,
-    'iconUrl': '/img/kth-style/icons/information.svg',
-    'iconData': $data-information-black-svg,
-  ),
-  'danger': (
-    'bgColor': $infoRed,
-    'iconUrl': '/img/kth-style/icons/error.svg',
-    'iconData': $data-error-black-svg,
-  ),
-  'success': (
-    'bgColor': $infoGreen,
-    'iconUrl': '/img/kth-style/icons/success.svg',
-    'iconData': $data-success-black-svg,
-  ),
-);
+  $alert-styles: (
+    'info': (
+      'bgColor': $infoYellow,
+      'iconUrl': '/img/kth-style/icons/information.svg',
+      'iconData': $data-information-black-svg,
+    ),
+    'danger': (
+      'bgColor': $infoRed,
+      'iconUrl': '/img/kth-style/icons/error.svg',
+      'iconData': $data-error-black-svg,
+    ),
+    'success': (
+      'bgColor': $infoGreen,
+      'iconUrl': '/img/kth-style/icons/success.svg',
+      'iconData': $data-success-black-svg,
+    ),
+  );
 
-@each $color, $value in $alert-styles {
-  .alert-#{$color} {
-    @include alert-variant(map-get($value, 'bgColor'), map-get($value, 'iconData'));
+  @each $color, $value in $alert-styles {
+    .alert-#{$color} {
+      @include alert-variant(map-get($value, 'bgColor'), map-get($value, 'iconData'));
+    }
   }
 }

@@ -1,67 +1,69 @@
-.modal {
-  margin-top: 1rem;
+@layer kth-style.old {
+  .modal {
+    margin-top: 1rem;
 
-  .modal-content {
-    border: 0;
-    margin-top: 3rem;
-  }
+    .modal-content {
+      border: 0;
+      margin-top: 3rem;
+    }
 
-  .modal-header {
-    .close {
-      padding-bottom: 0;
+    .modal-header {
+      .close {
+        padding-bottom: 0;
+      }
+    }
+
+    /* * * * used by new react component  ButtonModal, example kursinfo-admin-web * * * */
+    .modal-header.h-4 {
+      flex-direction: row;
+
+      h4 + .close {
+        align-self: baseline;
+        margin-top: 0;
+      }
     }
   }
 
-  /* * * * used by new react component  ButtonModal, example kursinfo-admin-web * * * */
-  .modal-header.h-4 {
-    flex-direction: row;
-
-    h4 + .close {
-      align-self: baseline;
-      margin-top: 0;
+  /* * * * Publish modal * * * */
+  #publish {
+    .modal-header {
+      padding: 20px;
+    }
+    .modal-footer {
+      button {
+        margin: 0;
+      }
+      button:last-of-type {
+        margin-left: 20px;
+      }
     }
   }
-}
 
-/* * * * Publish modal * * * */
-#publish {
-  .modal-header {
-    padding: 20px;
-  }
-  .modal-footer {
-    button {
-      margin: 0;
-    }
-    button:last-of-type {
-      margin-left: 20px;
+  /* * * * Personal toolbar override for modal behaviour * * * */
+
+  @media only screen and (min-width: 1024px) {
+    #kth-pmenu {
+      #menu-bar-wrapper {
+        z-index: 40 !important;
+      }
     }
   }
-}
 
-/* * * * Personal toolbar override for modal behaviour * * * */
+  /* * * * * * Information modal icon * * * * * * */
 
-@media only screen and (min-width: 1024px) {
-  #kth-pmenu {
-    #menu-bar-wrapper {
-      z-index: 40 !important;
-    }
+  .info-modal {
+    background: $data-open-modal-blue-svg no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    border: transparent;
+    border-radius: 0.8em;
+    margin-left: 0.5em;
+    padding: 0;
+    vertical-align: baseline;
+    padding-right: 1.3rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    position: relative;
+    top: 4px;
   }
-}
-
-/* * * * * * Information modal icon * * * * * * */
-
-.info-modal {
-  background: $data-open-modal-blue-svg no-repeat;
-  background-color: transparent;
-  background-size: contain;
-  border: transparent;
-  border-radius: 0.8em;
-  margin-left: 0.5em;
-  padding: 0;
-  vertical-align: baseline;
-  padding-right: 1.3rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  position: relative;
-  top: 4px;
 }
