@@ -1,24 +1,26 @@
-#breadcrumbs {
-  ol {
-    padding: 0;
-    margin: 0;
+@layer kth-style.old {
+  #breadcrumbs {
+    ol {
+      padding: 0;
+      margin: 0;
 
-    &.breadcrumb {
-      display: none;
-    }
-
-    @media (min-width: 992px) {
       &.breadcrumb {
-        display: flex;
-        background-color: $white;
-        border-radius: 0;
+        display: none;
+      }
 
-        li {
-          font-size: 1rem;
+      @media (min-width: 992px) {
+        &.breadcrumb {
+          display: flex;
+          background-color: $white;
+          border-radius: 0;
 
-          &.breadcrumb-item {
-            a {
-              font-size: 1rem;
+          li {
+            font-size: 1rem;
+
+            &.breadcrumb-item {
+              a {
+                font-size: 1rem;
+              }
             }
           }
         }

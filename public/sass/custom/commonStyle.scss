@@ -1,121 +1,123 @@
 // KTH specific styling
 
 // To override personal menu top margin in print.
-html {
-  body {
-    @media print {
-      margin-top: 0 !important;
+@layer kth-style.old {
+  html {
+    body {
+      @media print {
+        margin-top: 0 !important;
+      }
     }
   }
-}
 
-body {
-  .container {
-    &.withMainMenu {
-      > .row {
-        width: 100%;
-        padding: 0;
-        margin: 0;
+  body {
+    .container {
+      &.withMainMenu {
+        > .row {
+          width: 100%;
+          padding: 0;
+          margin: 0;
 
-        &:first-of-type {
-          flex-direction: row-reverse;
-          flex-wrap: nowrap;
+          &:first-of-type {
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+          }
+        }
+      }
+
+      &.main {
+        max-width: $widePageWidth;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+          margin: 0 $gutter;
+          max-width: calc(100% - 2 * #{$gutter});
+        }
+
+        @media (min-width: 1258px) {
+          max-width: 1228px;
+          margin: 0 auto;
         }
       }
     }
 
-    &.main {
-      max-width: $widePageWidth;
-      margin: 0 auto;
-
-      @media (min-width: 768px) {
-        margin: 0 $gutter;
-        max-width: calc(100% - 2 * #{$gutter});
-      }
-
-      @media (min-width: 1258px) {
-        max-width: 1228px;
-        margin: 0 auto;
-      }
+    .container,
+    .container-fluid {
+      padding: 0 $gutter; // Gutter should be the same in all break points.
     }
   }
 
-  .container,
-  .container-fluid {
-    padding: 0 $gutter; // Gutter should be the same in all break points.
+  .lead {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.4375;
+    margin: 0 0 22px;
+
+    @media (min-width: 768px) {
+      font-size: 1.375rem;
+    }
   }
-}
 
-.lead {
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.4375;
-  margin: 0 0 22px;
-
-  @media (min-width: 768px) {
-    font-size: 1.375rem;
+  .paragraphs {
+    p:not(.calendar) {
+      margin: 0 0 27px;
+      max-width: 730px;
+    }
   }
-}
 
-.paragraphs {
-  p:not(.calendar) {
-    margin: 0 0 27px;
-    max-width: 730px;
+  table {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 0; 
+    margin-bottom: 14px;
+
+    p {
+      margin-bottom: 0;
+    }
   }
-}
-
-table {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  margin-top: 0; 
-  margin-bottom: 14px;
 
   p {
-    margin-bottom: 0;
+    &.AlignLeft {
+      text-align: left;
+    }
+
+    &.AlignCenter {
+      text-align: center;
+    }
+
+    &.AlignRight {
+      text-align: right;
+    }
+
+    &.AlignJustify {
+      text-align: justify;
+    }
   }
-}
 
-p {
-  &.AlignLeft {
-    text-align: left;
-  }
+  a {
+    &.skipToMainContent {
+      left: -999px;
+      position: absolute;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      z-index: -999;
 
-  &.AlignCenter {
-    text-align: center;
-  }
-
-  &.AlignRight {
-    text-align: right;
-  }
-
-  &.AlignJustify {
-    text-align: justify;
-  }
-}
-
-a {
-  &.skipToMainContent {
-    left: -999px;
-    position: absolute;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    z-index: -999;
-
-    &:focus,
-    &:active {
-      background-color: $white;
-      color: $linkBlue;
-      left: 0;
-      top: 0;
-      width: auto;
-      height: auto;
-      overflow: auto;
-      padding: 5px;
-      font-size: 1rem;
-      z-index: 99999;
+      &:focus,
+      &:active {
+        background-color: $white;
+        color: $linkBlue;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: auto;
+        overflow: auto;
+        padding: 5px;
+        font-size: 1rem;
+        z-index: 99999;
+      }
     }
   }
 }

@@ -1,36 +1,38 @@
 // Set browser native outline when a focusable element gets focus
-iframe:focus,
-iframe:active,
-[tabindex]:not(body):focus,
-[tabindex]:not(body):active,
-button:not([disabled]):focus,
-button:not([disabled]):active,
-input:not([disabled]):focus,
-input:not([disabled]):active,
-select:not([disabled]):focus,
-select:not([disabled]):active,
-textarea:not([disabled]):focus,
-textarea:not([disabled]):active,
-input[type='checkbox']:not([disabled]):focus ~ label:before,
-input[type='radio']:not([disabled]):focus ~ label:before {
-  outline-width: thin;
-  outline-style: dotted;
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: 3px;
-  box-shadow: none;
-}
-#webform iframe:focus {
-  outline: none;
-}
-#webform iframe:active {
-  outline: none;
-}
+@layer kth-style.old {
+  iframe:focus,
+  iframe:active,
+  [tabindex]:not(body):focus,
+  [tabindex]:not(body):active,
+  button:not([disabled]):focus,
+  button:not([disabled]):active,
+  input:not([disabled]):focus,
+  input:not([disabled]):active,
+  select:not([disabled]):focus,
+  select:not([disabled]):active,
+  textarea:not([disabled]):focus,
+  textarea:not([disabled]):active,
+  input[type='checkbox']:not([disabled]):focus ~ label:before,
+  input[type='radio']:not([disabled]):focus ~ label:before {
+    outline-width: thin;
+    outline-style: dotted;
+    outline: 5px auto Highlight;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: 3px;
+    box-shadow: none;
+  }
+  #webform iframe:focus {
+    outline: none;
+  }
+  #webform iframe:active {
+    outline: none;
+  }
 
-/* This needs to be separated from the above block due to legacy msedge problem */
-[href]:focus,
-[href]:active {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: 3px;
+  /* This needs to be separated from the above block due to legacy msedge problem */
+  [href]:focus,
+  [href]:active {
+    outline: 5px auto Highlight;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: 3px;
+  }
 }

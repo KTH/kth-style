@@ -1,9 +1,11 @@
-.separator {
-  height: 1px;
-  width: 100%;
+@layer kth-style.old {
+  .separator {
+    height: 1px;
+    width: 100%;
 
-  &.gray {
-    background-color: $borderGrey;
-    margin-bottom: 1.875em;
+    &.gray {
+      background-color: $borderGrey;
+      margin-bottom: 1.875em;
+    }
   }
 }

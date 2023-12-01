@@ -21,72 +21,74 @@
 }
 
 // Collapse with <details> and <summary> tags
-details {
-  margin-bottom: 1.875rem;
-  &[open] {
-    > summary {
+@layer kth-style.old {
+  details {
+    margin-bottom: 1.875rem;
+    &[open] {
+      > summary {
+        &:before {
+          animation: rotateDown 1ms ease-in-out forwards;
+        }
+        &:hover:before {
+          animation-duration: 0.3s;
+        }
+      }
+    }
+
+    summary {
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      height: auto;
+      min-height: 2.75rem;
+      list-style: none;
+      padding: 0.638rem 1.25rem;
+
+      // Chrome specific due to no support for list-style: none on summary tag.
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      // Add a top margin to the element after the summary.
+      + *:nth-child(2) {
+        margin-top: 1.25rem;
+      }
+
       &:before {
-        animation: rotateDown 1ms ease-in-out forwards;
+        content: '';
+        height: 1rem;
+        width: 1rem;
+        display: inline-block;
+        margin: auto;
+        margin-bottom: -3px;
+        margin-right: 8px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: rotateUp 0.3s ease-in-out forwards;
+        animation-duration: 1ms;
       }
       &:hover:before {
+        text-decoration: none;
         animation-duration: 0.3s;
       }
-    }
-  }
 
-  summary {
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    height: auto;
-    min-height: 2.75rem;
-    list-style: none;
-    padding: 0.638rem 1.25rem;
+      &.blue {
+        background-color: $blue;
+        color: $white;
+        font-weight: 600;
 
-    // Chrome specific due to no support for list-style: none on summary tag.
-    &::-webkit-details-marker {
-      display: none;
-    }
-
-    // Add a top margin to the element after the summary.
-    + *:nth-child(2) {
-      margin-top: 1.25rem;
-    }
-
-    &:before {
-      content: '';
-      height: 1rem;
-      width: 1rem;
-      display: inline-block;
-      margin: auto;
-      margin-bottom: -3px;
-      margin-right: 8px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      animation: rotateUp 0.3s ease-in-out forwards;
-      animation-duration: 1ms;
-    }
-    &:hover:before {
-      text-decoration: none;
-      animation-duration: 0.3s;
-    }
-
-    &.blue {
-      background-color: $blue;
-      color: $white;
-      font-weight: 600;
-
-      &:before {
-        background-image: $data-arrow-expand-white-svg;
+        &:before {
+          background-image: $data-arrow-expand-white-svg;
+        }
       }
-    }
 
-    &.white {
-      background-color: $white;
-      color: $linkBlue;
-      padding-left: 0;
+      &.white {
+        background-color: $white;
+        color: $linkBlue;
+        padding-left: 0;
 
-      &:before {
-        background-image: $data-arrow-expand-blue-svg;
+        &:before {
+          background-image: $data-arrow-expand-blue-svg;
+        }
       }
     }
   }

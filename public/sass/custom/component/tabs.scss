@@ -1,81 +1,83 @@
-.tab-bar-container {
-  margin-left: 0;
-  margin-right: 0;
-  border-bottom: 1px solid $borderGrey;
-  flex-direction: column-reverse;
+@layer kth-style.old {
+  .tab-bar-container {
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: 1px solid $borderGrey;
+    flex-direction: column-reverse;
 
-  @media (min-width: 992px) {
-    flex-direction: row;
-  }
-
-  & > .col {
-    padding: 0;
-
-    @media (min-width: 768px) {
-      padding: 0 15px;
-      padding-left: 0;
+    @media (min-width: 992px) {
+      flex-direction: row;
     }
 
-    &:last-of-type {
-      padding-right: 0;
+    & > .col {
+      padding: 0;
+
+      @media (min-width: 768px) {
+        padding: 0 15px;
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
     }
-  }
 
-  .col {
-    margin-bottom: -1px;
-    max-width: 100%;
-  }
+    .col {
+      margin-bottom: -1px;
+      max-width: 100%;
+    }
 
-  .nav {
-    &.nav-tabs {
-      overflow-y: hidden;
-      flex-wrap: nowrap;
-
-      @media (min-width: 992px) {
-        overflow: initial;
+    .nav {
+      &.nav-tabs {
+        overflow-y: hidden;
         flex-wrap: nowrap;
-      }
 
-      & > li {
-        margin-bottom: 0;
-      }
+        @media (min-width: 992px) {
+          overflow: initial;
+          flex-wrap: nowrap;
+        }
 
-      .nav-link {
-        font-size: 1rem;
-        margin-right: 5px;
-        border-style: solid;
-        border-color: $borderGrey;
-        border-radius: 0.25rem 0.25rem 0 0;
-        background-color: $lightGrey;
-        cursor: pointer;
-        padding: 8px 20px 8px 20px;
-        position: relative;
-        top: 5px;
-        color: $black;
-        white-space: nowrap;
+        & > li {
+          margin-bottom: 0;
+        }
 
-        &.active {
-          background-color: $white;
-          font-weight: 700;
-          border-bottom: 1px solid $white;
-          padding: 13px 20px 8px 20px;
-          top: 0;
+        .nav-link {
+          font-size: 1rem;
+          margin-right: 5px;
+          border-style: solid;
+          border-color: $borderGrey;
+          border-radius: 0.25rem 0.25rem 0 0;
+          background-color: $lightGrey;
+          cursor: pointer;
+          padding: 8px 20px 8px 20px;
+          position: relative;
+          top: 5px;
+          color: $black;
+          white-space: nowrap;
+
+          &.active {
+            background-color: $white;
+            font-weight: 700;
+            border-bottom: 1px solid $white;
+            padding: 13px 20px 8px 20px;
+            top: 0;
+          }
         }
       }
     }
   }
-}
-.tab-content {
-  border: 1px solid $borderGrey;
-  border-top: none;
-  border-radius: 0 0 0.25rem 0.25rem;
+  .tab-content {
+    border: 1px solid $borderGrey;
+    border-top: none;
+    border-radius: 0 0 0.25rem 0.25rem;
 
-  .tab-pane {
-    padding: 20px;
+    .tab-pane {
+      padding: 20px;
+    }
   }
-}
 
-// -- KTH Style override
-.tab-content .tab-pane {
-  border: none;
+  // -- KTH Style override
+  .tab-content .tab-pane {
+    border: none;
+  }
 }
