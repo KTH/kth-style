@@ -1,167 +1,165 @@
 // sass-lint:disable no-mergeable-selectors
-@layer kth-style.old {
-  #mainMenu {
-    display: none;
-    &.sticky-menu {
-      position: sticky;
-      align-self: start;
-      top: 0;
-    }
+#mainMenu {
+  display: none;
+  &.sticky-menu {
+    position: sticky;
+    align-self: start;
+    top: 0;
+  }
 
-    @media (min-width: 992px) {
-      display: block;
-      width: 296px;
-      max-width: 296px;
-      &.col {
-        &.navbar {
-          padding: 0 5px $gutter 2 * $gutter;
+  @media (min-width: 992px) {
+    display: block;
+    width: 296px;
+    max-width: 296px;
+    &.col {
+      &.navbar {
+        padding: 0 5px $gutter 2 * $gutter;
 
-          &.navbar-expand-lg {
-            &.navbar-light {
-              #navbarNav {
-                &.collapse {
-                  &.navbar-collapse {
-                    display: block !important; //  Need !important to override bootstrap default.
-                    position: relative;
-                    top: 0;
-                    z-index: 0;
+        &.navbar-expand-lg {
+          &.navbar-light {
+            #navbarNav {
+              &.collapse {
+                &.navbar-collapse {
+                  display: block !important; //  Need !important to override bootstrap default.
+                  position: relative;
+                  top: 0;
+                  z-index: 0;
 
-                    ul {
-                      &.nav {
-                        background-color: $white;
-                        box-shadow: none;
-                        position: relative;
-                        width: 250px;
-                        z-index: 1;
-                        width: auto;
+                  ul {
+                    &.nav {
+                      background-color: $white;
+                      box-shadow: none;
+                      position: relative;
+                      width: 250px;
+                      z-index: 1;
+                      width: auto;
 
-                        .nav-item {
+                      .nav-item {
+                        &.ancestor {
+                          display: block;
+                          padding: 8px $gutter 8px 0;
+                          font-weight: 600;
+                          line-height: 1.375;
+                          margin-top: 0;
+                          margin-bottom: 0;
+                          @media (min-width: 768px) {
+                            font-size: 1.25rem;
+                          }
+                        }
+
+                        &.leaf {
+                          width: 250px;
+                        }
+
+                        &.selected {
+                          width: 250px;
+                        }
+                      }
+
+                      li {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        margin-top: 0;
+                        margin-bottom: 0;
+
+                        &.nav-item {
                           &.ancestor {
-                            display: block;
-                            padding: 8px $gutter 8px 0;
-                            font-weight: 600;
-                            line-height: 1.375;
-                            margin-top: 0;
-                            margin-bottom: 0;
-                            @media (min-width: 768px) {
-                              font-size: 1.25rem;
+                            a {
+                              &.nav-link {
+                                padding: 7px $gutter 7px 0;
+                              }
                             }
                           }
 
                           &.leaf {
-                            width: 250px;
+                            a {
+                              &.nav-link {
+                                padding: 7px $gutter 7px 0;
+
+                                &[href]:hover {
+                                  text-decoration: underline;
+                                }
+                              }
+                            }
                           }
 
                           &.selected {
-                            width: 250px;
+                            a,
+                            span {
+                              &.nav-link {
+                                padding: 7px $gutter 7px 0;
+                                color: $black;
+                              }
+                            }
+                          }
+
+                          &.node {
+                            a {
+                              &.nav-link {
+                                color: $black;
+                                padding: 7px $gutter 7px 0;
+
+                                &[href]:hover {
+                                  text-decoration: underline;
+                                }
+                              }
+                            }
                           }
                         }
 
-                        li {
-                          font-size: 1rem;
-                          font-weight: 400;
-                          line-height: 1.5;
-                          margin-top: 0;
-                          margin-bottom: 0;
-
+                        span {
                           &.nav-item {
                             &.ancestor {
-                              a {
-                                &.nav-link {
-                                  padding: 7px $gutter 7px 0;
-                                }
-                              }
-                            }
-
-                            &.leaf {
-                              a {
-                                &.nav-link {
-                                  padding: 7px $gutter 7px 0;
-
-                                  &[href]:hover {
-                                    text-decoration: underline;
-                                  }
-                                }
-                              }
-                            }
-
-                            &.selected {
-                              a,
-                              span {
-                                &.nav-link {
-                                  padding: 7px $gutter 7px 0;
-                                  color: $black;
-                                }
-                              }
-                            }
-
-                            &.node {
-                              a {
-                                &.nav-link {
-                                  color: $black;
-                                  padding: 7px $gutter 7px 0;
-
-                                  &[href]:hover {
-                                    text-decoration: underline;
-                                  }
-                                }
-                              }
-                            }
-                          }
-
-                          span {
-                            &.nav-item {
-                              &.ancestor {
-                                display: block;
-                              }
-                            }
-                          }
-
-                          &.parentLink {
-                            padding: 0;
-                            background: $data-arrow-back-blue-svg no-repeat left;
-                            background-size: 0.875rem 0.875rem;
-                            background-position-y: 5px;
-                            margin-bottom: 10px;
-
-                            a {
-                              padding-left: 1.313rem;
-                              font-size: 1rem;
                               display: block;
                             }
                           }
                         }
+
+                        &.parentLink {
+                          padding: 0;
+                          background: $data-arrow-back-blue-svg no-repeat left;
+                          background-size: 0.875rem 0.875rem;
+                          background-position-y: 5px;
+                          margin-bottom: 10px;
+
+                          a {
+                            padding-left: 1.313rem;
+                            font-size: 1rem;
+                            display: block;
+                          }
+                        }
                       }
                     }
+                  }
 
-                    // Styling for expandable left menu
-                    ul {
-                      &.nav {
-                        &.nav-list {
-                          &.expandable {
-                            li {
-                              &.nav-item {
-                                width: 100%;
+                  // Styling for expandable left menu
+                  ul {
+                    &.nav {
+                      &.nav-list {
+                        &.expandable {
+                          li {
+                            &.nav-item {
+                              width: 100%;
 
-                                &.node {
-                                  &.expanded {
-                                    background: none;
-                                  }
-
-                                  ul.nav-list {
-                                    border-top: 1px solid $borderGrey;
-                                    padding: 7px 0 0 20px;
-                                    margin-top: 7px;
-                                  }
+                              &.node {
+                                &.expanded {
+                                  background: none;
                                 }
 
-                                &.leaf {
-                                  a,
-                                  span {
-                                    &.nav-link {
-                                      padding: 7px 0;
-                                      color: $black;
-                                    }
+                                ul.nav-list {
+                                  border-top: 1px solid $borderGrey;
+                                  padding: 7px 0 0 20px;
+                                  margin-top: 7px;
+                                }
+                              }
+
+                              &.leaf {
+                                a,
+                                span {
+                                  &.nav-link {
+                                    padding: 7px 0;
+                                    color: $black;
                                   }
                                 }
                               }
@@ -177,89 +175,89 @@
           }
         }
       }
+    }
 
-      ul {
-        &.nav {
-          li {
-            &.nav-item {
-              width: 250px;
+    ul {
+      &.nav {
+        li {
+          &.nav-item {
+            width: 250px;
 
-              &.ancestor {
-                a {
-                  &.nav-link {
-                    font-weight: 600;
-                    line-height: 1.375;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    padding: 0 0 11px 4px;
+            &.ancestor {
+              a {
+                &.nav-link {
+                  font-weight: 600;
+                  line-height: 1.375;
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  padding: 0 0 11px 4px;
 
-                    @media (min-width: 768px) {
-                      font-size: 1.25rem;
-                    }
+                  @media (min-width: 768px) {
+                    font-size: 1.25rem;
                   }
                 }
               }
+            }
 
-              &.selected {
-                font-weight: 600 !important;
+            &.selected {
+              font-weight: 600 !important;
 
-                a,
-                span {
-                  &.nav-link {
-                    padding: 6px 0;
-                  }
+              a,
+              span {
+                &.nav-link {
+                  padding: 6px 0;
                 }
               }
+            }
 
-              &.leaf {
-                a {
-                  &.nav-link {
-                    padding: 6px 0;
-                    color: $black;
-                  }
+            &.leaf {
+              a {
+                &.nav-link {
+                  padding: 6px 0;
+                  color: $black;
                 }
               }
+            }
 
-              &.node {
-                background: $data-arrow-next-black-svg no-repeat right;
-                background-size: 14px 14px;
+            &.node {
+              background: $data-arrow-next-black-svg no-repeat right;
+              background-size: 14px 14px;
+              background-position: 100% 14px;
+
+              &.expandable {
+                background: $data-arrow-expand-black-svg no-repeat right;
+                background-size: 9px 14px;
                 background-position: 100% 14px;
-
-                &.expandable {
-                  background: $data-arrow-expand-black-svg no-repeat right;
-                  background-size: 9px 14px;
-                  background-position: 100% 14px;
-                }
               }
             }
           }
         }
       }
+    }
 
-      &.col {
-        flex: 0 0 300px;
-        max-width: 300px;
-        padding-left: 3 * $gutter;
-      }
+    &.col {
+      flex: 0 0 300px;
+      max-width: 300px;
+      padding-left: 3 * $gutter;
     }
   }
+}
 
-  .container {
-    &.start,
-    &.department.standard {
-      &.withMainMenu {
-        #mainMenu {
-          &.col {
-            //padding-left: 2 * $gutter;
+.container {
+  &.start,
+  &.department.standard {
+    &.withMainMenu {
+      #mainMenu {
+        &.col {
+          //padding-left: 2 * $gutter;
 
-            &.navbar {
-              &.navbar-expand-lg {
-                &.navbar-light {
-                  padding: 0 $gutter $gutter;
+          &.navbar {
+            &.navbar-expand-lg {
+              &.navbar-light {
+                padding: 0 $gutter $gutter;
 
-                  @media (min-width: 992px) {
-                    padding: 0 20px $gutter 2 * $gutter;
-                  }
+                @media (min-width: 992px) {
+                  padding: 0 20px $gutter 2 * $gutter;
                 }
               }
             }
