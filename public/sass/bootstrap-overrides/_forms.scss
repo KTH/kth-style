@@ -45,7 +45,19 @@
   input {
     &[type='submit'] {
       border: 1px solid;
-      @include btn-coloring-base($blue, $blueHover);
+      background-color: $blue;
+      border-color: $blue;
+
+      &:hover,
+      &:visited {
+        background-color: $blueHover;
+        border-color: $blueHover;
+      }
+
+      &:disabled {
+        background-color: $blue;
+        border-color: $blue;
+      }
       color: $white;
       border-radius: 0.25rem;
       font-size: 1rem;
