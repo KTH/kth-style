@@ -3,7 +3,10 @@
   "name": "kth-style",
   "version": "9.0.12",
   "description": "KTH CSS. A custom build of Bootstrap 5. The purpose of this project is to provide the essential design and style for applications within KTH and make the development process of these applications faster.",
-  "automaticPublish": "true",
+  "files": [
+    "dist",
+    "public"
+  ],
   "private": false,
   "license": "MIT",
   "repository": {
