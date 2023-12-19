@@ -48,5 +48,3 @@ bundles
 dist
 .env
 /tmp
-
-package-lock.json
