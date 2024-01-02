@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# !! Not working on linux since base64 will insert line breaks !!
+
 OUTFILE='public/sass/variables/_svg_data.scss'
 
 echo  '// prettier-ignore' > ${OUTFILE}

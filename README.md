@@ -8,6 +8,8 @@ For information how to use and examples: https://app.kth.se/style/
 
 ### How to generate icons in base64 format
 
+** Working as intended on MacOS, not Ubuntu! **
+
 - Add the icon into the `/public/img/kth-style/icons` folder
 - Run the script ./generate-svg-data.sh to generate the icons
 
