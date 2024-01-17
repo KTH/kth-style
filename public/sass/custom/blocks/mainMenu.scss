@@ -244,15 +244,13 @@
     &.withMainMenu {
       #mainMenu {
         &.col {
-          //padding-left: 2 * $gutter;
-
           &.navbar {
             &.navbar-expand-lg {
               &.navbar-light {
-                padding: 0 $gutter $gutter;
+                padding: 0 $gutter $gutter 0;
 
                 @media (min-width: 992px) {
-                  padding: 0 20px $gutter 2 * $gutter;
+                  padding: 0 20px $gutter 0;
                 }
               }
             }
