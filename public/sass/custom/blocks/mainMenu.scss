@@ -13,8 +13,6 @@
     max-width: 296px;
     &.col {
       &.navbar {
-        padding: 0 5px $gutter 2 * $gutter;
-
         &.navbar-expand-lg {
           &.navbar-light {
             #navbarNav {
@@ -235,9 +233,7 @@
     }
 
     &.col {
-      flex: 0 0 300px;
       max-width: 300px;
-      padding-left: 3 * $gutter;
     }
   }
 }
