@@ -58,7 +58,6 @@
   .cookie-notice {
     &:not(.cookie-modal-notice) {
       position: fixed;
-      max-width: 100vw;
       right: auto;
       top: auto;
       left: 20px;
@@ -101,6 +100,7 @@
 
         @media (max-width: 768px) {
           position: fixed;
+          max-width: fit-content;
           width: 100%;
           height: auto;
           bottom: 0;
