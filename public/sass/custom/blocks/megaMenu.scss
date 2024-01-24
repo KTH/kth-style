@@ -244,19 +244,39 @@
                         &.list {
                           &.links {
                             h2 {
-                              @include t4;
+                              font-weight: 600;
+                              color: $black;
+                              line-height: 1.375;
+                              margin-top: 16px;
+                              margin-bottom: 14px;
+
+                              @media (min-width: 768px) {
+                                font-size: 1.25rem;
+                              }
                             }
 
                             ul {
                               list-style: none;
                               padding: 0;
-                              @include t11;
+                              font-size: 1rem;
+                              font-weight: 400;
+                              line-height: 1.5;
+                              margin-top: 0;
+                              margin-bottom: 14px;
 
                               li {
-                                @include t11;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                margin-top: 0;
+                                margin-bottom: 14px;
 
                                 a {
-                                  @include t11;
+                                  font-size: 1rem;
+                                  font-weight: 400;
+                                  line-height: 1.5;
+                                  margin-top: 0;
+                                  margin-bottom: 14px;
                                 }
                               }
                             }
@@ -303,7 +323,15 @@
                   padding: 20px;
 
                   .teaserHeading {
-                    @include t4($marginTop: 0);
+                    font-weight: 600;
+                    color: $black;
+                    line-height: 1.375;
+                    margin-top: 0;
+                    margin-bottom: 14px;
+
+                    @media (min-width: 768px) {
+                      font-size: 1.25rem;
+                    }
                   }
 
                   .lead {
@@ -311,11 +339,23 @@
 
                     h2,
                     h3 {
-                      @include t4($marginBottom: 10px, $marginTop: 0);
+                      font-weight: 600;
+                      color: $black;
+                      line-height: 1.375;
+                      margin-top: 0;
+                      margin-bottom: 10px;
+
+                      @media (min-width: 768px) {
+                        font-size: 1.25rem;
+                      }
                     }
 
                     p {
-                      @include t11;
+                      font-size: 1rem;
+                      font-weight: 400;
+                      line-height: 1.5;
+                      margin-top: 0;
+                      margin-bottom: 14px;
                       max-width: 100%;
                       margin: 0 0 14px;
 
@@ -329,7 +369,11 @@
                       max-width: none;
 
                       li {
-                        @include t11;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        margin-top: 0;
+                        margin-bottom: 14px;
                       }
                     }
 
@@ -343,10 +387,18 @@
                       list-style: none;
                       margin: 0;
                       padding: 0;
-                      @include t11(false);
+                      font-size: 1rem;
+                      font-weight: 400;
+                      line-height: 1.5;
+                      margin-top: 0;
+                      margin-bottom: 14px;
 
                       li {
-                        @include t11(false);
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        margin-top: 0;
+                        margin-bottom: 14px;
                       }
                     }
                   }
