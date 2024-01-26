@@ -25,14 +25,13 @@ window.addEventListener('load', () => {
     if (pageFooter) {
       // Insert back to top button before footer
       pageFooter.parentNode.insertBefore(backToTopButton, pageFooter)
-
-      // Scroll to top when clicking the button
-      backToTopButton.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-        this.classList.toggle('show')
-        this.setAttribute('aria-hidden', true)
-      })
     }
+    // Scroll to top when clicking the button
+    backToTopButton.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      this.classList.toggle('show')
+      this.setAttribute('aria-hidden', true)
+    })
   }
 
   function handleBackToTop(scrollPos) {
