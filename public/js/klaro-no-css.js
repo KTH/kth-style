@@ -4036,48 +4036,48 @@
                       acceptAndHide: this.acceptAndHide,
                       manager: c,
                     })
-                  var P = _e(
-                    'div',
-                    {
-                      role: 'dialog',
-                      'aria-describedby': 'id-cookie-notice',
-                      'aria-labelledby': 'id-cookie-title',
-                      id: 'klaro-cookie-notice',
-                      tabIndex: '0',
-                      autoFocus: !0,
-                      ref: function (e) {
-                        i.noticeRef = e
-                      },
-                      className: 'cookie-notice '
-                        .concat(j || l ? '' : 'cookie-notice-hidden', ' ')
-                        .concat(m ? 'cookie-modal-notice' : '', ' ')
-                        .concat(v ? 'cn-embedded' : ''),
-                    },
-                    _e(
+                  var P = u(['!', 'consentNotice', 'title']),
+                    S = _e(
                       'div',
-                      { className: 'cn-body' },
-                      u(['!', 'consentNotice', 'title']) &&
-                        _e('h2', { id: 'id-cookie-title' }, u(['consentNotice', 'title'])),
+                      {
+                        role: 'dialog',
+                        'aria-describedby': 'id-cookie-notice',
+                        'aria-label': P,
+                        id: 'klaro-cookie-notice',
+                        tabIndex: '0',
+                        autoFocus: !0,
+                        ref: function (e) {
+                          i.noticeRef = e
+                        },
+                        className: 'cookie-notice '
+                          .concat(j || l ? '' : 'cookie-notice-hidden', ' ')
+                          .concat(m ? 'cookie-modal-notice' : '', ' ')
+                          .concat(v ? 'cn-embedded' : ''),
+                      },
                       _e(
-                        'p',
-                        { id: 'id-cookie-notice' },
-                        _e(Ne, {
-                          config: a,
-                          text: u(['consentNotice', 'description'], {
-                            purposes: _e('strong', { key: 'strong' }, t),
-                            privacyPolicy: w,
-                            learnMoreLink: A(),
-                          }),
-                        })
-                      ),
-                      l && _e('p', null, u(['consentNotice', 'testing'])),
-                      _,
-                      _e('div', { className: 'cn-ok' }, !y && A(), _e('div', { className: 'cn-buttons' }, z, O))
+                        'div',
+                        { className: 'cn-body' },
+                        P && _e('h2', { id: 'id-cookie-title' }, u(['consentNotice', 'title'])),
+                        _e(
+                          'p',
+                          { id: 'id-cookie-notice' },
+                          _e(Ne, {
+                            config: a,
+                            text: u(['consentNotice', 'description'], {
+                              purposes: _e('strong', { key: 'strong' }, t),
+                              privacyPolicy: w,
+                              learnMoreLink: A(),
+                            }),
+                          })
+                        ),
+                        l && _e('p', null, u(['consentNotice', 'testing'])),
+                        _,
+                        _e('div', { className: 'cn-ok' }, !y && A(), _e('div', { className: 'cn-buttons' }, z, O))
+                      )
                     )
-                  )
                   return m
-                    ? _e('div', { id: 'cookieScreen', className: 'cookie-modal' }, _e('div', { className: 'cm-bg' }), P)
-                    : P
+                    ? _e('div', { id: 'cookieScreen', className: 'cookie-modal' }, _e('div', { className: 'cm-bg' }), S)
+                    : S
                 },
               },
             ]),
