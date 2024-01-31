@@ -4042,7 +4042,7 @@
                       {
                         role: 'dialog',
                         'aria-describedby': 'id-cookie-notice',
-                        'aria-label': P,
+                        'aria-labelledby': P ? 'id-cookie-title' : 'id-cookie-notice',
                         id: 'klaro-cookie-notice',
                         tabIndex: '0',
                         autoFocus: !0,
