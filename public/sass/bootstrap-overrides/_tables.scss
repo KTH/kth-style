@@ -15,13 +15,13 @@
       tr {
         border-color: #fff;
         th {
-          padding: 0.75rem !important;
-          color: $white !important;
+          padding: 0.75rem;
+          color: $white;
           background-color: $grey;
           font-weight: 500;
-          border-right: 1px solid $white !important;
-          border-bottom: 1px solid $white !important;
-          vertical-align: top !important;
+          border-right: 1px solid $white;
+          border-bottom: 1px solid $white;
+          vertical-align: top;
         }
       }
     }
@@ -52,7 +52,7 @@
           border-style: none;
           background-color: $lightGrey;
           border-top: 1px solid $white;
-          padding: 0.75rem !important;
+          padding: 0.75rem;
         }
       }
     }
