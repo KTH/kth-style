@@ -54,13 +54,11 @@
     .cookie-notice {
       &:not(.cookie-modal-notice) {
         position: fixed;
-        width: 100vw;
-        max-width: 100vw;
-        height: 100vh;
-        right: 0;
-        top: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.5);
+        right: auto;
+        top: auto;
+        left: 20px;
+        bottom: 20px;
+        background: none;
         border-radius: 0;
         z-index: 99999;
 
@@ -69,15 +67,12 @@
           padding: 1.5rem;
           padding-top: 0.5rem;
           position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
           width: 554px;
           height: fit-content;
           max-width: 554px;
           background-color: $white;
           border-radius: 0.25rem;
-          box-shadow: 0 4px 6px 0 rgb(0 0 0 / 20%), 5px 5px 10px 0 rgb(0 0 0 / 19%);
+          box-shadow: 0 2px 10px 2px rgb(0 0 0 / 20%), 5px 5px 10px 0 rgb(0 0 0 / 19%);
 
           .cn-ok {
             flex-flow: column !important;
@@ -92,244 +87,257 @@
 
                 &.cm-btn-danger {
                   &.cn-decline {
-                    display: none;
-                  }
-                }
-              }
-            }
-          }
+                    min-height: 2.75rem;
+                    color: #000;
+                    background-color: #fff;
+                    border-color: #000;
+                    border: 1px solid;
+                    font-weight: bold;
+                    padding: 0.5rem 1.5rem;
 
-          @media (max-width: 768px) {
-            position: relative;
-            top: 30%;
-            width: 90%;
-            height: auto;
-          }
-        }
-      }
-
-      a {
-        color: $blue;
-      }
-
-      p {
-        color: $black;
-      }
-
-      .cm-link {
-        color: $blue;
-      }
-
-      .cm-btn {
-        &.cm-btn-success {
-          color: $white;
-          background-color: $blue;
-          border-color: $blue;
-          border: 1px solid transparent;
-          padding: 0.5rem 1.5rem;
-          line-height: 1.5;
-          border-radius: 0.25rem;
-          min-height: 2.75rem;
-          font-weight: bold;
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .cookie-modal {
-      z-index: 99999;
-      .cm-list-input.required:checked + .cm-list-label .slider {
-        background-color: $green;
-      }
-
-      .cm-list-input.only-required + .cm-list-label .slider {
-        background-color: $grey;
-        opacity: 0.5;
-      }
-
-      .cm-list-label {
-        .slider {
-          background-color: $grey;
-          &:before {
-            background-color: $white;
-          }
-        }
-      }
-
-      .cm-list-input:checked {
-        + .cm-list-label {
-          .slider {
-            background-color: $green;
-          }
-        }
-      }
-      .cm-list-input.required:checked {
-        + .cm-list-label {
-          .slider {
-            background-color: #97b566;
-          }
-        }
-      }
-
-      a {
-        color: $blue;
-      }
-      .cm-modal {
-        &.cm-klaro {
-          background-color: $white;
-          max-width: 794px;
-        }
-
-        .hide {
-          svg {
-            stroke: var(--bs-dark, #fafafa);
-          }
-        }
-
-        p {
-          color: $black;
-          font-size: 1rem;
-          line-height: 1.5;
-        }
-
-        li {
-          color: $black;
-          &.active {
-            border: 3px solid $blue;
-          }
-        }
-
-        .cm-header {
-          padding: 1.5rem;
-
-          h1 {
-            &.title {
-              font-size: 1.875rem;
-              font-weight: 400;
-              color: $black;
-              line-height: 1.3125;
-              margin-top: 0;
-              margin-bottom: 14px;
-            }
-          }
-        }
-
-        .cm-body {
-          padding: 1.5rem;
-
-          ul {
-            &.cm-services {
-              li {
-                &.cm-service {
-                  span {
-                    &.cm-list-title {
-                      color: $black;
-                      font-size: 1rem;
-                    }
-                    &.cm-required {
-                      color: $black;
-                      font-size: 1rem;
+                    @media (max-width: 554px) {
+                      margin-bottom: 10px;
                     }
                   }
                 }
               }
             }
-          }
-        }
-        .cm-footer {
-          .cm-powered-by a {
-            display: none;
-          }
 
-          @media (max-width: 768px) {
-            padding: 0 1rem;
-
-            .cm-footer-buttons {
-              display: block;
+            @media (max-width: 768px) {
+              margin: 10px;
+              position: fixed;
+              max-width: fit-content;
               width: 100%;
+              height: auto;
+              bottom: 0;
+              right: 0;
+            }
+          }
 
-              .cm-btn {
-                width: 100%;
-                margin-top: 1.4rem;
+          a {
+            color: $blue;
+          }
+
+          p {
+            color: $black;
+          }
+
+          .cm-link {
+            color: $blue;
+          }
+
+          .cm-btn {
+            &.cm-btn-success {
+              color: $white;
+              background-color: $blue;
+              border-color: $blue;
+              border: 1px solid transparent;
+              padding: 0.5rem 1.5rem;
+              line-height: 1.5;
+              border-radius: 0.25rem;
+              min-height: 2.75rem;
+              font-weight: bold;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .cookie-modal {
+          z-index: 99999;
+          .cm-list-input.required:checked + .cm-list-label .slider {
+            background-color: $green;
+          }
+
+          .cm-list-input.only-required + .cm-list-label .slider {
+            background-color: $grey;
+            opacity: 0.5;
+          }
+
+          .cm-list-label {
+            .slider {
+              background-color: $grey;
+              &:before {
+                background-color: $white;
               }
+            }
+          }
+
+          .cm-list-input:checked {
+            + .cm-list-label {
+              .slider {
+                background-color: $green;
+              }
+            }
+          }
+          .cm-list-input.required:checked {
+            + .cm-list-label {
+              .slider {
+                background-color: #97b566;
+              }
+            }
+          }
+
+          a {
+            color: $blue;
+          }
+          .cm-modal {
+            &.cm-klaro {
+              background-color: $white;
+              max-width: 794px;
+            }
+
+            .hide {
+              svg {
+                stroke: var(--bs-dark, #fafafa);
+              }
+            }
+
+            p {
+              color: $black;
+              font-size: 1rem;
+              line-height: 1.5;
+            }
+
+            li {
+              color: $black;
+              &.active {
+                border: 3px solid $blue;
+              }
+            }
+
+            .cm-header {
+              padding: 1.5rem;
+
+              h1 {
+                &.title {
+                  font-size: 1.875rem;
+                  font-weight: 400;
+                  color: $black;
+                  line-height: 1.3125;
+                  margin-top: 0;
+                  margin-bottom: 14px;
+                }
+              }
+            }
+
+            .cm-body {
+              padding: 1.5rem;
+
+              ul {
+                &.cm-services {
+                  li {
+                    &.cm-service {
+                      span {
+                        &.cm-list-title {
+                          color: $black;
+                          font-size: 1rem;
+                        }
+                        &.cm-required {
+                          color: $black;
+                          font-size: 1rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .cm-footer {
+              .cm-powered-by a {
+                display: none;
+              }
+
+              @media (max-width: 768px) {
+                padding: 0 1rem;
+
+                .cm-footer-buttons {
+                  display: block;
+                  width: 100%;
+
+                  .cm-btn {
+                    width: 100%;
+                    margin-top: 1.4rem;
+                  }
+                }
+              }
+            }
+          }
+          .cm-btn {
+            &.cm-btn-success {
+              color: $white;
+              background-color: $blue;
+              border-color: $blue;
+              border: 1px solid transparent;
+              padding: 0.5rem 1.5rem;
+              line-height: 1.5;
+              border-radius: 0.25rem;
+              min-height: 2.75rem;
+              font-weight: bold;
+              font-size: 1rem;
+
+              &.cm-btn-accept {
+                background-color: $green;
+                border-color: $green;
+              }
+            }
+
+            &.cm-btn-decline {
+              color: $black;
+              background-color: $white;
+              border-color: $black;
+              border: 1px solid;
+              padding: 0.5rem 1.5rem;
+              line-height: 1.5;
+              border-radius: 0.25rem;
+              min-height: 2.75rem;
+              font-weight: bold;
+              font-size: 1rem;
             }
           }
         }
       }
-      .cm-btn {
-        &.cm-btn-success {
-          color: $white;
-          background-color: $blue;
-          border-color: $blue;
-          border: 1px solid transparent;
-          padding: 0.5rem 1.5rem;
-          line-height: 1.5;
-          border-radius: 0.25rem;
-          min-height: 2.75rem;
-          font-weight: bold;
-          font-size: 1rem;
 
-          &.cm-btn-accept {
-            background-color: $green;
-            border-color: $green;
-          }
-        }
-
-        &.cm-btn-decline {
-          color: $black;
-          background-color: $white;
-          border-color: $black;
-          border: 1px solid;
-          padding: 0.5rem 1.5rem;
-          line-height: 1.5;
-          border-radius: 0.25rem;
-          min-height: 2.75rem;
-          font-weight: bold;
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-
-  /*
+      /*
   * Handle videos in columnsplitters agrid lists with 4 columns.
   */
-  .block {
-    &.columnSplitter {
-      &.row {
-        &.using4Columns {
-          .klaro {
-            .context-notice {
-              p {
-                font-size: 0.9rem;
-                margin-bottom: 0;
-              }
+      .block {
+        &.columnSplitter {
+          &.row {
+            &.using4Columns {
+              .klaro {
+                .context-notice {
+                  p {
+                    font-size: 0.9rem;
+                    margin-bottom: 0;
+                  }
 
-              .cm-btn {
-                margin-bottom: 4px;
-                min-height: 1.75rem;
-                padding: 0.3rem 0.6rem;
+                  .cm-btn {
+                    margin-bottom: 4px;
+                    min-height: 1.75rem;
+                    padding: 0.3rem 0.6rem;
+                  }
+                }
               }
             }
           }
         }
-      }
-    }
 
-    &.list {
-      &.grid {
-        .gridRowItem {
-          &.gridRowItem_4 {
-            .context-notice {
-              p {
-                font-size: 0.9rem;
-                margin-bottom: 0;
-              }
+        &.list {
+          &.grid {
+            .gridRowItem {
+              &.gridRowItem_4 {
+                .context-notice {
+                  p {
+                    font-size: 0.9rem;
+                    margin-bottom: 0;
+                  }
 
-              .cm-btn {
-                margin-bottom: 4px;
-                min-height: 1.75rem;
-                padding: 0.3rem 0.6rem;
+                  .cm-btn {
+                    margin-bottom: 4px;
+                    min-height: 1.75rem;
+                    padding: 0.3rem 0.6rem;
+                  }
+                }
               }
             }
           }
