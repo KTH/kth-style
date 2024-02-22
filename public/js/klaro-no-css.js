@@ -4038,9 +4038,8 @@
                     })
                   var P = u(['!', 'consentNotice', 'title']),
                     S = _e(
-                      'div',
+                      'dialog',
                       {
-                        role: 'dialog',
                         'aria-describedby': 'id-cookie-notice',
                         'aria-labelledby': P ? 'id-cookie-title' : 'id-cookie-notice',
                         id: 'klaro-cookie-notice',
