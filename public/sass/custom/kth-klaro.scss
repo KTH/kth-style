@@ -58,13 +58,11 @@
   .cookie-notice {
     &:not(.cookie-modal-notice) {
       position: fixed;
-      width: 100vw;
-      max-width: 100vw;
-      height: 100vh;
-      right: 0;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.5);
+      right: auto;
+      top: auto;
+      left: 20px;
+      bottom: 20px;
+      background: none;
       border-radius: 0;
       z-index: 99999;
 
@@ -73,15 +71,12 @@
         padding: 1.5rem;
         padding-top: 0.5rem;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 554px;
         height: fit-content;
         max-width: 554px;
         background-color: $white;
         border-radius: 0.25rem;
-        box-shadow: 0 4px 6px 0 rgb(0 0 0 / 20%), 5px 5px 10px 0 rgb(0 0 0 / 19%);
+        box-shadow: 0 2px 10px 2px rgb(0 0 0 / 20%), 5px 5px 10px 0 rgb(0 0 0 / 19%);
 
         .cn-ok {
           flex-flow: column !important;
@@ -96,7 +91,17 @@
 
               &.cm-btn-danger {
                 &.cn-decline {
-                  display: none;
+                  min-height: 2.75rem;
+                  color: #000;
+                  background-color: #fff;
+                  border-color: #000;
+                  border: 1px solid;
+                  font-weight: bold;
+                  padding: 0.5rem 1.5rem;
+
+                  @media (max-width: 554px) {
+                    margin-bottom: 10px;
+                  }
                 }
               }
             }
@@ -104,10 +109,13 @@
         }
 
         @media (max-width: 768px) {
-          position: relative;
-          top: 30%;
-          width: 90%;
+          margin: 10px;
+          position: fixed;
+          max-width: fit-content;
+          width: 100%;
           height: auto;
+          bottom: 0;
+          right: 0;
         }
       }
     }
