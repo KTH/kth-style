@@ -4040,6 +4040,7 @@
                     S = _e(
                       'dialog',
                       {
+                        open: true,
                         'aria-describedby': 'id-cookie-notice',
                         'aria-labelledby': P ? 'id-cookie-title' : 'id-cookie-notice',
                         id: 'klaro-cookie-notice',
