@@ -20,10 +20,14 @@ window.addEventListener('load', () => {
     } else {
       backToTopButton.innerText = 'To page top'
     }
-    if (document.querySelector('footer')) {
-      document.body.insertBefore(backToTopButton, document.querySelector('footer'))
+
+    const pageFooter = document.querySelector('body > footer')
+    if (pageFooter) {
+      // Insert back to top button before footer
+      pageFooter.parentNode.insertBefore(backToTopButton, pageFooter)
     }
   }
+  // Scroll to top when clicking the button
   backToTopButton.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' })
     this.classList.toggle('show')
