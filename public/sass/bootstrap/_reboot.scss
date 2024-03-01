@@ -7,12 +7,13 @@
 //
 // Normalize is licensed MIT. https://github.com/necolas/normalize.css
 
-// Body
+// Tables
 //
-// 1. Remove the margin in all browsers.
-// 2. As a best practice, apply a default `background-color`.
-// 3. Prevent adjustments of font size after orientation changes in iOS.
-// 4. Change the default tap highlight to be completely transparent in iOS.
+// Prevent double borders
+
+table {
+  border-collapse: collapse;
+}
 
 // Typography
 //
