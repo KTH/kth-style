@@ -1636,7 +1636,7 @@
           for (n.__e = _, d = O; d--; )
             null != j[d] &&
               ('function' == typeof n.type && null != j[d].__e && j[d].__e == n.__d && (n.__d = h(i, d + 1)),
-              N(j[d], j[d]))
+              q(j[d], j[d]))
           if (k) for (d = 0; d < k.length; d++) D(k[d], k[++d], k[++d])
         }
         function w(e, t, n) {
@@ -1730,7 +1730,7 @@
                   ? (g = (d = n.__c = i.__c).__ = d.__E)
                   : ('prototype' in O && O.prototype.render
                       ? (n.__c = d = new O(_, j))
-                      : ((n.__c = d = new y(_, j)), (d.constructor = O), (d.render = q)),
+                      : ((n.__c = d = new y(_, j)), (d.constructor = O), (d.render = N)),
                     w && w.sub(d),
                     (d.props = _),
                     d.state || (d.state = {}),
@@ -1898,7 +1898,7 @@
             t.__e(e, i)
           }
         }
-        function N(e, n, i) {
+        function q(e, n, i) {
           var r, o
           if (
             (t.unmount && t.unmount(e),
@@ -1913,10 +1913,10 @@
               }
             r.base = r.__P = null
           }
-          if ((r = e.__k)) for (o = 0; o < r.length; o++) r[o] && N(r[o], n, 'function' != typeof e.type)
+          if ((r = e.__k)) for (o = 0; o < r.length; o++) r[o] && q(r[o], n, 'function' != typeof e.type)
           i || null == e.__e || d(e.__e), (e.__e = e.__d = void 0)
         }
-        function q(e, t, n) {
+        function N(e, t, n) {
           return this.constructor(e, n)
         }
         function M(n, i, r) {
@@ -2471,7 +2471,7 @@
           for (var s = arguments.length, c = new Array(s > 4 ? s - 4 : 0), l = 4; l < s; l++) c[l - 4] = arguments[l]
           return c.length > 0 ? xe.apply(void 0, [a].concat(c)) : a
         }
-        const Ne = function (e) {
+        const qe = function (e) {
           var t = e.text,
             n = e.config
           if ((t instanceof Array || (t = [t]), !0 === n.htmlTexts)) {
@@ -2484,9 +2484,9 @@
           }
           return _e('span', null, t)
         }
-        function qe(e) {
+        function Ne(e) {
           return (
-            (qe =
+            (Ne =
               'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
                 ? function (e) {
                     return typeof e
@@ -2496,7 +2496,7 @@
                       ? 'symbol'
                       : typeof e
                   }),
-            qe(e)
+            Ne(e)
           )
         }
         function Me() {
@@ -2536,7 +2536,7 @@
           )
         }
         function Be(e, t) {
-          if (t && ('object' === qe(t) || 'function' == typeof t)) return t
+          if (t && ('object' === Ne(t) || 'function' == typeof t)) return t
           if (void 0 !== t) throw new TypeError('Derived constructors may only return object or undefined')
           return (function (e) {
             if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
@@ -2674,7 +2674,7 @@
                     _e(
                       'div',
                       { id: ''.concat(y, '-description') },
-                      k && _e('p', { className: 'cm-list-description' }, _e(Ne, { config: s, text: k })),
+                      k && _e('p', { className: 'cm-list-description' }, _e(qe, { config: s, text: k })),
                       e
                     )
                   )
@@ -3117,7 +3117,7 @@
                     _e(
                       'div',
                       { id: ''.concat(g, '-description') },
-                      O && _e('p', { className: 'cm-list-description' }, _e(Ne, { config: s, text: O })),
+                      O && _e('p', { className: 'cm-list-description' }, _e(qe, { config: s, text: O })),
                       e
                     ),
                     a.length > 0 &&
@@ -3672,11 +3672,11 @@
                       'div',
                       { className: 'cm-header' },
                       e,
-                      _e('h1', { className: 'title' }, _e(Ne, { config: u, text: f(['consentModal', 'title']) })),
+                      _e('h1', { className: 'title' }, _e(qe, { config: u, text: f(['consentModal', 'title']) })),
                       _e(
                         'p',
                         null,
-                        _e(Ne, {
+                        _e(qe, {
                           config: u,
                           text: [f(['consentModal', 'description'])].concat(
                             (h && [' '].concat(f(['privacyPolicy', 'text'], { privacyPolicy: h }))) || []
@@ -4040,7 +4040,7 @@
                     S = _e(
                       'dialog',
                       {
-                        open: true,
+                        open: 'true',
                         'aria-describedby': 'id-cookie-notice',
                         'aria-labelledby': P ? 'id-cookie-title' : 'id-cookie-notice',
                         id: 'klaro-cookie-notice',
@@ -4056,12 +4056,12 @@
                       },
                       _e(
                         'div',
-                        { className: 'cn-body' },
+                        null,
                         P && _e('h2', { id: 'id-cookie-title' }, u(['consentNotice', 'title'])),
                         _e(
                           'p',
                           { id: 'id-cookie-notice' },
-                          _e(Ne, {
+                          _e(qe, {
                             config: a,
                             text: u(['consentNotice', 'description'], {
                               purposes: _e('strong', { key: 'strong' }, t),
@@ -4110,17 +4110,17 @@
               Object.defineProperty(e, i.key, i)
           }
         }
-        function Nt(e, t) {
+        function qt(e, t) {
           return (
-            (Nt =
+            (qt =
               Object.setPrototypeOf ||
               function (e, t) {
                 return (e.__proto__ = t), e
               }),
-            Nt(e, t)
+            qt(e, t)
           )
         }
-        function qt(e, t) {
+        function Nt(e, t) {
           if (t && ('object' === Et(t) || 'function' == typeof t)) return t
           if (void 0 !== t) throw new TypeError('Derived constructors may only return object or undefined')
           return Mt(e)
@@ -4147,7 +4147,7 @@
               constructor: { value: e, writable: !0, configurable: !0 },
             })),
               Object.defineProperty(e, 'prototype', { writable: !1 }),
-              t && Nt(e, t)
+              t && qt(e, t)
           })(a, e)
           var t,
             n,
@@ -4172,7 +4172,7 @@
                   var n = Tt(this).constructor
                   e = Reflect.construct(t, arguments, n)
                 } else e = t.apply(this, arguments)
-                return qt(this, e)
+                return Nt(this, e)
               })
           function a(e) {
             var t
@@ -5858,7 +5858,7 @@
             var n = null != arguments[t] ? arguments[t] : {}
             t % 2
               ? En(Object(n), !0).forEach(function (t) {
-                  Nn(e, t, n[t])
+                  qn(e, t, n[t])
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -5868,7 +5868,7 @@
           }
           return e
         }
-        function Nn(e, t, n) {
+        function qn(e, t, n) {
           return (
             t in e
               ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 })
@@ -5876,7 +5876,7 @@
             e
           )
         }
-        function qn(e, t) {
+        function Nn(e, t) {
           var n = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator']
           if (!n) {
             if (Array.isArray(e) || (n = Mn(e)) || (t && e && 'number' == typeof e.length)) {
@@ -5954,7 +5954,7 @@
         function Ln(e, t) {
           if ((void 0 === Rn[e] ? (Rn[e] = [t]) : Rn[e].push(t), void 0 !== Bn[e])) {
             var n,
-              i = qn(Bn[e])
+              i = Nn(Bn[e])
             try {
               for (i.s(); !(n = i.n()).done; ) {
                 var r = n.value
@@ -5992,7 +5992,7 @@
             i[r - 1] = arguments[r]
           if ((void 0 === Bn[e] ? (Bn[e] = [i]) : Bn[e].push(i), void 0 !== t)) {
             var o,
-              a = qn(t)
+              a = Nn(t)
             try {
               for (a.s(); !(o = a.n()).done; ) {
                 var s = o.value
@@ -6043,13 +6043,13 @@
         function $n(e, t, n, i, r) {
           var o,
             a = [],
-            s = qn(i.services)
+            s = Nn(i.services)
           try {
             for (s.s(); !(o = s.n()).done; ) {
               var c,
                 l = o.value,
                 u = e.getConsent(l.name) && e.confirmed,
-                p = qn(document.querySelectorAll("[data-name='" + l.name + "']"))
+                p = Nn(document.querySelectorAll("[data-name='" + l.name + "']"))
               try {
                 for (p.s(); !(c = p.n()).done; ) {
                   var d = c.value,
@@ -6215,7 +6215,7 @@
                   n = document.createElement('script')
                 ;(n.src = '' !== t ? t + '/ide.js' : 'ide.js'), (n.type = 'application/javascript')
                 var i,
-                  r = qn(n.attributes)
+                  r = Nn(n.attributes)
                 try {
                   for (r.s(); !(i = r.n()).done; ) {
                     var o = i.value
@@ -6275,9 +6275,9 @@
           Ci = n(376),
           Ei = n.n(Ci),
           Di = n(619),
-          Ni = n.n(Di),
-          qi = n(501),
-          Mi = n.n(qi),
+          qi = n.n(Di),
+          Ni = n(501),
+          Mi = n.n(Ni),
           Ti = n(375),
           Ii = n.n(Ti),
           Ri = n(137),
@@ -6310,7 +6310,7 @@
             hu: Pi(),
             hr: xi(),
             it: Ei(),
-            nl: Ni(),
+            nl: qi(),
             no: Mi(),
             oc: Ii(),
             ro: Bi(),
