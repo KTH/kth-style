@@ -72,23 +72,41 @@
       bottom: 0;
       right: 0;
       left: 0;
-
+      #id-cookie-notice {
+        color: black;
+      }
       .cn-ok {
         flex-flow: column !important;
       }
-
-      .cn-buttons {
-        margin-top: 0.5rem;
-        @media (max-width: 575px) {
-          margin-top: 1rem;
+      .cm-link {
+        &.cn-learn-more {
+          color: #007fae;
+          margin-bottom: 10px;
         }
+      }
+      .cn-buttons {
+        @media (max-width: 575px) {
+          margin-top: 0.5rem;
+        }
+        margin-top: 1rem;
+
         button {
           &.cm-btn {
             @media (max-width: 384px) {
               width: auto;
             }
-            @media (max-width: 575px) {
-              margin-top: 0.5em;
+
+            &.cm-btn-success {
+              color: #fff;
+              background-color: #007fae;
+              border-color: #007fae;
+              border: 1px solid rgba(0, 0, 0, 0);
+              padding: 0.5rem 1.5rem;
+              line-height: 1.5;
+              border-radius: 0.25rem;
+              min-height: 2.75rem;
+              font-weight: bold;
+              font-size: 1rem;
             }
 
             &.cm-btn-danger {
@@ -129,7 +147,6 @@
       margin-bottom: 0.5rem;
     }
   }
-
   .cookie-modal {
     z-index: 99999;
     .cm-list-input.required:checked + .cm-list-label .slider {
