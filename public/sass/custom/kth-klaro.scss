@@ -3,7 +3,7 @@
 .klaro {
   // Videos
   .context-notice {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba($white, 0.9);
     flex-wrap: nowrap;
     border-radius: 0;
 
@@ -23,15 +23,13 @@
       &.cm-btn-success-var {
         color: $white;
         background-color: $blue;
-        border-color: $blue;
         border: 1px solid transparent;
       }
 
       &.cm-btn-success {
         color: $black;
         background-color: $white;
-        border-color: $black;
-        border: 1px solid;
+        border: 1px solid $black;
       }
     }
   }
@@ -41,7 +39,6 @@
       &.cm-btm-success {
         color: $white;
         background-color: $blue;
-        border-color: $blue;
         border: 1px solid transparent;
         padding: 0.5rem 1.5rem;
         line-height: 1.5;
@@ -58,96 +55,92 @@
   .cookie-notice {
     &:not(.cookie-modal-notice) {
       position: fixed;
-      right: auto;
-      top: auto;
-      left: 20px;
-      bottom: 20px;
-      background: none;
-      border-radius: 0;
-      z-index: 99999;
-
-      .cn-body {
-        font-size: 1rem;
-        padding: 1.5rem;
-        padding-top: 0.5rem;
-        position: absolute;
-        width: 554px;
-        height: fit-content;
-        max-width: 554px;
-        background-color: $white;
-        border-radius: 0.25rem;
-        box-shadow: 0 2px 10px 2px rgb(0 0 0 / 20%), 5px 5px 10px 0 rgb(0 0 0 / 19%);
-
-        .cn-ok {
-          flex-flow: column !important;
+      font-size: 1rem;
+      padding: 1.5rem;
+      margin: 0.625rem;
+      padding-top: 0.5rem;
+      width: 554px;
+      height: fit-content;
+      max-width: 554px;
+      background-color: $white;
+      border-radius: 0.25rem;
+      box-shadow: 0 2px 10px 2px rgba($black, 0.2), 5px 5px 10px 0 rgba($black, 0.19);
+      border: none;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      #id-cookie-notice {
+        color: $black;
+      }
+      .cn-ok {
+        flex-flow: column !important;
+      }
+      .cm-link {
+        &.cn-learn-more {
+          color: $blue;
+          margin-bottom: 0.625rem;
         }
+      }
+      .cn-buttons {
+        @media (max-width: 575px) {
+          margin-top: 0.5rem;
+        }
+        margin-top: 1rem;
 
-        .cn-buttons {
-          button {
-            &.cm-btn {
-              @media (max-width: 384px) {
-                width: auto;
-              }
+        button {
+          &.cm-btn {
+            @media (max-width: 384px) {
+              width: auto;
+            }
 
-              &.cm-btn-danger {
-                &.cn-decline {
-                  min-height: 2.75rem;
-                  color: #000;
-                  background-color: #fff;
-                  border-color: #000;
-                  border: 1px solid;
-                  font-weight: bold;
-                  padding: 0.5rem 1.5rem;
+            &.cm-btn-success {
+              color: $white;
+              background-color: $blue;
+              border: 1px solid $black;
+              padding: 0.5rem 1.5rem;
+              border-radius: 0.25rem;
+              min-height: 2.75rem;
+              font-weight: bold;
+              font-size: 1rem;
+            }
 
-                  @media (max-width: 554px) {
-                    margin-bottom: 10px;
-                  }
+            &.cm-btn-danger {
+              &.cn-decline {
+                min-height: 2.75rem;
+                color: $black;
+                background-color: $white;
+                border: 1px solid $black;
+                font-weight: bold;
+                padding: 0.5rem 1.5rem;
+
+                @media (max-width: 575px) {
+                  margin-bottom: 0.5rem;
                 }
+              }
+            }
+            @media (max-width: 575px) {
+              &.cm-btn-success {
+                margin-top: 0.5em;
               }
             }
           }
         }
+      }
 
-        @media (max-width: 768px) {
-          margin: 10px;
-          position: fixed;
-          max-width: fit-content;
-          width: 100%;
-          height: auto;
-          bottom: 0;
-          right: 0;
-        }
+      @media (max-width: 768px) {
+        margin: 0.625rem;
+        position: fixed;
+        max-width: fit-content;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        right: 0;
       }
     }
-
-    a {
-      color: $blue;
-    }
-
     p {
-      color: $black;
-    }
-
-    .cm-link {
-      color: $blue;
-    }
-
-    .cm-btn {
-      &.cm-btn-success {
-        color: $white;
-        background-color: $blue;
-        border-color: $blue;
-        border: 1px solid transparent;
-        padding: 0.5rem 1.5rem;
-        line-height: 1.5;
-        border-radius: 0.25rem;
-        min-height: 2.75rem;
-        font-weight: bold;
-        font-size: 1rem;
-      }
+      margin-bottom: 0.5rem;
     }
   }
-
   .cookie-modal {
     z-index: 99999;
     .cm-list-input.required:checked + .cm-list-label .slider {
@@ -178,7 +171,8 @@
     .cm-list-input.required:checked {
       + .cm-list-label {
         .slider {
-          background-color: #97b566;
+          //No appropriate green variable for this
+          background-color: #536635;
         }
       }
     }
@@ -194,7 +188,7 @@
 
       .hide {
         svg {
-          stroke: var(--bs-dark, #fafafa);
+          stroke: $black;
         }
       }
 
@@ -222,7 +216,7 @@
             color: $black;
             line-height: 1.3125;
             margin-top: 0;
-            margin-bottom: 14px;
+            margin-bottom: 0.875rem;
           }
         }
       }
@@ -273,10 +267,8 @@
       &.cm-btn-success {
         color: $white;
         background-color: $blue;
-        border-color: $blue;
         border: 1px solid transparent;
         padding: 0.5rem 1.5rem;
-        line-height: 1.5;
         border-radius: 0.25rem;
         min-height: 2.75rem;
         font-weight: bold;
@@ -291,8 +283,7 @@
       &.cm-btn-decline {
         color: $black;
         background-color: $white;
-        border-color: $black;
-        border: 1px solid;
+        border: 1px solid $black;
         padding: 0.5rem 1.5rem;
         line-height: 1.5;
         border-radius: 0.25rem;
@@ -319,7 +310,7 @@
             }
 
             .cm-btn {
-              margin-bottom: 4px;
+              margin-bottom: 0.25rem;
               min-height: 1.75rem;
               padding: 0.3rem 0.6rem;
             }
@@ -340,7 +331,7 @@
             }
 
             .cm-btn {
-              margin-bottom: 4px;
+              margin-bottom: 0.25rem;
               min-height: 1.75rem;
               padding: 0.3rem 0.6rem;
             }
