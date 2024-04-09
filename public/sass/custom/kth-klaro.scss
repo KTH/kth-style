@@ -17,7 +17,7 @@
 
       &.cm-btn-success-var {
         color: $white;
-        background-color: $blue;
+        background-color: #004791;
         border: 1px solid transparent;
       }
 
@@ -33,7 +33,7 @@
     .cm-btm {
       &.cm-btm-success {
         color: $white;
-        background-color: $blue;
+        background-color: #004791;
         border: 1px solid transparent;
         padding: 0.5rem 1.5rem;
         line-height: 1.5;
@@ -72,8 +72,10 @@
       }
       .cm-link {
         &.cn-learn-more {
-          color: $blue;
+          color: #036eb8;
           margin-bottom: 0.625rem;
+          text-decoration: underline;
+          text-underline-offset: 0.25rem;
         }
       }
       .cn-buttons {
@@ -90,7 +92,7 @@
 
             &.cm-btn-success {
               color: $white;
-              background-color: $blue;
+              background-color: #004791;
               border: 1px solid transparent;
               padding: 0.5rem 1.5rem;
               border-radius: 0.25rem;
@@ -172,7 +174,9 @@
     }
 
     a {
-      color: $blue;
+      color: #036eb8;
+      text-decoration: underline;
+      text-underline-offset: 0.25rem;
     }
     .cm-modal {
       &.cm-klaro {
@@ -195,7 +199,7 @@
       li {
         color: $black;
         &.active {
-          border: 3px solid $blue;
+          border: 3px solid #004791;
         }
       }
 
@@ -259,7 +263,7 @@
     .cm-btn {
       &.cm-btn-success {
         color: $white;
-        background-color: $blue;
+        background-color: #004791;
         border: 1px solid transparent;
         padding: 0.5rem 1.5rem;
         border-radius: 0.25rem;
