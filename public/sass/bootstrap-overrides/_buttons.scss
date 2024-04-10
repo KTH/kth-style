@@ -19,82 +19,84 @@
   }
 }
 
-.external-link::after {
-  @extend %icon-general-style;
-  height: 1.25rem;
-  width: 1.3rem;
-  background: $data-open-window-blue-svg no-repeat;
-  background-size: 1.25rem 1.25rem;
-  margin: 0 0 -4px 10px;
-}
-
-.pdf-link {
-  margin: 0;
-  @media (min-width: 768px) {
-    margin: 0 1.5em 0 1em;
-  }
-  &:before {
+@layer kth-style.old {
+  .external-link::after {
     @extend %icon-general-style;
-    background: $data-pdf-blue-svg no-repeat;
     height: 1.25rem;
-    margin: 0 0.625rem 0.3rem 0;
-    width: 1rem;
-    vertical-align: middle;
+    width: 1.3rem;
+    background: $data-open-window-blue-svg no-repeat;
+    background-size: 1.25rem 1.25rem;
+    margin: 0 0 -4px 10px;
   }
-}
 
-.pdf-post-link {
-  margin: 0;
-
-  &:after {
-    @extend %icon-general-style;
-    background: $data-pdf-blue-svg no-repeat;
-    height: 1.25rem;
-    width: 1rem;
-    margin: 0 0 0.3rem 0.625em;
-    vertical-align: middle;
-  }
-}
-
-.btn-info-modal {
-  //change secondary to primary
-  background: $data-open-modal-blue-svg no-repeat;
-  background-color: transparent;
-  background-size: contain;
-  border: transparent;
-  border-radius: 0.8em;
-  margin-left: 1em;
-  width: 1.3em;
-  height: 1.3em;
-  padding: 0;
-  vertical-align: baseline;
-}
-
-th > button.btn-info-modal,
-td > button.btn-info-modal,
-td > span > button.btn-info-modal {
-  @extend %table-info-icon-for-popup;
-  margin-left: 0;
-  vertical-align: middle;
-}
-
-.btn-upload-file {
-  //FileInput in kth-style-react-components
-  display: flex;
-  flex-direction: column;
-  input[type='file'] {
-    filter: alpha(opacity=0);
-    opacity: 0;
-    border: 0;
-  }
-  span {
+  .pdf-link {
     margin: 0;
-    &::after {
+    @media (min-width: 768px) {
+      margin: 0 1.5em 0 1em;
+    }
+    &:before {
       @extend %icon-general-style;
-      vertical-align: bottom;
-      background: $data-upload-blue-svg no-repeat;
-      background-size: 1em;
-      float: right;
+      background: $data-pdf-blue-svg no-repeat;
+      height: 1.25rem;
+      margin: 0 0.625rem 0.3rem 0;
+      width: 1rem;
+      vertical-align: middle;
+    }
+  }
+
+  .pdf-post-link {
+    margin: 0;
+
+    &:after {
+      @extend %icon-general-style;
+      background: $data-pdf-blue-svg no-repeat;
+      height: 1.25rem;
+      width: 1rem;
+      margin: 0 0 0.3rem 0.625em;
+      vertical-align: middle;
+    }
+  }
+
+  .btn-info-modal {
+    //change secondary to primary
+    background: $data-open-modal-blue-svg no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    border: transparent;
+    border-radius: 0.8em;
+    margin-left: 1em;
+    width: 1.3em;
+    height: 1.3em;
+    padding: 0;
+    vertical-align: baseline;
+  }
+
+  th > button.btn-info-modal,
+  td > button.btn-info-modal,
+  td > span > button.btn-info-modal {
+    @extend %table-info-icon-for-popup;
+    margin-left: 0;
+    vertical-align: middle;
+  }
+
+  .btn-upload-file {
+    //FileInput in kth-style-react-components
+    display: flex;
+    flex-direction: column;
+    input[type='file'] {
+      filter: alpha(opacity=0);
+      opacity: 0;
+      border: 0;
+    }
+    span {
+      margin: 0;
+      &::after {
+        @extend %icon-general-style;
+        vertical-align: bottom;
+        background: $data-upload-blue-svg no-repeat;
+        background-size: 1em;
+        float: right;
+      }
     }
   }
 }
