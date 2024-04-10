@@ -2,6 +2,8 @@
 // Text truncation
 //
 
-.text-truncate {
-  @include text-truncate();
+@layer kth-style.old {
+  .text-truncate {
+    @include text-truncate();
+  }
 }
