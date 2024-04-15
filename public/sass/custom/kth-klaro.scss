@@ -141,7 +141,7 @@
   .cookie-modal {
     z-index: 99999;
     .cm-list-input.required:checked + .cm-list-label .slider {
-      background-color: $green;
+      background-color: #3d784a;
     }
 
     .cm-list-input.only-required + .cm-list-label .slider {
@@ -161,7 +161,7 @@
     .cm-list-input:checked {
       + .cm-list-label {
         .slider {
-          background-color: $green;
+          background-color: #3d784a;
         }
       }
     }
@@ -272,8 +272,8 @@
         font-size: 1rem;
 
         &.cm-btn-accept {
-          background-color: $green;
-          border-color: $green;
+          background-color: #3d784a;
+          border-color: #3d784a;
         }
       }
 
