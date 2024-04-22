@@ -30,11 +30,6 @@
     // as our inputs.
     .btn {
       position: relative;
-      z-index: 2;
-
-      &:focus {
-        z-index: 5;
-      }
     }
   }
 
