@@ -1,34 +1,36 @@
-.block {
-  &.siteName {
-    font-weight: 600;
-    color: #000;
-    line-height: 1.375;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: initial;
-    height: auto;
-    max-width: calc(100% - 136px);
-    position: relative;
-    top: -5px;
+@layer kth-style.old {
+  .block {
+    &.siteName {
+      font-weight: 600;
+      color: #000;
+      line-height: 1.375;
+      margin-top: 0;
+      margin-bottom: 0;
+      position: initial;
+      height: auto;
+      max-width: calc(100% - 136px);
+      position: relative;
+      top: -5px;
 
-    a {
-      color: $black;
-
-      &:hover {
+      a {
         color: $black;
-        cursor: pointer;
-      }
 
-      &:active {
-        color: $black;
-      }
+        &:hover {
+          color: $black;
+          cursor: pointer;
+        }
 
-      &:visited {
-        color: $black;
+        &:active {
+          color: $black;
+        }
+
+        &:visited {
+          color: $black;
+        }
       }
-    }
-    @media print {
-      display: none;
+      @media print {
+        display: none;
+      }
     }
   }
 }
