@@ -1,7 +1,7 @@
 // Overrides the default Klaro style for consent modal.
 
 .klaro {
-  // Videos
+  // Consent overlay on media
   .context-notice {
     background: rgba($white, 0.9);
     flex-wrap: nowrap;
@@ -29,24 +29,7 @@
     }
   }
 
-  .cookie-modal {
-    .cm-btm {
-      &.cm-btm-success {
-        color: $white;
-        background-color: #004791;
-        border: 1px solid transparent;
-        padding: 0.5rem 1.5rem;
-        line-height: 1.5;
-        border-radius: 0.25rem;
-        min-height: 2.75rem;
-        font-weight: bold;
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
-.klaro {
+  //Consent dialog, with information and three buttons that lets you choose actions
   .cookie-notice {
     &:not(.cookie-modal-notice) {
       position: fixed;
@@ -54,9 +37,9 @@
       padding: 1.5rem;
       margin: 0.625rem;
       padding-top: 0.5rem;
-      width: 554px;
+      width: 100%;
       height: fit-content;
-      max-width: 554px;
+      max-width: 720px;
       background-color: $white;
       border-radius: 0.25rem;
       box-shadow: 0 2px 10px 2px rgba($black, 0.2), 5px 5px 10px 0 rgba($black, 0.19);
@@ -67,9 +50,7 @@
       #id-cookie-notice {
         color: $black;
       }
-      .cn-ok {
-        flex-flow: column !important;
-      }
+
       .cm-link {
         &.cn-learn-more {
           color: #036eb8;
@@ -90,35 +71,28 @@
               width: auto;
             }
 
+            &.cm-btn-success,
+            &.cm-btn-danger.cn-decline,
+            &.cm-btn-learn-more.cn-info {
+              padding: 0.5rem 1.5rem;
+              min-height: 2.75rem;
+              font-weight: bold;
+              font-size: 1rem;
+              border-radius: 0.25rem;
+            }
+
             &.cm-btn-success {
               color: $white;
               background-color: #004791;
               border: 1px solid transparent;
-              padding: 0.5rem 1.5rem;
-              border-radius: 0.25rem;
-              min-height: 2.75rem;
-              font-weight: bold;
-              font-size: 1rem;
             }
 
-            &.cm-btn-danger {
-              &.cn-decline {
-                min-height: 2.75rem;
-                color: $black;
-                background-color: $white;
-                border: 1px solid $black;
-                font-weight: bold;
-                padding: 0.5rem 1.5rem;
-
-                @media (max-width: 575px) {
-                  margin-bottom: 0.5rem;
-                }
-              }
-            }
-            @media (max-width: 575px) {
-              &.cm-btn-success {
-                margin-top: 0.5em;
-              }
+            &.cm-btn-danger.cn-decline,
+            &.cm-btn-learn-more.cn-info {
+              color: $black;
+              background-color: $white;
+              border: 1px solid $black;
+              margin-bottom: 1rem;
             }
           }
         }
@@ -138,108 +112,88 @@
       margin-bottom: 0.5rem;
     }
   }
+
+  //Modal that appears when "Manage services/Hantera valbara tjänster" is clicked
   .cookie-modal {
     z-index: 99999;
-    .cm-list-input.required:checked + .cm-list-label .slider {
-      background-color: #3d784a;
-    }
 
-    .cm-list-input.only-required + .cm-list-label .slider {
-      background-color: $grey;
-      opacity: 0.5;
-    }
-
-    .cm-list-label {
-      .slider {
-        background-color: $grey;
-        &:before {
-          background-color: $white;
-        }
-      }
-    }
-
-    .cm-list-input:checked {
-      + .cm-list-label {
-        .slider {
-          background-color: #3d784a;
-        }
-      }
-    }
-    .cm-list-input.required:checked {
-      + .cm-list-label {
-        .slider {
-          background-color: #97b566;
-        }
-      }
-    }
-
-    a {
-      color: #036eb8;
-      text-decoration: underline;
-      text-underline-offset: 0.25rem;
-    }
-    .cm-modal {
-      &.cm-klaro {
-        background-color: $white;
-        max-width: 794px;
-      }
-
-      .hide {
-        svg {
-          stroke: $black;
-        }
-      }
-
-      p {
-        color: $black;
-        font-size: 1rem;
-        line-height: 1.5;
-      }
-
-      li {
-        color: $black;
-        &.active {
-          border: 3px solid #004791;
-        }
-      }
-
+    .cm-modal.cm-klaro {
+      background-color: $white;
+      max-width: 794px;
+      //Header section
       .cm-header {
         padding: 1.5rem;
 
-        h1 {
-          &.title {
-            font-size: 1.875rem;
-            font-weight: 400;
-            color: $black;
-            line-height: 1.3125;
-            margin-top: 0;
-            margin-bottom: 0.875rem;
+        .hide {
+          svg {
+            stroke: $black;
+          }
+        }
+
+        .title {
+          font-size: 1.875rem;
+          font-weight: 400;
+          color: $black;
+          line-height: 1.3125;
+          margin-top: 0;
+          margin-bottom: 0.875rem;
+        }
+
+        p {
+          color: $black;
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+        li {
+          color: $black;
+          &.active {
+            border: 3px solid #004791;
           }
         }
       }
 
+      //Body section
       .cm-body {
         padding: 1.5rem;
 
-        ul {
-          &.cm-services {
-            li {
-              &.cm-service {
-                span {
-                  &.cm-list-title {
-                    color: $black;
-                    font-size: 1rem;
-                  }
-                  &.cm-required {
-                    color: $black;
-                    font-size: 1rem;
-                  }
+        .cm-services {
+          .cm-service {
+            span {
+              &.cm-list-title,
+              &.cm-required {
+                color: $black;
+                font-size: 1rem;
+              }
+            }
+
+            .cm-list-label {
+              .slider {
+                background-color: $grey;
+                &:before {
+                  background-color: $white;
                 }
+              }
+            }
+
+            .cm-list-input {
+              &.required:checked + .cm-list-label .slider {
+                background-color: #3d784a;
+              }
+
+              &.only-required + .cm-list-label .slider {
+                background-color: $grey;
+                opacity: 0.5;
+              }
+
+              &:checked + .cm-list-label .slider {
+                background-color: #3d784a;
               }
             }
           }
         }
       }
+
+      //Footer section
       .cm-footer {
         .cm-powered-by a {
           display: none;
@@ -255,38 +209,32 @@
             .cm-btn {
               width: 100%;
               margin-top: 1.4rem;
+              padding: 0.5rem 1.5rem;
+              border-radius: 0.25rem;
+              min-height: 2.75rem;
+              font-weight: bold;
+              font-size: 1rem;
+
+              &.cm-btn-success {
+                color: $white;
+                background-color: #004791;
+                border: 1px solid transparent;
+
+                &.cm-btn-accept {
+                  background-color: #3d784a;
+                  border-color: #3d784a;
+                }
+              }
+
+              &.cm-btn-decline {
+                color: $black;
+                background-color: $white;
+                border: 1px solid $black;
+                line-height: 1.5;
+              }
             }
           }
         }
-      }
-    }
-    .cm-btn {
-      &.cm-btn-success {
-        color: $white;
-        background-color: #004791;
-        border: 1px solid transparent;
-        padding: 0.5rem 1.5rem;
-        border-radius: 0.25rem;
-        min-height: 2.75rem;
-        font-weight: bold;
-        font-size: 1rem;
-
-        &.cm-btn-accept {
-          background-color: #3d784a;
-          border-color: #3d784a;
-        }
-      }
-
-      &.cm-btn-decline {
-        color: $black;
-        background-color: $white;
-        border: 1px solid $black;
-        padding: 0.5rem 1.5rem;
-        line-height: 1.5;
-        border-radius: 0.25rem;
-        min-height: 2.75rem;
-        font-weight: bold;
-        font-size: 1rem;
       }
     }
   }
