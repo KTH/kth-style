@@ -1919,7 +1919,7 @@
         function N(e, t, n) {
           return this.constructor(e, n)
         }
-        function M(n, i, r) {
+        function T(n, i, r) {
           var o, a, s
           t.__ && t.__(n, i),
             (a = (o = 'function' == typeof r) ? null : (r && r.__k) || i.__k),
@@ -1972,7 +1972,7 @@
           (o = []),
           (a = 'function' == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout),
           (_.__r = 0)
-        var T,
+        var M,
           I,
           R,
           B = 0,
@@ -1991,7 +1991,7 @@
           return (
             (B = 1),
             (function (e, t, n) {
-              var i = F(T++, 2)
+              var i = F(M++, 2)
               return (
                 (i.t = e),
                 i.__c ||
@@ -2021,7 +2021,7 @@
           ;(I = null), H && H(e)
         }),
           (t.__r = function (e) {
-            L && L(e), (T = 0)
+            L && L(e), (M = 0)
             var t = (I = e.__c).__H
             t && (t.__h.forEach(Q), t.__h.forEach(J), (t.__h = []))
           }),
@@ -2248,7 +2248,7 @@
             )
           }
         function de(e, t, n) {
-          return null == t.__k && (t.textContent = ''), M(e, t), 'function' == typeof n && n(), e ? e.__c : null
+          return null == t.__k && (t.textContent = ''), T(e, t), 'function' == typeof n && n(), e ? e.__c : null
         }
         ;(y.prototype.isReactComponent = {}),
           ['componentWillMount', 'componentWillReceiveProps', 'componentWillUpdate'].forEach(function (e) {
@@ -2499,9 +2499,9 @@
             Ne(e)
           )
         }
-        function Me() {
+        function Te() {
           return (
-            (Me =
+            (Te =
               Object.assign ||
               function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -2510,10 +2510,10 @@
                 }
                 return e
               }),
-            Me.apply(this, arguments)
+            Te.apply(this, arguments)
           )
         }
-        function Te(e, t) {
+        function Me(e, t) {
           if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
         }
         function Ie(e, t) {
@@ -2589,7 +2589,7 @@
                 return Be(this, e)
               })
           function a() {
-            return Te(this, a), o.apply(this, arguments)
+            return Me(this, a), o.apply(this, arguments)
           }
           return (
             (t = a),
@@ -2661,7 +2661,7 @@
                     }),
                     _e(
                       'label',
-                      Me({ htmlFor: y, className: 'cm-list-label' }, f ? { tabIndex: '0' } : {}),
+                      Te({ htmlFor: y, className: 'cm-list-label' }, f ? { tabIndex: '0' } : {}),
                       _e(
                         'span',
                         { className: 'cm-list-title', id: ''.concat(h) },
@@ -3892,90 +3892,87 @@
                   var e,
                     t,
                     n,
-                    i = this,
-                    r = this.props,
-                    o = r.lang,
-                    a = r.config,
-                    s = r.show,
-                    c = r.manager,
-                    l = r.testing,
-                    u = r.t,
-                    p = this.state,
-                    d = p.confirming,
-                    f = p.modal,
-                    v = a.embedded,
-                    m = a.noticeAsModal,
-                    y = a.hideLearnMore,
-                    h = a.purposeOrder || [],
-                    b = (function (e) {
+                    i,
+                    r = this,
+                    o = this.props,
+                    a = o.lang,
+                    s = o.config,
+                    c = o.show,
+                    l = o.manager,
+                    u = o.testing,
+                    p = o.t,
+                    d = this.state,
+                    f = d.confirming,
+                    v = d.modal,
+                    m = s.embedded,
+                    y = s.noticeAsModal,
+                    h = s.hideLearnMore,
+                    b = s.purposeOrder || [],
+                    g = (function (e) {
                       for (var t = new Set([]), n = 0; n < e.services.length; n++)
                         for (var i = e.services[n].purposes || [], r = 0; r < i.length; r++) t.add(i[r])
                       return Array.from(t)
-                    })(a)
+                    })(s)
                       .filter(function (e) {
                         return 'functional' !== e
                       })
                       .sort(function (e, t) {
-                        return h.indexOf(e) - h.indexOf(t)
+                        return b.indexOf(e) - b.indexOf(t)
                       }),
-                    g = b.map(function (e) {
-                      return u(['!', 'purposes', e, 'title?']) || Oe(e)
+                    _ = g.map(function (e) {
+                      return p(['!', 'purposes', e, 'title?']) || Oe(e)
                     })
-                  ;(t =
-                    1 === g.length
-                      ? g[0]
-                      : []
-                          .concat(
-                            ((n = g.slice(0, -2)),
-                            (function (e) {
-                              if (Array.isArray(e)) return jt(e)
-                            })(n) ||
-                              (function (e) {
-                                if (
-                                  ('undefined' != typeof Symbol && null != e[Symbol.iterator]) ||
-                                  null != e['@@iterator']
-                                )
-                                  return Array.from(e)
-                              })(n) ||
-                              (function (e, t) {
-                                if (e) {
-                                  if ('string' == typeof e) return jt(e, t)
-                                  var n = Object.prototype.toString.call(e).slice(8, -1)
-                                  return (
-                                    'Object' === n && e.constructor && (n = e.constructor.name),
-                                    'Map' === n || 'Set' === n
-                                      ? Array.from(e)
-                                      : 'Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
-                                      ? jt(e, t)
-                                      : void 0
-                                  )
-                                }
-                              })(n) ||
-                              (function () {
-                                throw new TypeError(
-                                  'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
-                                )
-                              })()),
-                            [g.slice(-2).join(' & ')]
-                          )
-                          .join(', ')),
-                    void 0 !== a.privacyPolicy
-                      ? 'string' == typeof a.privacyPolicy
-                        ? (e = a.privacyPolicy)
-                        : 'object' === wt(a.privacyPolicy) && (e = a.privacyPolicy[o] || a.privacyPolicy.default)
-                      : void 0 !== (e = u(['!', 'privacyPolicyUrl'], { lang: o })) && (e = e.join(''))
-                  var _,
-                    k = function (e) {
-                      e.preventDefault(), i.setState({ modal: !0 })
-                    }
                   if (
-                    (c.changed && (_ = _e('p', { className: 'cn-changes' }, u(['consentNotice', 'changeDescription']))),
-                    !s && !l && !d)
+                    ((n =
+                      1 === _.length
+                        ? _[0]
+                        : []
+                            .concat(
+                              ((i = _.slice(0, -2)),
+                              (function (e) {
+                                if (Array.isArray(e)) return jt(e)
+                              })(i) ||
+                                (function (e) {
+                                  if (
+                                    ('undefined' != typeof Symbol && null != e[Symbol.iterator]) ||
+                                    null != e['@@iterator']
+                                  )
+                                    return Array.from(e)
+                                })(i) ||
+                                (function (e, t) {
+                                  if (e) {
+                                    if ('string' == typeof e) return jt(e, t)
+                                    var n = Object.prototype.toString.call(e).slice(8, -1)
+                                    return (
+                                      'Object' === n && e.constructor && (n = e.constructor.name),
+                                      'Map' === n || 'Set' === n
+                                        ? Array.from(e)
+                                        : 'Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+                                        ? jt(e, t)
+                                        : void 0
+                                    )
+                                  }
+                                })(i) ||
+                                (function () {
+                                  throw new TypeError(
+                                    'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+                                  )
+                                })()),
+                              [_.slice(-2).join(' & ')]
+                            )
+                            .join(', ')),
+                    void 0 !== s.privacyPolicy
+                      ? 'string' == typeof s.privacyPolicy
+                        ? (e = s.privacyPolicy)
+                        : 'object' === wt(s.privacyPolicy) && (e = s.privacyPolicy[a] || s.privacyPolicy.default)
+                      : void 0 !== (e = p(['!', 'privacyPolicyUrl'], { lang: a })) && (e = e.join('')),
+                    l.changed && (t = _e('p', { className: 'cn-changes' }, p(['consentNotice', 'changeDescription']))),
+                    !c && !u && !f)
                   )
                     return _e('div', null)
-                  var w,
-                    j = (!a.mustConsent || m) && !c.confirmed && !a.noNotice,
-                    z = a.hideDeclineAll
+                  var k,
+                    w = (!s.mustConsent || y) && !l.confirmed && !s.noNotice,
+                    j = s.hideDeclineAll
                       ? ''
                       : _e(
                           'button',
@@ -3984,100 +3981,94 @@
                             type: 'button',
                             onClick: this.declineAndHide,
                           },
-                          u(['decline'])
+                          p(['decline'])
                         ),
-                    O = a.acceptAll
+                    z = s.acceptAll
                       ? _e(
                           'button',
                           { className: 'cm-btn cm-btn-success', type: 'button', onClick: this.acceptAndHide },
-                          u(['ok'])
+                          p(['ok'])
                         )
                       : _e(
                           'button',
                           { className: 'cm-btn cm-btn-success', type: 'button', onClick: this.saveAndHide },
-                          u(['ok'])
+                          p(['ok'])
                         ),
-                    A = function () {
-                      return m
-                        ? _e(
-                            'button',
-                            {
-                              key: 'learnMoreLink',
-                              className: 'cm-btn cm-btn-lern-more cm-btn-info',
-                              type: 'button',
-                              onClick: k,
-                            },
-                            u(['consentNotice', 'learnMore'])
-                          )
-                        : _e(
-                            'a',
-                            { key: 'learnMoreLink', className: 'cm-link cn-learn-more', href: '#', onClick: k },
-                            u(['consentNotice', 'learnMore'])
-                          )
-                    }
+                    O = _e(
+                      'button',
+                      {
+                        key: 'learnMoreLink',
+                        className: 'cm-btn cm-btn-learn-more cm-btn-info',
+                        type: 'button',
+                        onClick: function (e) {
+                          e.preventDefault(), r.setState({ modal: !0 })
+                        },
+                      },
+                      p(['consentNotice', 'learnMore'])
+                    )
                   if (
-                    (void 0 !== e && (w = _e('a', { key: 'ppLink', href: e }, u(['privacyPolicy', 'name']))),
-                    f || (c.confirmed && !l) || (!c.confirmed && a.mustConsent))
+                    (void 0 !== e && (k = _e('a', { key: 'ppLink', href: e }, p(['privacyPolicy', 'name']))),
+                    v || (l.confirmed && !u) || (!l.confirmed && s.mustConsent))
                   )
                     return _e(gt, {
-                      t: u,
-                      lang: o,
-                      config: a,
+                      t: p,
+                      lang: a,
+                      config: s,
                       hide: function () {
-                        ;(a.mustConsent && !a.acceptAll) ||
-                          (c.confirmed && !l ? i.props.hide() : i.setState({ modal: !1 }),
+                        ;(s.mustConsent && !s.acceptAll) ||
+                          (l.confirmed && !u ? r.props.hide() : r.setState({ modal: !1 }),
                           setTimeout(function () {
-                            i.noticeRef && i.noticeRef.focus()
+                            r.noticeRef && r.noticeRef.focus()
                           }, 1))
                       },
-                      confirming: d,
+                      confirming: f,
                       declineAndHide: this.declineAndHide,
                       saveAndHide: this.saveAndHide,
                       acceptAndHide: this.acceptAndHide,
-                      manager: c,
+                      manager: l,
                     })
-                  var P = u(['!', 'consentNotice', 'title']),
-                    S = _e(
+                  var A = p(['!', 'consentNotice', 'title']),
+                    P = _e(
                       'dialog',
                       {
                         open: 'true',
                         'aria-describedby': 'id-cookie-notice',
-                        'aria-labelledby': P ? 'id-cookie-title' : 'id-cookie-notice',
+                        'aria-labelledby': A ? 'id-cookie-title' : 'id-cookie-notice',
                         id: 'klaro-cookie-notice',
                         tabIndex: '0',
                         autoFocus: !0,
                         ref: function (e) {
-                          i.noticeRef = e
+                          r.noticeRef = e
                         },
                         className: 'cookie-notice '
-                          .concat(j || l ? '' : 'cookie-notice-hidden', ' ')
-                          .concat(m ? 'cookie-modal-notice' : '', ' ')
-                          .concat(v ? 'cn-embedded' : ''),
+                          .concat(w || u ? '' : 'cookie-notice-hidden', ' ')
+                          .concat(y ? 'cookie-modal-notice' : '', ' ')
+                          .concat(m ? 'cn-embedded' : ''),
                       },
                       _e(
                         'div',
                         null,
-                        P && _e('h2', { id: 'id-cookie-title' }, u(['consentNotice', 'title'])),
+                        A && _e('h2', { id: 'id-cookie-title' }, p(['consentNotice', 'title'])),
                         _e(
                           'p',
                           { id: 'id-cookie-notice' },
                           _e(qe, {
-                            config: a,
-                            text: u(['consentNotice', 'description'], {
-                              purposes: _e('strong', { key: 'strong' }, t),
-                              privacyPolicy: w,
-                              learnMoreLink: A(),
+                            config: s,
+                            text: p(['consentNotice', 'description'], {
+                              purposes: _e('strong', { key: 'strong' }, n),
+                              privacyPolicy: k,
+                              learnMoreLink: O,
                             }),
                           })
                         ),
-                        l && _e('p', null, u(['consentNotice', 'testing'])),
-                        _,
-                        _e('div', { className: 'cn-ok' }, !y && A(), _e('div', { className: 'cn-buttons' }, z, O))
+                        u && _e('p', null, p(['consentNotice', 'testing'])),
+                        t,
+                        _e('div', { className: 'cn-ok' }, _e('div', { className: 'cn-buttons' }, !h && O, j, z))
                       )
                     )
-                  return m
-                    ? _e('div', { id: 'cookieScreen', className: 'cookie-modal' }, _e('div', { className: 'cm-bg' }), S)
-                    : S
+                  return y
+                    ? _e('div', { id: 'cookieScreen', className: 'cookie-modal' }, _e('div', { className: 'cm-bg' }), P)
+                    : P
                 },
               },
             ]),
@@ -4123,20 +4114,20 @@
         function Nt(e, t) {
           if (t && ('object' === Et(t) || 'function' == typeof t)) return t
           if (void 0 !== t) throw new TypeError('Derived constructors may only return object or undefined')
-          return Mt(e)
+          return Tt(e)
         }
-        function Mt(e) {
+        function Tt(e) {
           if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
           return e
         }
-        function Tt(e) {
+        function Mt(e) {
           return (
-            (Tt = Object.setPrototypeOf
+            (Mt = Object.setPrototypeOf
               ? Object.getPrototypeOf
               : function (e) {
                   return e.__proto__ || Object.getPrototypeOf(e)
                 }),
-            Tt(e)
+            Mt(e)
           )
         }
         var It = (function (e) {
@@ -4167,9 +4158,9 @@
               })()),
               function () {
                 var e,
-                  t = Tt(i)
+                  t = Mt(i)
                 if (r) {
-                  var n = Tt(this).constructor
+                  var n = Mt(this).constructor
                   e = Reflect.construct(t, arguments, n)
                 } else e = t.apply(this, arguments)
                 return Nt(this, e)
@@ -4181,7 +4172,7 @@
                 if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
               })(this, a),
               (t = o.call(this, e)),
-              e.manager.watch(Mt(t)),
+              e.manager.watch(Tt(t)),
               (t.state = { show: e.show > 0 || !e.manager.confirmed }),
               t
             )
@@ -4348,7 +4339,7 @@
             f = a.additionalClass,
             v = (a.embedded, a.stylePrefix)
           !(function (e, n) {
-            var i = F(T++, 3)
+            var i = F(M++, 3)
             !t.__s &&
               (function (e, t) {
                 return (
@@ -5879,7 +5870,7 @@
         function Nn(e, t) {
           var n = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator']
           if (!n) {
-            if (Array.isArray(e) || (n = Mn(e)) || (t && e && 'number' == typeof e.length)) {
+            if (Array.isArray(e) || (n = Tn(e)) || (t && e && 'number' == typeof e.length)) {
               n && (e = n)
               var i = 0,
                 r = function () {}
@@ -5921,21 +5912,21 @@
             },
           }
         }
-        function Mn(e, t) {
+        function Tn(e, t) {
           if (e) {
-            if ('string' == typeof e) return Tn(e, t)
+            if ('string' == typeof e) return Mn(e, t)
             var n = Object.prototype.toString.call(e).slice(8, -1)
             return (
               'Object' === n && e.constructor && (n = e.constructor.name),
               'Map' === n || 'Set' === n
                 ? Array.from(e)
                 : 'Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
-                ? Tn(e, t)
+                ? Mn(e, t)
                 : void 0
             )
           }
         }
-        function Tn(e, t) {
+        function Mn(e, t) {
           ;(null == t || t > e.length) && (t = e.length)
           for (var n = 0, i = new Array(t); n < t; n++) i[n] = e[n]
           return i
@@ -5963,13 +5954,13 @@
                   t.apply(
                     void 0,
                     (function (e) {
-                      if (Array.isArray(e)) return Tn(e)
+                      if (Array.isArray(e)) return Mn(e)
                     })((o = r)) ||
                       (function (e) {
                         if (('undefined' != typeof Symbol && null != e[Symbol.iterator]) || null != e['@@iterator'])
                           return Array.from(e)
                       })(o) ||
-                      Mn(o) ||
+                      Tn(o) ||
                       (function () {
                         throw new TypeError(
                           'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
@@ -6277,9 +6268,9 @@
           Di = n(619),
           qi = n.n(Di),
           Ni = n(501),
-          Mi = n.n(Ni),
-          Ti = n(375),
-          Ii = n.n(Ti),
+          Ti = n.n(Ni),
+          Mi = n(375),
+          Ii = n.n(Mi),
           Ri = n(137),
           Bi = n.n(Ri),
           Ui = n(812),
@@ -6311,7 +6302,7 @@
             hr: xi(),
             it: Ei(),
             nl: qi(),
-            no: Mi(),
+            no: Ti(),
             oc: Ii(),
             ro: Bi(),
             sr: Hi(),
