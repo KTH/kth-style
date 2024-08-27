@@ -1,6 +1,8 @@
 // Overrides the default Klaro style for consent modal.
 
 .klaro {
+  $color-primary: #004791;
+
   // Consent overlay on media
   .context-notice {
     background: rgba($white, 0.9);
@@ -17,7 +19,7 @@
 
       &.cm-btn-success-var {
         color: $white;
-        background-color: #004791;
+        background-color: $color-primary;
         border: 1px solid transparent;
       }
 
@@ -33,12 +35,8 @@
   .cookie-notice {
     &:not(.cookie-modal-notice) {
       position: fixed;
-      font-size: 1rem;
-      padding: 1.5rem;
+      padding: 0.5rem 1.5rem 1.5rem;
       margin: 0.625rem;
-      padding-top: 0.5rem;
-      width: 100%;
-      height: fit-content;
       max-width: 760px;
       background-color: $white;
       border-radius: 0.25rem;
@@ -52,41 +50,41 @@
       }
 
       .cn-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
         margin-top: 1rem;
 
         @media (max-width: 575px) {
           margin-top: 0.5rem;
         }
 
-        button {
-          &.cm-btn {
-            @media (max-width: 384px) {
-              width: auto;
-            }
+        .cm-btn {
+          @media (max-width: 384px) {
+            width: auto;
+          }
 
-            &.cm-btn-success,
-            &.cm-btn-danger.cn-decline,
-            &.cm-btn-learn-more.cm-btn-info {
-              padding: 0.5rem 1.5rem;
-              min-height: 2.75rem;
-              font-weight: bold;
-              font-size: 1rem;
-              border-radius: 0.25rem;
-            }
+          &.cm-btn-success,
+          &.cm-btn-danger.cn-decline,
+          &.cm-btn-learn-more.cm-btn-info {
+            padding: 0.5rem 1.5rem;
+            min-height: 2.75rem;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+          }
 
-            &.cm-btn-success {
-              color: $white;
-              background-color: #004791;
-              border: 1px solid transparent;
-            }
+          &.cm-btn-success {
+            color: $white;
+            background-color: $color-primary;
+            border: 1px solid transparent;
+          }
 
-            &.cm-btn-danger.cn-decline,
-            &.cm-btn-learn-more.cm-btn-info {
-              color: $black;
-              background-color: $white;
-              border: 1px solid $black;
-              margin-bottom: 1rem;
-            }
+          &.cm-btn-danger.cn-decline,
+          &.cm-btn-learn-more.cm-btn-info {
+            color: $black;
+            background-color: $white;
+            border: 1px solid $black;
           }
         }
       }
@@ -119,7 +117,7 @@
       li {
         color: $black;
         &.active {
-          border: 3px solid #004791;
+          border: 3px solid $color-primary;
         }
       }
 
@@ -143,50 +141,46 @@
           font-size: 1.875rem;
           font-weight: 400;
           color: $black;
-          line-height: 1.3125;
+          line-height: 2.5rem;
           margin-top: 0;
           margin-bottom: 0.875rem;
         }
-
-        
       }
 
       //Body section
       .cm-body {
         padding: 1.5rem;
 
-        .cm-services {
-          .cm-service {
-            span {
-              &.cm-list-title,
-              &.cm-required {
-                color: $black;
-                font-size: 1rem;
+        .cm-service {
+          span {
+            &.cm-list-title,
+            &.cm-required {
+              color: $black;
+              font-size: 1rem;
+            }
+          }
+
+          .cm-list-label {
+            .slider {
+              background-color: $grey;
+              &:before {
+                background-color: $white;
               }
             }
+          }
 
-            .cm-list-label {
-              .slider {
-                background-color: $grey;
-                &:before {
-                  background-color: $white;
-                }
-              }
+          .cm-list-input {
+            &.required:checked + .cm-list-label .slider {
+              background-color: #3d784a;
             }
 
-            .cm-list-input {
-              &.required:checked + .cm-list-label .slider {
-                background-color: #3d784a;
-              }
+            &.only-required + .cm-list-label .slider {
+              background-color: $grey;
+              opacity: 0.5;
+            }
 
-              &.only-required + .cm-list-label .slider {
-                background-color: $grey;
-                opacity: 0.5;
-              }
-
-              &:checked + .cm-list-label .slider {
-                background-color: #3d784a;
-              }
+            &:checked + .cm-list-label .slider {
+              background-color: #3d784a;
             }
           }
         }
@@ -208,11 +202,10 @@
             .cm-btn {
               width: 100%;
               margin-top: 1.4rem;
-              
             }
-          } 
-        }  
-        
+          }
+        }
+
         .cm-btn {
           padding: 0.5rem 1.5rem;
           border-radius: 0.25rem;
@@ -222,7 +215,7 @@
 
           &.cm-btn-success {
             color: $white;
-            background-color: #004791;
+            background-color: $color-primary;
             border: 1px solid transparent;
 
             &.cm-btn-accept {
