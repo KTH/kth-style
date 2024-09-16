@@ -36,7 +36,6 @@
 @import './bootstrap/button-group';
 @import './bootstrap/nav';
 @import './bootstrap/card';
-@import './bootstrap/breadcrumb';
 @import './bootstrap/pagination';
 @import './bootstrap/badge';
 @import './bootstrap/progress';
@@ -72,16 +71,10 @@
 @import './custom/typography';
 
 // Slots
-@import 'custom/slots/intra';
-@import 'custom/slots/breadcrumbs';
-@import 'custom/slots/footer';
-@import 'custom/slots/header';
 @import 'custom/slots/articleNavigation';
 @import 'custom/slots/mobileMenu';
 
 // Blocks
-@import 'custom/blocks/siteName';
-@import 'custom/blocks/megaMenu';
 @import 'custom/blocks/mainMenu';
 @import 'custom/blocks/separator';
 
