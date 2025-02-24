@@ -1,7 +1,7 @@
 {
   "//": "JSHint configuration - http://jshint.com/docs/options/",
   "name": "kth-style",
-  "version": "9.1.2",
+  "version": "9.2.0-0",
   "description": "KTH CSS. A custom build of Bootstrap 5. The purpose of this project is to provide the essential design and style for applications within KTH and make the development process of these applications faster.",
   "files": [
     "dist",
