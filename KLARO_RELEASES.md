@@ -15,10 +15,10 @@ Mission statement: You found an error in _klaro_ and want to fix it, add it to _
 2. Fix the error, e.g, commit `fix: add more bunnies`.
 3. Build with `$ make`.
 4. Commit changes in `dist`, e.g. `build: make`.
-5. Create a new branch in `KTH/kth-style` from `HEAD` in `main` or on the branch `deprecation`, whichever uses the latest version, e.g. `fix/klaro-with-more-bunnies`.
+5. Create a new branch in `KTH/kth-style` from `HEAD` in `main` _or_ from the branch `deprecation`, whichever uses the latest version, e.g. `fix/klaro-with-more-bunnies`.
 6. Copy `dist/klaro-no-css.js` in `KTH/klaro-js` to `public/js/klaro-no-css.js` in `KTH/kth-style`, branch `fix/klaro-with-more-bunnies`.
 7. Commit change in `public/js/klaro-no-css.js`, e.g. `fix: klaro with more bunnies`
-8. Do a prerelease of `kth-style`, e.g. `9.10.10-0`.
+8. Do a [prerelease](https://github.com/KTH/team-kth-web-docs/wiki/Node-packages#make-a-pre-release) of `kth-style`, e.g. `9.10.10-0`.
 9. Test prerelease `kth-style@9.10.10-0`.
 10. Merge `fix/klaro-with-more-bunnies` into `main` in `kth-style`.
 11. Release `kth-style@9.10.10`. 🚀
