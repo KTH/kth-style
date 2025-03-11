@@ -1,10 +1,19 @@
-# KTH STYLE ![Continous Integration](https://github.com/KTH/kth-style/actions/workflows/main.yml/badge.svg)
+# KTH STYLE
+
+### Notice
+
+This package is being deprecated and will eventually be replaced by [@kth/style](https://github.com/KTH/style).
+
+- **`main` branch**: Contains the deprecated version 9 of this package.
+- **`deprecation` branch**: This branch is the base for version 10, which is still in use but will also be removed in the future.
+
+When making changes, please use the `deprecation` branch
+
+For future development, consider migrating to [@kth/style](https://github.com/KTH/style).
 
 ## kth-style
 
 KTH base stylesheets and javascript package and a custom build of Bootstrap 4. The purpose of this project is to provide the essential design and style for applications within KTH and make the development process of these applications faster.
-
-For information how to use and examples: https://app.kth.se/style/
 
 ### How to generate icons in base64 format
 
