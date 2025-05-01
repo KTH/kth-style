@@ -54,7 +54,7 @@
   "devDependencies": {
     "@babel/cli": "^7.18.9",
     "@babel/core": "^7.18.9",
-    "@babel/preset-env": "7.26.0",
+    "@babel/preset-env": "7.27.1",
     "@kth/eslint-config-kth": "^3.0.10",
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^10.2.4",
