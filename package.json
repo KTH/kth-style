@@ -47,7 +47,7 @@
     "babel-js-prod": "babel --minified --source-maps false public/js --out-dir dist/js"
   },
   "dependencies": {
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.8",
     "jquery": "^3.6.0",
     "tether": "^2.0.0"
   },
