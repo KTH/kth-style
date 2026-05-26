@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "jquery": "^3.7.1",
+    "jquery": "^4.0.0",
     "tether": "^2.0.0"
   },
   "devDependencies": {
