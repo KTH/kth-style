@@ -1,0 +1,12 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    'padding':
+      map-merge(
+        map-get($utilities, 'padding'),
+        (
+          print: true,
+        )
+      ),
+  )
+);
